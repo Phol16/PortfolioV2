@@ -61,8 +61,8 @@ const MainProjects = () => {
         The current website is this application.
         It is an application that shows the details and the projects`}
         image={[portfolio0,portfolio1,portfolio2]}
-        demo={'#'}
-        source={'#'}
+        demo={'https://portfolio-phol.onrender.com/'}
+        source={'https://github.com/Phol16/PortfolioV2'}
         />
         <ProjectsInfo
         title={'Pokemon Pokedex'}
