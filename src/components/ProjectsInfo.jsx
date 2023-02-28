@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CarouselImg from './CarouselImg';
 
 const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
-
+  console.log(title)
   return (
     <div className='max-w-md bg-black/30 p-5 rounded-md border border-sky-400'>
       <main className='flex justify-center gap-5 p-5'>
