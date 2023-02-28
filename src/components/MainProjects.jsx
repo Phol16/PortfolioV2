@@ -45,16 +45,6 @@ const MainProjects = () => {
         source={'https://github.com/Phol16'}
         />
         <ProjectsInfo
-        title={'The Maze Game'}
-        tech={'HTML CSS JS'}
-        description={`A simple application developed by using HTML CSS and JS.
-        It is an application where you can choose game difficulty.
-        It is an application develop for pc because the user will use the keyboard to play`}
-        image={[mazegame0,mazegame1,mazegame2]}
-        demo={'https://phol16.github.io/TheMazeGame/startingPage.html'}
-        source={'https://github.com/Phol16/TheMazeGame'}
-        />
-        <ProjectsInfo
         title={'Portfolio'}
         tech={'ReactJS HTML CSS JS'}
         description={`A Web-Based application developed by using ReactJS.
@@ -63,6 +53,16 @@ const MainProjects = () => {
         image={[portfolio0,portfolio1,portfolio2]}
         demo={'https://portfolio-phol.onrender.com/'}
         source={'https://github.com/Phol16/PortfolioV2'}
+        />
+        <ProjectsInfo
+        title={'The Maze Game'}
+        tech={'HTML CSS JS'}
+        description={`A simple application developed by using HTML CSS and JS.
+        It is an application where you can choose game difficulty.
+        It is an application develop for pc because the user will use the keyboard to play`}
+        image={[mazegame0,mazegame1,mazegame2]}
+        demo={'https://phol16.github.io/TheMazeGame/startingPage.html'}
+        source={'https://github.com/Phol16/TheMazeGame'}
         />
         <ProjectsInfo
         title={'Pokemon Pokedex'}
