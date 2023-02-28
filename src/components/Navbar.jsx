@@ -11,8 +11,8 @@ const Navbar = () => {
       <Logo />
       <nav className=' gap-5 pr-2 hidden md:flex'>
         <NavButton redirect={''} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
-        <NavButton redirect={''} icon={<FontAwesomeIcon icon={faInfoCircle} />} text={'About Me'} />
-        <NavButton redirect={''} icon={<FontAwesomeIcon icon={faProjectDiagram} />} text={'Projects'} />
+        <NavButton redirect={'#About'} icon={<FontAwesomeIcon icon={faInfoCircle} />} text={'About Me'} />
+        <NavButton redirect={'#Projects'} icon={<FontAwesomeIcon icon={faProjectDiagram} />} text={'Projects'} />
       </nav>
       <section className='flex flex-col md:hidden'>
         <button

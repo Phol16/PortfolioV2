@@ -5,7 +5,7 @@ import React from 'react';
 
 const MainAbout = () => {
   return (
-    <div className='pb-10 px-2 flex flex-col sm:items-center gap-5'>
+    <div className='py-10 px-2 flex flex-col sm:items-center gap-5' id='About'>
       <main>
         <h1 className='text-sky-400 text-2xl xl:text-3xl'>About Me</h1>
         <p className='p-1 text-sm md:max-w-lg xl:text-base xl:max-w-xl'>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, ExpressJS, ReactJs, and NodeJS to build dynamic and engaging web applications.</p>
@@ -65,7 +65,7 @@ const MainAbout = () => {
                   <p>C++</p>
                 </div>
                 <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faT} className='text-lg xl:text-2xl text-blue-400' />
+                  <FontAwesomeIcon icon={faT} className='text-lg xl:text-2xl text-blue-500' />
                   <p>Typescript</p>
                 </div>
               </main>

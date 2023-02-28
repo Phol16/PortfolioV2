@@ -31,10 +31,12 @@ const Hero = () => {
         </span>
       </p>
       <ContactLinks/>
-      <div className='relative top-[30%]'>
-        <button className='bg-transparent hover:scale-125 transition-all duration-[300ms] hover:text-sky-400'>
+      <div className='relative top-[30%] '>
+        <a href="#About">
+        <button className='bg-transparent focus:outline-none hover:scale-125 transition-all duration-[300ms] hover:text-sky-400 text-white'>
         <FontAwesomeIcon icon={faArrowDown} className='text-xl animate-bounce'/>
         </button>
+        </a>
       </div>
     </div>
   );
