@@ -1,5 +1,5 @@
 import { faCanadianMapleLeaf, faCss3, faGit, faGitAlt, faGitSquare, faHtml5, faJs, faJsSquare, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faC, faDatabase, faE, faLeaf, faT, faX } from '@fortawesome/free-solid-svg-icons';
+import { faC, faDatabase, faE, faLeaf, faS, faT, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -66,7 +66,10 @@ const MainAbout = () => {
                   <p>C++</p>
                 </div>
                 <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faT} className='text-2xl xl:text-4xl text-blue-500' />
+                  <section className='text-2xl xl:text-4xl text-blue-500 flex justify-center'>
+                  <FontAwesomeIcon icon={faT}  />
+                  <FontAwesomeIcon icon={faS}/>
+                  </section>
                   <p>TypeScript</p>
                 </div>
               </main>
