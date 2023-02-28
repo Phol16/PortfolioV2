@@ -36,7 +36,7 @@ const MainAbout = () => {
         <section className='sm:col-span-2 sm:justify-self-center'>
           <h2 className='text-sky-400 text-lg xl:text-xl mt-4'>Skills</h2>
           <div className='p-1 gap-5 flex flex-col py-4'>
-            <section className='flex text-xs gap-2 justify-center'>
+            <section className='flex text-xs gap-5 justify-center'>
               <div className='flex flex-col xl:text-base'>
                 <FontAwesomeIcon icon={faHtml5} className='text-2xl xl:text-4xl text-orange-500' />
                 <p>HTML</p>
@@ -56,7 +56,7 @@ const MainAbout = () => {
             </section>
             <section>
               <h3 className='text-sm mb-2 text-sky-200'>Programming Language</h3>
-              <main className='flex items-center justify-center gap-2 text-xs'>
+              <main className='flex items-center justify-center gap-5 text-xs'>
                 <div className='flex flex-col xl:text-base'>
                   <FontAwesomeIcon icon={faJsSquare} className='text-2xl xl:text-4xl text-yellow-400' />
                   <p>Javascript</p>
@@ -73,7 +73,7 @@ const MainAbout = () => {
             </section>
             <section>
               <h3 className='text-sm mb-2 text-sky-200'>Tech Stack</h3>
-              <main className='flex items-center justify-center gap-2 text-xs'>
+              <main className='flex items-center justify-center gap-5 text-xs'>
                 <div className='flex flex-col xl:text-base'>
                   <FontAwesomeIcon icon={faLeaf} className='text-2xl xl:text-4xl p-1 text-green-500' />
                   <p>MongoDB</p>
