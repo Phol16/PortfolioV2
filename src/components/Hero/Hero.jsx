@@ -11,7 +11,7 @@ const Hero = () => {
       <h1 className={style.mainText}>
         Hi ! My name is <span className='text-sky-400'>Phol</span>
       </h1>
-      <p className={style.textAnimate}>
+      <div className={style.textAnimate}>
         I am a
         <span className='text-sky-400'>
           <ul className={style.dynamicText}>
@@ -29,7 +29,7 @@ const Hero = () => {
             </li>
           </ul>
         </span>
-      </p>
+      </div>
       <ContactLinks/>
       <div className='relative top-[30%] '>
         <a href="#About">

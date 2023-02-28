@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <div className='flex flex-col items-center'>
       <Navbar />
-      <main className='flex justify-center items-center overflow-auto'>
+      <main className='flex justify-center items-center overflow-auto mb-10'>
         <Outlet />
       </main>
       <Footer />
