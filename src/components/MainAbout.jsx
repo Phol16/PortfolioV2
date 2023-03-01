@@ -3,6 +3,69 @@ import { faC, faDatabase, faE, faLeaf, faS, faT, faX } from '@fortawesome/free-s
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
+const skills = [
+  {
+    icon: <FontAwesomeIcon icon={faHtml5} className='text-2xl xl:text-4xl text-orange-500' />,
+    name: 'HTML',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCss3} className='text-2xl xl:text-4xl text-blue-400' />,
+    name: 'CSS',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faJsSquare} className='text-2xl xl:text-4xl text-yellow-400' />,
+    name: 'Javascript',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faGitAlt} className='text-2xl xl:text-4xl text-orange-500' />,
+    name: 'Git',
+  },
+];
+
+const programmingLanguage = [
+  {
+    icon: <FontAwesomeIcon icon={faJsSquare} className='text-2xl xl:text-4xl text-yellow-400' />,
+    name: 'Javascript',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faC} className='text-2xl xl:text-4xl text-blue-400' />,
+    name: 'C++',
+  },
+  {
+    icon: (
+      <section className='text-2xl xl:text-4xl text-blue-500 flex justify-center'>
+        <FontAwesomeIcon icon={faT} />
+        <FontAwesomeIcon icon={faS} />
+      </section>
+    ),
+    name: 'TypeScript',
+  },
+];
+
+const techStack = [
+  {
+    icon: <FontAwesomeIcon icon={faLeaf} className='text-2xl xl:text-4xl p-1 text-green-500' />,
+    name: 'MongoDB',
+  },
+  {
+    icon: (
+      <div className='text-sm p-1 xl:text-lg xl:text-2xl'>
+        <FontAwesomeIcon icon={faE} className='text-gray-400' />
+        <FontAwesomeIcon icon={faX} />
+      </div>
+    ),
+    name: 'Express JS',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faReact} className='text-2xl xl:text-4xl p-1 text-blue-400' />,
+    name: 'React JS',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faNodeJs} className='text-2xl xl:text-4xl p-1 text-green-400' />,
+    name: 'Node JS',
+  },
+];
+
 const MainAbout = () => {
   return (
     <div className='py-10 px-2 flex flex-col sm:items-center gap-5' id='About'>
@@ -37,65 +100,39 @@ const MainAbout = () => {
           <h2 className='text-sky-400 text-lg xl:text-xl mt-4'>Skills</h2>
           <div className='p-1 gap-5 flex flex-col py-4'>
             <section className='flex text-xs gap-5 justify-center'>
-              <div className='flex flex-col xl:text-base'>
-                <FontAwesomeIcon icon={faHtml5} className='text-2xl xl:text-4xl text-orange-500' />
-                <p>HTML</p>
-              </div>
-              <div className='flex flex-col xl:text-base'>
-                <FontAwesomeIcon icon={faCss3} className='text-2xl xl:text-4xl text-blue-400' />
-                <p>CSS</p>
-              </div>
-              <div className='flex flex-col xl:text-base'>
-                <FontAwesomeIcon icon={faJsSquare} className='text-2xl xl:text-4xl text-yellow-400' />
-                <p>Javascript</p>
-              </div>
-              <div className='flex flex-col xl:text-base'>
-                <FontAwesomeIcon icon={faGitAlt} className='text-2xl xl:text-4xl text-orange-500' />
-                <p>Git</p>
-              </div>
+              {skills.map((details) => {
+                return (
+                  <div className='flex flex-col xl:text-base'>
+                    {details.icon}
+                    <p>{details.name}</p>
+                  </div>
+                );
+              })}
             </section>
             <section>
               <h3 className='text-sm mb-2 text-sky-200'>Programming Language</h3>
               <main className='flex items-center justify-center gap-5 text-xs'>
-                <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faJsSquare} className='text-2xl xl:text-4xl text-yellow-400' />
-                  <p>Javascript</p>
-                </div>
-                <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faC} className='text-2xl xl:text-4xl text-blue-400' />
-                  <p>C++</p>
-                </div>
-                <div className='flex flex-col xl:text-base'>
-                  <section className='text-2xl xl:text-4xl text-blue-500 flex justify-center'>
-                  <FontAwesomeIcon icon={faT}  />
-                  <FontAwesomeIcon icon={faS}/>
-                  </section>
-                  <p>TypeScript</p>
-                </div>
+                {programmingLanguage.map((details) => {
+                  return (
+                    <div className='flex flex-col xl:text-base'>
+                      {details.icon}
+                      <p>{details.name}</p>
+                    </div>
+                  );
+                })}
               </main>
             </section>
             <section>
               <h3 className='text-sm mb-2 text-sky-200'>Tech Stack</h3>
               <main className='flex items-center justify-center gap-5 text-xs'>
-                <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faLeaf} className='text-2xl xl:text-4xl p-1 text-green-500' />
-                  <p>MongoDB</p>
-                </div>
-                <div className='flex flex-col xl:text-base items-center '>
-                  <div className='text-sm p-1 xl:text-lg xl:text-2xl'>
-                    <FontAwesomeIcon icon={faE} className='text-gray-400' />
-                    <FontAwesomeIcon icon={faX} />
-                  </div>
-                  <p>ExpressJs</p>
-                </div>
-                <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faReact} className='text-2xl xl:text-4xl p-1 text-blue-400' />
-                  <p>ReactJS</p>
-                </div>
-                <div className='flex flex-col xl:text-base'>
-                  <FontAwesomeIcon icon={faNodeJs} className='text-2xl xl:text-4xl p-1 text-green-400' />
-                  <p>NodeJS</p>
-                </div>
+                {techStack.map((details) => {
+                  return (
+                    <div className='flex flex-col xl:text-base'>
+                      {details.icon}
+                      <p>{details.name}</p>
+                    </div>
+                  );
+                })}
               </main>
             </section>
           </div>
