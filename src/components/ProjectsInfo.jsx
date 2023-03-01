@@ -9,11 +9,11 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
   return (
     <div className='max-w-md bg-black/30 p-5 rounded-md border border-sky-400'>
       <main className='flex justify-center gap-5 p-5'>
-        <button onClick={()=>{window.open(demo, '_blank')}} className='bg-transparent flex justify-center items-center gap-1 hover:scale-110 transition-all dureation-[150ms] hover:text-sky-400 text-xs sm:text-sm focus:outline-none'>
+        <button onClick={()=>{window.open(demo, '_blank')}} className='bg-transparent flex justify-center items-center gap-1 hover:scale-110 transition-all dureation-[150ms] hover:text-sky-400 text-xs sm:text-sm md:text-base focus:outline-none'>
           <FontAwesomeIcon icon={faHome} />
           Live Demo
         </button>
-        <button onClick={()=>{window.open(source, '_blank')}} className='bg-transparent flex justify-center items-center gap-1 hover:scale-110 transition-all dureation-[150ms] hover:text-sky-400 text-xs sm:text-sm focus:outline-none'>
+        <button onClick={()=>{window.open(source, '_blank')}} className='bg-transparent flex justify-center items-center gap-1 hover:scale-110 transition-all dureation-[150ms] hover:text-sky-400 text-xs sm:text-sm md:text-base focus:outline-none'>
           <FontAwesomeIcon icon={faGithub} />
           Source Code
         </button>
