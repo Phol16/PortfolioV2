@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import Logo from '../assets/svg/Logo';
 import NavButton from './NavButton';
-import PDF from '../assets/PholibertLim_CV.pdf';
+import PDF from '../assets/Lim_Pholibert_CV.pdf';
 import ContactLinks from './ContactLinks';
 
 const Navbar = () => {
