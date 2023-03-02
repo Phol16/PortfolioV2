@@ -10,7 +10,7 @@ export const primaryTextColor = 'text-white';
 export const primaryTextColorDark = 'text-black'
 
 export const secondaryTextColor = 'text-sky-400';
-export const secondaryTextColorDark = 'text-green-600'
+export const secondaryTextColorDark = 'text-green-700'
 export const tertiaryTextColor = 'text-sky-200';
 export const tertiaryTextColorDark = 'text-green-500'
 
