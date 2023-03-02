@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import DarkLight from './DarkLight';
 import { FASizeIcon, primaryTextColor, primaryTextColorDark } from './ThemeRWD';
-import hover from './style/hover.module.css';
+import hover from './style/Hover.module.css';
 import { ThemeContext } from '../layout/Intro';
 
 const contact = [
