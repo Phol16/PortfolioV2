@@ -1,15 +1,16 @@
-import { faCloudMoon, faDownload, faHamburger, faInfoCircle, faMoon, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faCloudMoon, faDownload, faHamburger, faInfoCircle, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Logo from '../assets/svg/Logo';
 import NavButton from './NavButton';
 import PDF from '../assets/Lim_Pholibert_CV.pdf';
 import ContactLinks from './ContactLinks';
-import { LD, primaryBgColor, primaryTextColor, secondaryBgColor, secondaryTextColor, ThemeRWD } from './ThemeRWD';
+import { primaryTextColor, secondaryBgColor } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useContext(ThemeContext);
   return (
     <>
       <div className={`${secondaryBgColor} p-5 flex justify-between w-full items-center`}>
@@ -29,7 +30,7 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faHamburger} className='text-3xl hover:scale-125 transition-all duration-[150ms]' />
           </button>
           {open && (
-            <nav className={`${primaryBgColor} ${primaryTextColor} flex flex-col items-center gap-5 pt-5 absolute right-2 top-[98px] rounded-md w-40 z-10`}>
+            <nav className={`${secondaryBgColor} ${primaryTextColor} flex flex-col items-center gap-5 pt-5 absolute right-2 top-[98px] rounded-md w-40 z-10`}>
               <h1 className='text-xl'>Phol</h1>
               <main className='flex flex-col justify-center items-center gap-3 py-20'>
                 <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
@@ -45,8 +46,14 @@ const Navbar = () => {
         </section>
       </div>
       <div className='fixed bottom-10 right-5 z-10'>
-            <ThemeRWD />
-            <LD/>
+        <button
+          className=' bg-transparent'
+          onClick={() => {
+            setDark(!dark);
+          }}
+        >
+          <FontAwesomeIcon icon={faCloudMoon} />
+        </button>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CarouselImg from './CarouselImg';
-import { heading, subHeading, miniHeading, miniContent, FontSizeIcon, tertiaryTextColor, primaryBgColor, secondaryBgColor } from './ThemeRWD';
+import { subHeading, miniHeading, miniContent, FontSizeIcon, tertiaryTextColor, primaryBgColor } from './ThemeRWD';
 
 const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
   const projectButton = [
@@ -24,7 +24,9 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
         <section className='flex justify-center gap-5 p-5'>
           {projectButton.map((details) => {
             return (
-              <button key={details.title} className={`bg-transparent hover:scale-110 transiton-all duration-[150ms] flex items-center`}
+              <button
+                key={details.title}
+                className={`bg-transparent hover:scale-110 transiton-all duration-[150ms] flex items-center`}
                 onClick={() => {
                   window.open(`${details.redirect}`, '_blank');
                 }}

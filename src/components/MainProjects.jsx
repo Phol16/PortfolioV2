@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectsInfo from './ProjectsInfo';
-import { heading, subHeading, miniHeading, miniContent, secondaryTextColor, primaryTextColor } from './ThemeRWD';
+import { heading, secondaryTextColor, primaryTextColor } from './ThemeRWD';
 import movienotepad0 from '../assets/movienotepad/movienotepad0.png';
 import movienotepad1 from '../assets/movienotepad/movienotepad1.png';
 import movienotepad2 from '../assets/movienotepad/movienotepad2.png';

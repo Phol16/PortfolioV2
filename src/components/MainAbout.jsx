@@ -1,7 +1,7 @@
 import React from 'react';
 import SkillGroup from './SkillGroup';
 import { programmingLanguage, skills, techStack } from './SkillData';
-import { heading, subHeading, miniHeading, miniContent, secondaryTextColor, tertiaryTextColor, primaryBgColor, primaryTextColor } from './ThemeRWD';
+import { heading, subHeading, miniHeading, miniContent, secondaryTextColor, tertiaryTextColor, primaryTextColor } from './ThemeRWD';
 
 const Educ = [
   {
