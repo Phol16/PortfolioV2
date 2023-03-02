@@ -37,13 +37,13 @@ const Educ = [
 
 const MainAbout = () => {
   return (
-    <div className='py-10 px-2 flex flex-col sm:items-center gap-5' id='About'>
+    <div className='py-10 px-2 flex flex-col items-center gap-5' id='About'>
       <main>
         <h1 className='text-sky-400 text-xl xl:text-wxl'>About Me</h1>
-        <p className='p-1 text-sm md:max-w-lg xl:text-base xl:max-w-xl 2xl:max-w-3xl'>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, ExpressJS, ReactJs, and NodeJS to build dynamic and engaging web applications.</p>
+        <p className='p-1 text-sm max-w-md md:max-w-xl md:text-base xl:max-w-xl 2xl:max-w-3xl'>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, ExpressJS, ReactJs, and NodeJS to build dynamic and engaging web applications.</p>
       </main>
-      <section className='grid sm:grid-cols-2 gap-5 md:gap-10 items-center '>
-        <div className='p-1 gap-4 flex flex-col'>
+      <section className='grid md:grid-cols-2 gap-5 md:gap-10 items-center '>
+        <div className='p-1 gap-4 flex flex-col max-w-sm'>
           <h2 className='text-sky-400 text-lg xl:text-xl'>Education</h2>
           {Educ.map((details) => {
             return (
@@ -67,11 +67,13 @@ const MainAbout = () => {
             <li> Silver Rank in Valorant </li>
           </ul>
         </div>
-        <main className='col-span-2'>
-        <h2 className='text-sky-400 text-lg xl:text-xl'>Skills</h2>
-          {groupSkill.map((details) => {
-            return <SkillGroup name={details.name} information={details.information} />;
-          })}
+        <main className='md:col-span-2 w-fit md:justify-self-center'>
+          <h2 className='text-sky-400 text-lg xl:text-xl'>Skills</h2>
+          <section>
+            {groupSkill.map((details) => {
+              return <SkillGroup name={details.name} information={details.information} />;
+            })}
+          </section>
         </main>
       </section>
     </div>
