@@ -84,9 +84,9 @@ const Information = [
 
 const MainProjects = () => {
   return (
-    <div className='my-5 text-white p-5' id='Projects'>
+    <div className='my-5 text-white p-5 flex flex-col' id='Projects'>
       <h1 className='text-sky-400 text-xl xl:text-wxl my-5'>Projects</h1>
-      <main className='grid sm:grid-cols-2 xl:grid-cols-3 gap-5 justify-center items-center'>
+      <main className='grid sm:grid-cols-2 xl:grid-cols-3 gap-5 self-center'>
         {Information.map((Details) => {
           return <ProjectsInfo title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;
         })}
