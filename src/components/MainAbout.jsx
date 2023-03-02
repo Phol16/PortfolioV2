@@ -13,7 +13,7 @@ const Educ = [
   {
     title: 'Ateneo de Zamboanga University',
     info: 'Bachelor of Science in Computer Engineering',
-    year: ['2015', '2022'],
+    year: ['2015', '2021'],
   },
   {
     title: 'Technical Education and Skills Development Authority',
