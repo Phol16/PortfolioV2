@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import SkillGroup from './SkillGroup';
-import { programmingLanguage, skills, techStack } from './SkillData';
+import { design, programmingLanguage, repo, skills, techStack } from './SkillData';
 import { heading, subHeading, miniHeading, miniContent, secondaryTextColor, tertiaryTextColor, primaryTextColor, primaryTextColorDark, secondaryTextColorDark, tertiaryTextColorDark } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 
@@ -24,6 +24,10 @@ const Educ = [
 
 const groupSkill = [
   {
+    name:null,
+    information:repo
+  },
+  {
     name: null,
     information: skills,
   },
@@ -34,6 +38,10 @@ const groupSkill = [
   {
     name: 'Tech Stack',
     information: techStack,
+  },
+  {
+    name:'Styling',
+    information:design,
   },
 ];
 
@@ -76,7 +84,7 @@ const MainAbout = () => {
         </div>
         <main className='md:col-span-2 w-fit md:justify-self-center'>
           <h2 className={`${subHeading} ${STextColor}`}>Skills</h2>
-          <section>
+          <section className='grid md:grid-cols-2 gap-4 items-end'>
             {groupSkill.map((details) => {
               return <SkillGroup name={details.name} information={details.information} key={details.name} />;
             })}

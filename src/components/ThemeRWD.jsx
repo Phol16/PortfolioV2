@@ -4,13 +4,14 @@ export const miniHeading = 'text-xs md:text-sm xl:text-base';
 export const miniContent = 'text-xs xl:text-sm p-1';
 
 export const FontSizeIcon = 'text-xl xl:text-2xl p-1';
+export const FontSizeWH = 'w-10 p-1'
 
 export const primaryTextColor = 'text-white';
 export const primaryTextColorDark = 'text-black'
 
 export const secondaryTextColor = 'text-sky-400';
 export const secondaryTextColorDark = 'text-green-600'
-export const tertiaryTextColor = 'text-sky-300';
+export const tertiaryTextColor = 'text-sky-200';
 export const tertiaryTextColorDark = 'text-green-500'
 
 export const primaryBgColor = 'bg-zinc-900';
