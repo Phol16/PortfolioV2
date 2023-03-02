@@ -24,8 +24,8 @@ const Educ = [
 
 const groupSkill = [
   {
-    name:null,
-    information:repo
+    name: null,
+    information: repo,
   },
   {
     name: null,
@@ -40,16 +40,16 @@ const groupSkill = [
     information: techStack,
   },
   {
-    name:'Styling',
-    information:design,
+    name: 'Styling',
+    information: design,
   },
 ];
 
 const MainAbout = () => {
-  const {dark, setDark} = useContext(ThemeContext);
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark
-  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
-  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark
+  const { dark } = useContext(ThemeContext);
+  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark;
+  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark;
 
   return (
     <div className={`${PTextColor} py-10 px-2 flex flex-col items-center gap-5`} id='About'>
@@ -85,8 +85,8 @@ const MainAbout = () => {
         <main className='md:col-span-2 w-fit md:justify-self-center'>
           <h2 className={`${subHeading} ${STextColor}`}>Skills</h2>
           <section className='grid md:grid-cols-2 gap-4 items-end'>
-            {groupSkill.map((details) => {
-              return <SkillGroup name={details.name} information={details.information} key={details.name} />;
+            {groupSkill.map((details, index) => {
+              return <SkillGroup name={details.name} information={details.information} key={index} />;
             })}
           </section>
         </main>

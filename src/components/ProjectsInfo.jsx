@@ -3,13 +3,13 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CarouselImg from './CarouselImg';
-import { subHeading, miniHeading, miniContent, FontSizeIcon, tertiaryTextColor, primaryBgColor, tertiaryTextColorDark, primaryBgColorLight } from './ThemeRWD';
+import { subHeading, miniHeading, miniContent, FASizeIcon, tertiaryTextColor, primaryBgColor, tertiaryTextColorDark, primaryBgColorLight } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 
 const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
-  const {dark, setDark} = useContext(ThemeContext);
-  const BGColor = dark ? primaryBgColor : primaryBgColorLight
-  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark
+  const { dark } = useContext(ThemeContext);
+  const BGColor = dark ? primaryBgColor : primaryBgColorLight;
+  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark;
   const projectButton = [
     {
       icon: faHome,
@@ -23,10 +23,10 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
     },
   ];
   return (
-    <div className={`${BGColor} max-w-md p-5 rounded-md border ${dark ? 'border-white': 'border-black'} flex flex-col justify-between`}>
+    <div className={`${BGColor} max-w-md p-5 rounded-md border ${dark ? 'border-white' : 'border-black'} flex flex-col justify-between`}>
       <main>
         <section className='flex justify-center gap-5 p-5'>
-          {projectButton.map((details) => {
+          {projectButton.map((details, index) => {
             return (
               <button
                 key={details.title}
@@ -35,7 +35,7 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
                   window.open(`${details.redirect}`, '_blank');
                 }}
               >
-                <FontAwesomeIcon icon={details.icon} className={`${FontSizeIcon}`} />
+                <FontAwesomeIcon icon={details.icon} className={`${FASizeIcon}`} />
                 <p className={`${miniContent}`}>{details.title}</p>
               </button>
             );

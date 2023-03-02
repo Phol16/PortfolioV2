@@ -3,8 +3,8 @@ import { ThemeContext } from '../layout/Intro';
 import { miniHeading, miniContent, tertiaryTextColor, tertiaryTextColorDark } from './ThemeRWD';
 
 const SkillGroup = ({ name, information }) => {
-  const {dark, setDark} = useContext(ThemeContext);
-  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark
+  const { dark } = useContext(ThemeContext);
+  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark;
   return (
     <section className='p-2'>
       <h3 className={`${miniHeading} ${TTextColor} ${name ? 'mb-5' : null}`}>{name}</h3>

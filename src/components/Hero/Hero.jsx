@@ -7,11 +7,9 @@ import { primaryTextColor, primaryTextColorDark, secondaryTextColor, secondaryTe
 import style from './style.module.css';
 
 const Hero = () => {
-  const {dark, setDark} = useContext(ThemeContext);
+  const {dark} = useContext(ThemeContext);
   const PTextColor = dark ? primaryTextColor : primaryTextColorDark
   const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
-
-  console.log(dark);
 
   return (
     <div className={`${PTextColor} flex flex-col justify-center items-center h-[80vh]`}>

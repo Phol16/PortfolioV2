@@ -85,9 +85,9 @@ const Information = [
 ];
 
 const MainProjects = () => {
-  const {dark, setDark} = useContext(ThemeContext);
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark
-  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
+  const { dark } = useContext(ThemeContext);
+  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark;
   return (
     <div className={`${PTextColor} my-5 p-5 flex flex-col gap-5`} id='Projects'>
       <h1 className={`${heading} ${STextColor}`}>Projects</h1>

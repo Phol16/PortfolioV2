@@ -1,0 +1,51 @@
+.DhoverFill::after{
+  background-color: var(--DsecondaryBgColor);
+  position: absolute;
+  content: '';
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.DhoverFill:hover::after{
+  transition: 0.5s;
+  right: 0;
+}
+.DhoverFill{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DhoverFill:hover{
+  color: white;
+}
+
+.LhoverFill::after{
+  background-color: var(--LsecondaryBgColor);
+  position: absolute;
+  content: '';
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.LhoverFill:hover::after{
+  transition: 0.5s;
+  right: 0;
+}
+.LhoverFill{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LhoverFill:hover{
+  color: white;
+}

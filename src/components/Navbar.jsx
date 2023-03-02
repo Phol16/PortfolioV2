@@ -8,13 +8,12 @@ import ContactLinks from './ContactLinks';
 import { primaryTextColor, primaryTextColorDark, secondaryBgColor, secondaryBgColorDark } from './ThemeRWD';
 import DarkLight from './DarkLight';
 import { ThemeContext } from '../layout/Intro';
+import FixedNav from './FixedNav';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const {dark} = useContext(ThemeContext)
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark
-  const SBGColor = dark ?secondaryBgColor : secondaryBgColorDark
-
+  const { dark } = useContext(ThemeContext);
+  const SBGColor = dark ? secondaryBgColor : secondaryBgColorDark;
 
   return (
     <>
@@ -50,9 +49,9 @@ const Navbar = () => {
           )}
         </section>
       </div>
-      <div className='fixed bottom-20 right-5 z-10'>
-        <DarkLight />
-      </div>
+      <nav className='fixed bottom-20 right-0 z-10'>
+        <FixedNav />
+      </nav>
     </>
   );
 };

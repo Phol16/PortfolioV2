@@ -1,9 +1,6 @@
 .mainText{
  font-size: 20px;
 }
-#this{
-  color: black;
-}
 .textAnimate{
   display: flex;
   font-size: 20px;
@@ -26,7 +23,7 @@
   content: '';
   position: absolute;
   border-left: 2px solid white;
-  background-color: var(--Dark);
+  background-color: var(--DprimaryBgColor);
   left: 0px;
   height: 28px;
   width: 100%;
@@ -36,7 +33,7 @@
   content: '';
   position: absolute;
   border-left: 2px solid black;
-  background-color: rgb(226 232 240);
+  background-color: var(--LprimaryBgColor);
   left: 0px;
   height: 28px;
   width: 100%;

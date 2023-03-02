@@ -13,8 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --Dark: rgb(24 24 27);
-  --Light: white;
+  --DprimaryBgColor: rgb(24 24 27);
+  --LprimaryBgColor: rgb(226 232 240);
+
+  --DsecondaryBgColor:rgb(7 89 133);
+  --LsecondaryBgColor:rgb(22 101 52);
+
+  --DprimaryTextColor: white;
+  --LprimaryTextColor:black;
 }
 *{
   margin: 0;
