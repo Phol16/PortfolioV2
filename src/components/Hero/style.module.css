@@ -1,6 +1,9 @@
 .mainText{
  font-size: 20px;
 }
+#this{
+  color: black;
+}
 .textAnimate{
   display: flex;
   font-size: 20px;
@@ -19,11 +22,11 @@
 .dynamicText li span {
   position: relative;
 }
-.dynamicText li span::after {
+.dark::after {
   content: '';
   position: absolute;
   border-left: 2px solid white;
-  background-color: #242424;
+  background-color: var(--Dark);
   left: 0px;
   height: 28px;
   width: 100%;

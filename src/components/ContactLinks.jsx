@@ -4,7 +4,7 @@ import React from 'react'
 
 const ContactLinks = () => {
   return (
-    <div className='text-2xl gap-2 flex md:text-4xl'>
+    <div className='text-2xl md:text-4xl gap-2 flex '>
       <button className='bg-transparent hover:scale-125 transition-all duration-[150ms] focus:outline-none' onClick={()=>{window.open('https://github.com/Phol16', '_blank')}}>
       <FontAwesomeIcon icon={faGithub}/>
       </button>
