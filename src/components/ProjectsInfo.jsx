@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CarouselImg from './CarouselImg';
-import { subHeading, miniHeading, miniContent, FontSizeIcon, tertiaryTextColor, primaryBgColor } from './ThemeRWD';
+import { subHeading, miniHeading, miniContent, FontSizeIcon, tertiaryTextColor, primaryBgColor, tertiaryTextColorDark, primaryBgColorLight } from './ThemeRWD';
+import { ThemeContext } from '../layout/Intro';
 
 const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
+  const {dark, setDark} = useContext(ThemeContext);
+  const BGColor = dark ? primaryBgColor : primaryBgColorLight
+  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark
   const projectButton = [
     {
       icon: faHome,
@@ -19,7 +23,7 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
     },
   ];
   return (
-    <div className={`${primaryBgColor} max-w-md p-5 rounded-md border border-sky-400 flex flex-col justify-between`}>
+    <div className={`${BGColor} max-w-md p-5 rounded-md border ${dark ? 'border-white': 'border-black'} flex flex-col justify-between`}>
       <main>
         <section className='flex justify-center gap-5 p-5'>
           {projectButton.map((details) => {
@@ -45,7 +49,7 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
           ) : (
             <h2 className={`${subHeading}`}>{title}</h2>
           )}
-          <section className={`${miniHeading} ${tertiaryTextColor}`}>{tech}</section>
+          <section className={`${miniHeading} ${TTextColor}`}>{tech}</section>
           <p className={`${miniContent}`}>{description}</p>
         </article>
       </main>

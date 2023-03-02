@@ -1,44 +1,48 @@
-import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
-import { faArrowDown, faArrowDown19, faArrowDownShortWide, faArrowDownUpAcrossLine, faArrowDownUpLock, faArrowsDownToLine, faArrowTrendDown, faArrowTurnDown, faCloudArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../../layout/Intro';
 import ContactLinks from '../ContactLinks';
-import { primaryTextColor, secondaryTextColor } from '../ThemeRWD';
+import { primaryTextColor, primaryTextColorDark, secondaryTextColor, secondaryTextColorDark } from '../ThemeRWD';
 import style from './style.module.css';
 
-
 const Hero = () => {
-  const [dynamicColor, setDynamicColor]=useState(style.dark)
+  const {dark, setDark} = useContext(ThemeContext);
+  const PTextColor = dark ? primaryTextColor : primaryTextColorDark
+  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
+
+  console.log(dark);
+
   return (
-    <div className={`${primaryTextColor} flex flex-col justify-center items-center h-[80vh]`}>
+    <div className={`${PTextColor} flex flex-col justify-center items-center h-[80vh]`}>
       <h1 className={style.mainText}>
-        Hi ! My name is <span className={secondaryTextColor}>Phol</span>
+        Hi ! My name is <span className={STextColor}>Phol</span>
       </h1>
       <div className={style.textAnimate}>
         I am a
-        <span className='text-sky-400'>
+        <span className={STextColor}>
           <ul className={style.dynamicText}>
             <li>
-              <span className={dynamicColor}>Programmer</span>
+              <span className={dark ? style.dark : style.light}>Programmer</span>
             </li>
             <li>
-              <span className={dynamicColor}>Web Developer</span>
+              <span className={dark ? style.dark : style.light}>Web Developer</span>
             </li>
             <li>
-              <span className={dynamicColor}>Computer Gamer</span>
+              <span className={dark ? style.dark : style.light}>Computer Gamer</span>
             </li>
             <li>
-              <span className={dynamicColor}>Movie Enthusiast</span>
+              <span className={dark ? style.dark : style.light}>Movie Enthusiast</span>
             </li>
           </ul>
         </span>
       </div>
-      <ContactLinks/>
+      <ContactLinks />
       <div className='relative top-[30%] '>
-        <a href="#About">
-        <button className='bg-transparent focus:outline-none hover:scale-125 transition-all duration-[300ms] hover:text-sky-400 text-white'>
-        <FontAwesomeIcon icon={faArrowDown} className='text-xl animate-bounce'/>
-        </button>
+        <a href='#About'>
+          <button className={`${PTextColor} bg-transparent focus:outline-none hover:scale-125 transition-all duration-[300ms] `}>
+            <FontAwesomeIcon icon={faArrowDown} className='text-xl animate-bounce' />
+          </button>
         </a>
       </div>
     </div>

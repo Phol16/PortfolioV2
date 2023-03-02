@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ProjectsInfo from './ProjectsInfo';
-import { heading, secondaryTextColor, primaryTextColor } from './ThemeRWD';
+import { heading, secondaryTextColor, primaryTextColor, primaryTextColorDark, secondaryTextColorDark } from './ThemeRWD';
 import movienotepad0 from '../assets/movienotepad/movienotepad0.png';
 import movienotepad1 from '../assets/movienotepad/movienotepad1.png';
 import movienotepad2 from '../assets/movienotepad/movienotepad2.png';
@@ -19,6 +19,7 @@ import eatstagram2 from '../assets/eatstagram/eatstagram2.png';
 import weatherapp0 from '../assets/weatherapp/weatherApp0.png';
 import weatherapp1 from '../assets/weatherapp/weatherApp1.png';
 import weatherapp2 from '../assets/weatherapp/weatherApp2.png';
+import { ThemeContext } from '../layout/Intro';
 
 const Information = [
   {
@@ -84,9 +85,12 @@ const Information = [
 ];
 
 const MainProjects = () => {
+  const {dark, setDark} = useContext(ThemeContext);
+  const PTextColor = dark ? primaryTextColor : primaryTextColorDark
+  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
   return (
-    <div className={`${primaryTextColor} my-5 p-5 flex flex-col gap-5`} id='Projects'>
-      <h1 className={`${heading} ${secondaryTextColor}`}>Projects</h1>
+    <div className={`${PTextColor} my-5 p-5 flex flex-col gap-5`} id='Projects'>
+      <h1 className={`${heading} ${STextColor}`}>Projects</h1>
       <main className='grid sm:grid-cols-2 xl:grid-cols-3 gap-5 self-center p-2'>
         {Information.map((Details) => {
           return <ProjectsInfo key={Details.title} title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;
