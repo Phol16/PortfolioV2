@@ -5,6 +5,7 @@ import DarkLight from './DarkLight';
 import { FASizeIcon, primaryTextColor, primaryTextColorDark } from './ThemeRWD';
 import hover from './style/Hover.module.css';
 import { ThemeContext } from '../layout/Intro';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const contact = [
   {
@@ -22,11 +23,16 @@ const FixedNav = () => {
   const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
   return (
     <div className='flex flex-col gap-2'>
+      <a href='#Top' className={`${PTextColor} hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}>
+        <button className='bg-transparent focus:outline-none'>
+          <FontAwesomeIcon icon={faHome} className={FASizeIcon} />
+        </button>
+      </a>
       {contact.map((details) => {
         return (
           <button
             key={details.redirect}
-            className={`${PTextColor} bg-transparent hover:scale-125 transition-all duration-[150ms] focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}
+            className={`${PTextColor} bg-transparent hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}
             onClick={() => {
               window.open(details.redirect, '_blank');
             }}

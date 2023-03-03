@@ -11,7 +11,7 @@ const DarkLight = () => {
 
   return (
     <button
-      className={`${PTextColor} flex justify-center bg-transparent focus:outline-none hover:scale-125 transtion-all duration-[150ms] w-[60px] ${dark ? hover.DhoverFill : hover.LhoverFill}`}
+      className={`${PTextColor} bg-transparent focus:outline-none hover:scale-125 w-[60px] ${dark ? hover.DhoverFill : hover.LhoverFill}`}
       onClick={() => {
         setDark(!dark);
       }}
