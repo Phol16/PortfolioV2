@@ -5,10 +5,10 @@ import Logo from '../assets/svg/Logo';
 import NavButton from './NavButton';
 import PDF from '../assets/Lim_Pholibert_CV.pdf';
 import ContactLinks from './ContactLinks';
-import { primaryTextColor, primaryTextColorDark, secondaryBgColor, secondaryBgColorDark } from './ThemeRWD';
-import DarkLight from './DarkLight';
+import { secondaryBgColor, secondaryBgColorDark } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 import FixedNav from './FixedNav';
+import dropdown from './style/DropDown.module.css'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`${SBGColor} p-5 flex justify-between w-full items-center`} id='Top'>
+      <div className={`${SBGColor} p-5 flex justify-between w-full items-center z-30`} id='Top'>
         <Logo />
         <nav className=' gap-5 pr-2 hidden md:flex'>
           <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
@@ -33,8 +33,10 @@ const Navbar = () => {
           >
             <FontAwesomeIcon icon={faHamburger} className='text-3xl hover:scale-125 transition-all duration-[150ms]' />
           </button>
-          {open && (
-            <nav className={`${SBGColor} text-white flex flex-col items-center gap-5 pt-5 absolute right-2 top-[98px] rounded-md w-40 z-20`}>
+        </section>
+      </div>
+          
+            <nav className={`${SBGColor} text-white flex flex-col md:hidden items-center gap-5 pt-5 absolute right-2 rounded-md w-40 z-20 ${open ? dropdown.dropDownOpen : dropdown.dropDownClose}`}>
               <h1 className='text-xl'>Phol</h1>
               <main className='flex flex-col justify-center items-center gap-3 py-20'>
                 <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
@@ -46,9 +48,7 @@ const Navbar = () => {
                 <p className='text-xs'>pholibertlim@gmail.com</p>
               </section>
             </nav>
-          )}
-        </section>
-      </div>
+
       <nav className='fixed bottom-20 right-0 z-10'>
         <FixedNav />
       </nav>

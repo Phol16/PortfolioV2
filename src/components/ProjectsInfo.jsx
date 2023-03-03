@@ -23,9 +23,9 @@ const ProjectsInfo = ({ title, tech, description, image, demo, source }) => {
     },
   ];
   return (
-    <div className={`${BGColor} max-w-md p-5 rounded-md border ${dark ? 'border-white' : 'border-black'} flex flex-col justify-between`}>
+    <div className={`${BGColor} max-w-md p-2 rounded-md border ${dark ? 'border-white' : 'border-black'} flex flex-col justify-between`}>
       <main>
-        <section className='flex justify-center gap-5 p-5'>
+        <section className='flex justify-center gap-5 py-4'>
           {projectButton.map((details, index) => {
             return (
               <button
