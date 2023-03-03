@@ -8,7 +8,6 @@ import ContactLinks from './ContactLinks';
 import { secondaryBgColor, secondaryBgColorDark } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 import FixedNav from './FixedNav';
-import dropdown from './style/DropDown.module.css'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +35,7 @@ const Navbar = () => {
         </section>
       </div>
           
-            <nav className={`${SBGColor} text-white flex flex-col md:hidden items-center gap-5 pt-5 absolute right-2 rounded-md w-40 z-20 ${open ? dropdown.dropDownOpen : dropdown.dropDownClose}`}>
+            <nav className={`${SBGColor} text-white flex flex-col md:hidden items-center gap-5 pt-5 absolute right-2 rounded-md w-40 z-20 ${open ? 'top-[98px]' : 'top-[-100%]'}`}>
               <h1 className='text-xl'>Phol</h1>
               <main className='flex flex-col justify-center items-center gap-3 py-20'>
                 <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />

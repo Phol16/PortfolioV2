@@ -20,6 +20,7 @@
   position: relative;
 }
 .dark::after {
+  transition: 500ms;
   content: '';
   position: absolute;
   border-left: 2px solid white;
@@ -30,6 +31,7 @@
   animation: typing steps(16) infinite 2s;
 }
 .light::after {
+  transition: 500ms;
   content: '';
   position: absolute;
   border-left: 2px solid black;

@@ -1,8 +1,0 @@
-.dropDownOpen{
-  transition: 1s;
-  top: 98px;
-}
-.dropDownClose{
-  top: -100%;
-  transition: 2s;
-}

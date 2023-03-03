@@ -9,12 +9,12 @@ export const SVGSizeWH = 'w-10 p-1';
 export const primaryTextColor = 'text-white';
 export const primaryTextColorDark = 'text-black';
 
-export const secondaryTextColor = 'text-sky-400';
-export const secondaryTextColorDark = 'text-green-700';
-export const tertiaryTextColor = 'text-sky-200';
-export const tertiaryTextColorDark = 'text-green-500';
+export const secondaryTextColor = 'text-sky-400 duration-[200ms]';
+export const secondaryTextColorDark = 'text-green-700 duration-[200ms]';
+export const tertiaryTextColor = 'text-sky-200 duration-[200ms]';
+export const tertiaryTextColorDark = 'text-green-500 duration-[200ms]';
 
-export const primaryBgColor = 'bg-zinc-900';
-export const primaryBgColorLight = 'bg-slate-200';
-export const secondaryBgColor = 'bg-sky-800';
-export const secondaryBgColorDark = 'bg-green-800';
+export const primaryBgColor = 'bg-zinc-900 duration-[500ms]';
+export const primaryBgColorLight = 'bg-slate-200 duration-[500ms]';
+export const secondaryBgColor = 'bg-sky-800 duration-[500ms] ';
+export const secondaryBgColorDark = 'bg-green-800 duration-[500ms]';
