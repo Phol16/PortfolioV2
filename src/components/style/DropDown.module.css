@@ -1,27 +1,8 @@
 .dropDownOpen{
-  position: relative;
+  transition: 1s;
   top: 98px;
-  animation: visible 0.5s ease ;
 }
 .dropDownClose{
-  position: relative;
   top: -100%;
-  animation: hidden 1s ease;
-}
-
-@keyframes visible{
-  0%{
-    top: -100%;
-  }
-  100%{
-    top: 98px;
-  }
-}
-@keyframes hidden{
-  0%{
-    top: 98px;
-  }
-  100%{
-    top: -100%;
-  }
+  transition: 2s;
 }
