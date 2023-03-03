@@ -10,7 +10,6 @@ const Hero = () => {
   const {dark} = useContext(ThemeContext);
   const PTextColor = dark ? primaryTextColor : primaryTextColorDark
   const STextColor = dark ? secondaryTextColor : secondaryTextColorDark
-
   return (
     <div className={`${PTextColor} flex flex-col justify-center items-center h-[80vh]`}>
       <h1 className={style.mainText}>

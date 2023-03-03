@@ -9,6 +9,7 @@ const DarkLight = () => {
   const { dark, setDark } = useContext(ThemeContext);
   const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
 
+  localStorage.setItem('Mode', dark)
   return (
     <button
       className={`${PTextColor} bg-transparent focus:outline-none hover:scale-125 w-[60px] ${dark ? hover.DhoverFill : hover.LhoverFill}`}

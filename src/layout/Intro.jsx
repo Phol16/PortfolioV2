@@ -7,7 +7,11 @@ import { primaryBgColor, primaryBgColorLight } from '../components/ThemeRWD';
 export const ThemeContext = createContext({dark:true});
 
 const Intro = () => {
-  const [dark, setDark] = useState(true);
+  const local = localStorage.getItem('Mode')
+
+  const value = local !== 'true' ? false : true
+  const [dark, setDark] = useState( local === null ? true : value );
+  console.log(dark);
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>
