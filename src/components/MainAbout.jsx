@@ -24,11 +24,11 @@ const Educ = [
 
 const groupSkill = [
   {
-    name: null,
+    name: 'Version Control System',
     information: repo,
   },
   {
-    name: null,
+    name: 'Web Development',
     information: skills,
   },
   {

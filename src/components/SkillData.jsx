@@ -94,6 +94,10 @@ export const design = [
 
 export const repo = [
   {
+    icon: <FontAwesomeIcon icon={faGitAlt} className={`${FASizeIcon} text-orange-500`} />,
+    name: 'Git',
+  },
+  {
     icon: <FontAwesomeIcon icon={faGithub} className={`${FASizeIcon}`} />,
     name: 'GitHub',
   },
