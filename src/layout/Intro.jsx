@@ -15,9 +15,9 @@ const Intro = () => {
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>
-      <div className={`${dark ? primaryBgColor : primaryBgColorLight}`}>
+      <div className={`${dark ? primaryBgColor : primaryBgColorLight} `}>
         <Navbar />
-        <main className='mb-10'>
+        <main className='pb-10'>
           <Outlet />
         </main>
         <Footer />
