@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ProjectsInfo from './ProjectsInfo';
-import { heading, secondaryTextColor, primaryTextColor, primaryTextColorDark, secondaryTextColorDark } from './ThemeRWD';
+import { Theading, secondaryTextColor, primaryTextColor, primaryTextColorDark, secondaryTextColorDark } from './ThemeRWD';
 import movienotepad0 from '../assets/movienotepad/movienotepad0.png';
 import movienotepad1 from '../assets/movienotepad/movienotepad1.png';
 import movienotepad2 from '../assets/movienotepad/movienotepad2.png';
@@ -90,7 +90,7 @@ const MainProjects = () => {
   const STextColor = dark ? secondaryTextColor : secondaryTextColorDark;
   return (
     <div className={`${PTextColor} my-5 p-5 flex flex-col gap-5`} id='Projects'>
-      <h1 className={`${heading} ${STextColor}`}>Projects</h1>
+      <h1 className={`${Theading} ${STextColor}`}>Projects</h1>
       <main className='grid sm:grid-cols-2 xl:grid-cols-3 gap-5 self-center p-2'>
         {Information.map((Details) => {
           return <ProjectsInfo key={Details.title} title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;

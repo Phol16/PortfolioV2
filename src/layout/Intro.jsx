@@ -11,7 +11,7 @@ const Intro = () => {
 
   const value = local !== 'true' ? false : true
   const [dark, setDark] = useState( local === null ? true : value );
-  console.log(dark);
+
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>

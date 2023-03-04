@@ -1,7 +1,7 @@
-export const heading = 'text-lg md:text-xl xl:text-2xl font-extrabold';
-export const subHeading = 'text-base md:text-lg xl:text-xl font-bold';
-export const miniHeading = 'text-xs md:text-sm xl:text-base font-semibold';
-export const miniContent = 'text-xs xl:text-sm p-1 font-normal';
+export const Theading = 'text-lg md:text-xl xl:text-2xl font-bold';
+export const TsubHeading = 'text-base md:text-lg xl:text-xl font-semi-bold';
+export const TminiHeading = 'text-xs md:text-sm xl:text-base font-medium';
+export const TminiContent = 'text-xs xl:text-sm p-1 font-normal';
 
 export const FASizeIcon = 'text-xl xl:text-2xl p-1';
 export const SVGSizeWH = 'w-10 p-1';
