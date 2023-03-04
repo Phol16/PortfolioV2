@@ -55,7 +55,7 @@ const MainAbout = () => {
     <div className={`${PTextColor} py-10 px-2 flex flex-col m-auto gap-5 max-w-md md:max-w-xl xl:max-w-7xl`} id='About'>
       <main className='max-w-4xl m-auto'>
         <h1 className={`${Theading} ${STextColor}`}>About Me</h1>
-        <p className='m-auto p-1 text-xs md:text-sm xl:text-base '>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, Express JS, React Js, and Node JS to build dynamic and engaging web applications.</p>
+        <p className={`${TsubHeading} m-auto p-1 `}>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, Express JS, React Js, and Node JS to build dynamic and engaging web applications.</p>
       </main>
       <section className='flex flex-col justify-center items-center gap-5'>
         <article className='grid md:grid-cols-2 gap-5 md:gap-10 p-2'>

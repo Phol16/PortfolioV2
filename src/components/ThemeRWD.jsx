@@ -1,5 +1,5 @@
 export const Theading = 'text-lg md:text-xl xl:text-2xl font-bold';
-export const TsubHeading = 'text-base md:text-lg xl:text-xl font-semi-bold';
+export const TsubHeading = 'text-base md:text-lg xl:text-xl font-medium';
 export const TminiHeading = 'text-xs md:text-sm xl:text-base font-medium';
 export const TminiContent = 'text-xs xl:text-sm p-1 font-normal';
 
