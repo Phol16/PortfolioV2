@@ -3,7 +3,7 @@ export const TsubHeading = 'text-base md:text-lg xl:text-xl font-semi-bold';
 export const TminiHeading = 'text-xs md:text-sm xl:text-base font-medium';
 export const TminiContent = 'text-xs xl:text-sm p-1 font-normal';
 
-export const FASizeIcon = 'text-xl xl:text-2xl p-1';
+export const FASizeIcon = 'text-xl xl:text-3xl p-1';
 export const SVGSizeWH = 'w-10 p-1';
 
 export const primaryTextColor = 'text-white';
