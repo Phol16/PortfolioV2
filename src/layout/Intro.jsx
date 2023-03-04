@@ -15,9 +15,9 @@ const Intro = () => {
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>
-      <div className={`${dark ? primaryBgColor : primaryBgColorLight} flex flex-col items-center`}>
+      <div className={`${dark ? primaryBgColor : primaryBgColorLight}`}>
         <Navbar />
-        <main className='flex justify-center items-center overflow-auto mb-10'>
+        <main className='mb-10'>
           <Outlet />
         </main>
         <Footer />
