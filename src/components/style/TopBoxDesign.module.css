@@ -1,0 +1,26 @@
+@media only screen and (min-width: 768px) {
+  .Dbox::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-top: solid white 1px;
+    border-right: solid white 1px;
+    border-top-right-radius: 10px;
+    align-self: end;
+    top: -2rem;
+    right: -2rem;
+  }
+  .Lbox::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-top: solid black 1px;
+    border-right: solid black 1px;
+    border-top-right-radius: 10px;
+    align-self: end;
+    top: -2rem;
+    right: -2rem;
+  }
+}

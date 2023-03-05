@@ -4,13 +4,16 @@ import { ThemeFormat } from './ThemeFormat';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../layout/Intro';
+import ContactLinks from './ContactLinks';
+import topBoxDesign from './style/TopBoxDesign.module.css'
 
 const Hero = () => {
   const { dark } = useContext(ThemeContext);
   const { primaryDColorText, primaryLColorText, secondaryDColorText, secondaryLColorText, tertiaryDColorText, tertiaryLColorText, DMain, DSub, DMini } = ThemeFormat;
+
   return (
-    <div className={`${dark ? primaryDColorText : primaryLColorText} h-[85vh] flex flex-col justify-center p-1`}>
-      <article className=' flex flex-col gap-2 m-auto'>
+    <div className={`${dark ? primaryDColorText : primaryLColorText} h-[85vh] flex flex-col justify-center p-1 `}>
+      <article className={`relative flex flex-col gap-2 m-auto ${dark? topBoxDesign.Dbox: topBoxDesign.Lbox}`}>
         <h1 className={`${DMain}`}>
           Hi ! My name is <span className={`${dark ? secondaryDColorText : secondaryLColorText}`}>Phol</span>
         </h1>
@@ -27,6 +30,7 @@ const Hero = () => {
           </h2>
           <p className={`${DMini} ${dark ? tertiaryDColorText : tertiaryLColorText} max-w-xs md:max-w-[400px]`}>I am a MERN stack developer. I am knowledgeable in creating front-end and back-end and I am eager to learn more advance technologies</p>
         </section>
+        <ContactLinks />
       </article>
       <div className=' relative w-fit animate-bounce bottom '>
         <a href='#Projects' className='flex flex-col gap-4 hover:scale-125'>
