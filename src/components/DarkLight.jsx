@@ -2,12 +2,13 @@ import { faCloudMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../layout/Intro';
-import { FASizeIcon, primaryTextColor, primaryTextColorDark } from './ThemeRWD';
 import hover from './style/Hover.module.css';
+import { ThemeFormat } from './ThemeFormat';
 
 const DarkLight = () => {
   const { dark, setDark } = useContext(ThemeContext);
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const {primaryDColorText , primaryLColorText, FASizeIcon}=ThemeFormat
+  const PTextColor = dark ? primaryDColorText : primaryLColorText;
 
   localStorage.setItem('Mode', dark)
   return (

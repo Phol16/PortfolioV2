@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import SkillGroup from './SkillGroup';
 import { design, programmingLanguage, repo, skills, techStack } from './SkillData';
-import { Theading, TsubHeading, TminiHeading, TminiContent, secondaryTextColor, tertiaryTextColor, primaryTextColor, primaryTextColorDark, secondaryTextColorDark, tertiaryTextColorDark } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
-import { ThemeFormat } from './ThemeFormat';
+import  {ThemeFormat}  from './ThemeFormat';
 
 const Educ = [
   {
@@ -48,13 +47,12 @@ const groupSkill = [
 
 const MainAbout = () => {
   const { dark } = useContext(ThemeContext);
-  const {Theading, primaryDColorText, primaryLColorText,secondaryDColorText, secondaryLColorText} = ThemeFormat
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
-  const STextColor = dark ? secondaryTextColor : secondaryTextColorDark;
-  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark;
+  const {Theading, primaryDColorText, primaryLColorText,secondaryDColorText, secondaryLColorText, TsubHeading} = ThemeFormat
+  const PTextColor = dark ? primaryDColorText : primaryLColorText;
+  const STextColor = dark ? secondaryDColorText : secondaryLColorText;
 
   return (
-    <div className={`${dark ? primaryDColorText : primaryLColorText} flex flex-col py-10 max-w-fit m-auto gap-10`} id='About'>
+    <div className={`${PTextColor} flex flex-col py-10 max-w-fit m-auto gap-10`} id='About'>
       <main className='max-w-4xl m-auto'>
         <h1 className={`${Theading} ${STextColor}`}>About Me</h1>
         <p className={`${TsubHeading} m-auto p-2 `}>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, Express JS, React Js, and Node JS to build dynamic and engaging web applications. I am also eager to learn other technologies as well.</p>

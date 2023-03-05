@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import typing from './style/Typing.module.css';
-import { ThemeFormat } from './ThemeFormat';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../layout/Intro';
 import ContactLinks from './ContactLinks';
 import topBoxDesign from './style/TopBoxDesign.module.css'
+import { ThemeFormat } from './ThemeFormat';
 
 const Hero = () => {
   const { dark } = useContext(ThemeContext);

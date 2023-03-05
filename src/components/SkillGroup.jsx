@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../layout/Intro';
-import { TminiHeading, TminiContent, tertiaryTextColor, tertiaryTextColorDark } from './ThemeRWD';
+import { ThemeFormat } from './ThemeFormat';
 
 const SkillGroup = ({ name, information }) => {
   const { dark } = useContext(ThemeContext);
-  const TTextColor = dark ? tertiaryTextColor : tertiaryTextColorDark;
+  const {tertiaryDColorText, tertiaryLColorText, TminiHeading, TminiContent}= ThemeFormat
+  const TTextColor = dark ? tertiaryDColorText : tertiaryLColorText;
   return (
     <section className='p-1 self-end'>
       <h3 className={`${TminiHeading} ${TTextColor} ${name ? 'mb-5' : null}`}>{name}</h3>
