@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { ThemeFormat } from '../components/ThemeFormat';
+import ConnectingPage from '../pages/ConnectingPage';
 
 export const ThemeContext = createContext({dark:true});
 
@@ -11,19 +12,27 @@ const Intro = () => {
 
   const value = local !== 'true' ? false : true
   const [dark, setDark] = useState( local === null ? true : value );
+  const [load, setLoad] = useState(false)
 
   const{primaryBGDark, primaryBGLight}=ThemeFormat
+   const BG = dark ? primaryBGDark : primaryBGLight
 
+   setTimeout(() => {
+    setLoad(true)
+   }, 2000);
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>
-      <div className={`${dark ? primaryBGDark : primaryBGLight} `}>
+      {load ?
+      <div className={`${BG}`}>
         <Navbar />
         <main className='pb-10'>
           <Outlet />
         </main>
         <Footer />
       </div>
+      : <ConnectingPage/>
+}
     </ThemeContext.Provider>
   );
 };
