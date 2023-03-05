@@ -37,7 +37,7 @@ const Navbar = () => {
       </div>
       <nav className={`${SBGColor} text-white flex flex-col md:hidden items-center gap-5 pt-5 absolute right-2 rounded-md w-40 z-20 ${open ? 'top-[98px]' : 'top-[-100%]'}`}>
         <h1 className='text-xl'>Phol</h1>
-        <main className='flex flex-col justify-center items-center gap-3 py-20'>
+        <main className='flex flex-col gap-3 py-20'>
           <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
           <NavButton redirect={'#About'} icon={<FontAwesomeIcon icon={faInfoCircle} />} text={'About Me'} />
           <NavButton redirect={'#Projects'} icon={<FontAwesomeIcon icon={faProjectDiagram} />} text={'Projects'} />
