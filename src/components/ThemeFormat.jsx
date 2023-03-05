@@ -1,6 +1,6 @@
 export const ThemeFormat = {
-  primaryBGDark: 'bg-zinc-800',
-  primaryBGLight: 'bg-slate-200',
+  primaryBGDark: 'bg-zinc-800 duration-[200ms]',
+  primaryBGLight: 'bg-slate-200 duration-[200ms]',
 
   secondaryBgDark: 'bg-sky-800',
   secondaryBgLight: 'bg-green-800',
@@ -17,8 +17,11 @@ export const ThemeFormat = {
   DSub: 'font-semibold text-sm md:text-lg',
   DMini: 'font-medium text-xs',
 
-  Theading: 'text-lg md:text-xl xl:text-2xl font-bold',
-  TsubHeading: 'text-sm md:text-base xl:text-lg font-medium',
+  Theading: 'text-xl md:text-2xl xl:text-4xl font-bold',
+  TsubHeading: 'text-lg md:text-xl xl:text-2xl font-semibold',
   TminiHeading: 'text-xs md:text-sm xl:text-base font-medium',
   TminiContent: 'text-xs xl:text-sm p-1 font-medium',
+
+  FASizeIcon: 'text-xl xl:text-2xl p-1',
+  SVGSizeIcon: 'w-10 p-1',
 };
