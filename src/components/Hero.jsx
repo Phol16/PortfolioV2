@@ -14,8 +14,8 @@ const Hero = () => {
         <h1 className={`${DMain}`}>
           Hi ! My name is <span className={`${dark ? secondaryDColorText : secondaryLColorText}`}>Phol</span>
         </h1>
-        <section className=' flex flex-col gap-1'>
-          <h2 className={`${DSub} ${dark ? tertiaryDColorText : tertiaryLColorText} ${typing.List}`}>
+        <section className=' flex flex-col gap-1 px-2'>
+          <h2 className={`${DSub} ${dark ? secondaryDColorText : secondaryLColorText} ${typing.List}`}>
             <ul>
               <li>
                 <span className={dark ? typing.Dark : typing.Light}>Full-stack developer</span>
@@ -28,11 +28,11 @@ const Hero = () => {
           <p className={`${DMini} ${dark ? tertiaryDColorText : tertiaryLColorText} max-w-xs md:max-w-[400px]`}>I am a MERN stack developer. I am knowledgeable in creating front-end and back-end and I am eager to learn more advance technologies</p>
         </section>
       </article>
-      <div className=' relative w-fit animate-bounce bottom'>
-        <a href="#Projects" className='flex flex-col gap-4'>
-        <p className='transform rotate-[270deg] text-xs font-medium'>Go Down</p>
-        <FontAwesomeIcon icon={faCaretDown} />
-      </a>
+      <div className=' relative w-fit animate-bounce bottom '>
+        <a href='#Projects' className='flex flex-col gap-4 hover:scale-125'>
+          <p className='transform rotate-[270deg] text-xs font-medium'>Go Down</p>
+          <FontAwesomeIcon icon={faCaretDown} className='' />
+        </a>
       </div>
     </div>
   );
