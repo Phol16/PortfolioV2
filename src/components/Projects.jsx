@@ -76,7 +76,7 @@ const Projects = () => {
   const { dark } = useContext(ThemeContext);
   const {Theading, primaryDColorText, primaryLColorText,secondaryDColorText, secondaryLColorText} = ThemeFormat
   return (
-    <div className={`${dark ? primaryDColorText : primaryLColorText} flex flex-col py-5 max-w-fit m-auto gap-10`} id='Projects'>
+    <div className={`${dark ? primaryDColorText : primaryLColorText} flex flex-col py-10 max-w-fit m-auto gap-10`} id='Projects'>
       <h1 className={`${Theading} ${dark ? secondaryDColorText: secondaryLColorText}`}>Projects</h1>
       <main className='grid gap-5 justify-center items-center lg:grid-cols-2 gap-5 w-fit self-center'>
       {Information.map((Details) => {

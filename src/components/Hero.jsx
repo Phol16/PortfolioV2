@@ -9,7 +9,7 @@ const Hero = () => {
   const { dark } = useContext(ThemeContext);
   const { primaryDColorText, primaryLColorText, secondaryDColorText, secondaryLColorText, tertiaryDColorText, tertiaryLColorText, DMain, DSub, DMini } = ThemeFormat;
   return (
-    <div className={`${dark ? primaryDColorText : primaryLColorText} h-[80vh] flex flex-col justify-center p-1`}>
+    <div className={`${dark ? primaryDColorText : primaryLColorText} h-[85vh] flex flex-col justify-center p-1`}>
       <article className=' flex flex-col gap-2 m-auto'>
         <h1 className={`${DMain}`}>
           Hi ! My name is <span className={`${dark ? secondaryDColorText : secondaryLColorText}`}>Phol</span>
@@ -29,7 +29,7 @@ const Hero = () => {
         </section>
       </article>
       <div className=' relative w-fit animate-bounce bottom'>
-        <a href="#About" className='flex flex-col gap-4'>
+        <a href="#Projects" className='flex flex-col gap-4'>
         <p className='transform rotate-[270deg] text-xs font-medium'>Go Down</p>
         <FontAwesomeIcon icon={faCaretDown} />
       </a>
