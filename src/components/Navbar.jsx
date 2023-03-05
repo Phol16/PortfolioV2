@@ -5,15 +5,15 @@ import Logo from '../assets/svg/Logo';
 import NavButton from './NavButton';
 import PDF from '../assets/Lim_Pholibert_CV.pdf';
 import ContactLinks from './ContactLinks';
-import { primaryTextColor, primaryTextColorDark, secondaryBgColor, secondaryBgColorDark } from './ThemeRWD';
 import { ThemeContext } from '../layout/Intro';
 import FixedNav from './FixedNav';
+import { ThemeFormat } from './ThemeFormat';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { dark } = useContext(ThemeContext);
-  const SBGColor = dark ? secondaryBgColor : secondaryBgColorDark;
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const {secondaryBgDark, secondaryBgLight}= ThemeFormat
+  const SBGColor = dark ? secondaryBgDark : secondaryBgLight;
 
   return (
     <>

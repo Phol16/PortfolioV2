@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../layout/Intro';
-import { primaryTextColor, primaryTextColorDark } from './ThemeRWD';
+import { ThemeFormat } from './ThemeFormat';
 
 const Footer = () => {
   const { dark } = useContext(ThemeContext);
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const {primaryDColorText, primaryLColorText}=ThemeFormat
+  const PTextColor = dark ? primaryDColorText : primaryLColorText;
 
   return (
     <div className={`${PTextColor} absolute bottom-1 text-sm w-full flex items-center hidden sm:flex`}>

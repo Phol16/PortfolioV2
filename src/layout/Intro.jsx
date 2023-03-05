@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { primaryBgColor, primaryBgColorLight } from '../components/ThemeRWD';
+import { ThemeFormat } from '../components/ThemeFormat';
 
 export const ThemeContext = createContext({dark:true});
 
@@ -12,10 +12,12 @@ const Intro = () => {
   const value = local !== 'true' ? false : true
   const [dark, setDark] = useState( local === null ? true : value );
 
+  const{primaryBGDark, primaryBGLight}=ThemeFormat
+
 
   return (
     <ThemeContext.Provider value={{dark, setDark}}>
-      <div className={`${dark ? primaryBgColor : primaryBgColorLight} `}>
+      <div className={`${dark ? primaryBGDark : primaryBGLight} `}>
         <Navbar />
         <main className='pb-10'>
           <Outlet />

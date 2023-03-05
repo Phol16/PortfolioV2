@@ -2,10 +2,10 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import DarkLight from './DarkLight';
-import { FASizeIcon, primaryTextColor, primaryTextColorDark } from './ThemeRWD';
 import hover from './style/Hover.module.css';
 import { ThemeContext } from '../layout/Intro';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { ThemeFormat } from './ThemeFormat';
 
 const contact = [
   {
@@ -20,7 +20,8 @@ const contact = [
 
 const FixedNav = () => {
   const { dark } = useContext(ThemeContext);
-  const PTextColor = dark ? primaryTextColor : primaryTextColorDark;
+  const {primaryDColorText, primaryLColorText, FASizeIcon}=ThemeFormat
+  const PTextColor = dark ? primaryDColorText : primaryLColorText;
   return (
     <div className='flex flex-col gap-2'>
       <a href='#Top' className={`${PTextColor} hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}>
