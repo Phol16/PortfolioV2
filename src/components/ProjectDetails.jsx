@@ -23,8 +23,8 @@ const ProjectDetails = ({ title, tech, description, image, demo, source }) => {
   ];
 
   return (
-    <div className={`flex items-center flex-col md:flex-row p-1 justify-self-end`}>
-      <article className={`flex flex-col justify-center items-center gap-2 relative md:left-5 z-10`}>
+    <div className={`flex items-center flex-col sm:flex-row p-1 justify-self-end`}>
+      <article className={`flex flex-col justify-center items-center gap-2 relative sm:left-5 z-10`}>
         <section className='flex gap-2'>
           {projectButton.map((details, index) => {
             return (
