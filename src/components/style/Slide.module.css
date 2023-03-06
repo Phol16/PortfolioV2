@@ -1,20 +1,20 @@
 .initialLeft{
-  transition: all 1.5s;
+  transition:  ease-in-out 0.7s,;
   opacity: 0;
  transform: translateX(-100%);
 }
 .slideLeft{
-  transition: all 1.5s;
+  transition: transform ease-in-out 0.7s , opacity ease 1s;
   opacity: 1;
   transform: translateX(0);
 }
 .initialRight{
-  transition: all 1.5s;
+  transition:  ease-in-out 0.7s, opacity ease 1s;
   opacity: 0;
   transform: translateX(100%);
 }
 .slideRight{
-  transition: all 1.5s;
+  transition: transform ease-in-out 0.7s;
   opacity: 1;
   transform: translateX(0);
 }

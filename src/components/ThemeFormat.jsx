@@ -5,8 +5,8 @@
   secondaryBgDark: 'bg-sky-800',
   secondaryBgLight: 'bg-green-800',
 
-  primaryDColorText: 'text-white',
-  primaryLColorText: 'text-black',
+  primaryDColorText: 'text-white transition-colors',
+  primaryLColorText: 'text-black transition-colors',
 
   secondaryDColorText: 'text-sky-400',
   secondaryLColorText: 'text-green-700',
