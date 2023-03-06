@@ -9,7 +9,7 @@ const SkillGroup = ({ name, information }) => {
   return (
     <section className='p-1 self-end'>
       <h3 className={`${TminiHeading} ${TTextColor} ${name ? 'mb-5' : null}`}>{name}</h3>
-      <main className='flex justify-center gap-5 '>
+      <main className='flex flex-wrap justify-center gap-5 '>
         {information.map((details) => {
           return (
             <div className='flex flex-col justify-end ' key={details.name}>
