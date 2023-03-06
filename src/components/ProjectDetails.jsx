@@ -49,7 +49,7 @@ const ProjectDetails = ({ title, tech, description, image, demo, source, number 
             {projectButton.map((details, index) => {
               return (
                 <section className='relative flex flex-col items-center' key={index}>
-                  {info === details.title && <p className={`${PTextColor} ${BG} border absolute text-xs w-24 rounded-lg p-1 text-center -top-8`}>{details.title}</p>}
+                  {info === details.title && <p className={`${PTextColor} ${BG} ${dark ? 'border-white' : 'border-black'} border absolute text-xs w-24 rounded-lg p-1 text-center -top-8`}>{details.title}</p>}
                   <button
                     ref={infoRef}
                     onMouseOut={() => {
