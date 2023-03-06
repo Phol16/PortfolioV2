@@ -5,7 +5,7 @@ import Projects from '../components/Projects';
 
 const MainPage = () => {
   return (
-    <div>
+    <div className='flex flex-col gap-20 pb-10'>
       <Hero />
       <Projects/>
       <MainAbout />

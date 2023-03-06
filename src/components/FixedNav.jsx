@@ -24,7 +24,7 @@ const FixedNav = () => {
   const PTextColor = dark ? primaryDColorText : primaryLColorText;
   return (
     <div className='flex flex-col gap-2'>
-      <a href='#Top' className={`${PTextColor} hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}>
+      <a href='#Home' className={`${PTextColor} hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}>
         <button className='bg-transparent focus:outline-none'>
           <FontAwesomeIcon icon={faHome} className={FASizeIcon} />
         </button>

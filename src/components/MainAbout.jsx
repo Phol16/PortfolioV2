@@ -52,7 +52,7 @@ const MainAbout = () => {
   const STextColor = dark ? secondaryDColorText : secondaryLColorText;
 
   return (
-    <div className={`${PTextColor} flex flex-col py-10 max-w-fit m-auto gap-10 p-2`} id='About'>
+    <div className={`${PTextColor} flex flex-col  max-w-fit m-auto gap-10 p-2`} id='About'>
       <main className='max-w-4xl m-auto'>
         <h1 className={`${Theading} ${STextColor}`}>About Me</h1>
         <section className='flex gap-2 p-2'>

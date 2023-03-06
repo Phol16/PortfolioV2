@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`${SBGColor} p-5 flex justify-between w-full items-center z-30`} id='Top'>
+      <div className={`${SBGColor} p-5 flex justify-between w-full items-center z-30`} id='Home'>
         <Logo />
         <nav className=' gap-5 pr-2 hidden md:flex'>
           <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
