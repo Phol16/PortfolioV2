@@ -17,8 +17,8 @@
   DSub: 'font-semibold text-sm md:text-lg',
   DMini: 'font-medium text-xs',
 
-  Theading: 'text-xl md:text-2xl xl:text-4xl font-bold',
-  TsubHeading: 'text-lg md:text-xl xl:text-2xl font-semibold',
+  Theading: 'text-lg md:text-xl xl:text-2xl font-bold',
+  TsubHeading: 'text-base md:text-lg xl:text-xl font-medium',
   TminiHeading: 'text-xs md:text-sm xl:text-base font-medium',
   TminiContent: 'text-xs xl:text-sm p-1 font-medium',
 
