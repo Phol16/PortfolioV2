@@ -56,7 +56,7 @@ const MainAbout = () => {
       <main className='max-w-4xl m-auto'>
         <h1 className={`${Theading} ${STextColor}`}>About Me</h1>
         <section className='flex gap-2 p-2'>
-        <img width='300' alt='Coding' src='https://i.pinimg.com/originals/54/e3/7d/54e37d8074ebcde1d96c77d7b2a7f310.gif' className={` border-2 ${dark ? 'border-sky-400' : 'border-green-700'} rounded-lg hidden sm:flex`} />
+        <img decoding='async' loading='lazy' width='300' alt='Coding' src='https://i.pinimg.com/originals/54/e3/7d/54e37d8074ebcde1d96c77d7b2a7f310.gif' className={` border-2 ${dark ? 'border-sky-400' : 'border-green-700'} rounded-lg hidden sm:flex`} />
         <p className={`${TminiHeading} m-auto p-2 `}>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, Express JS, React Js, and Node JS to build dynamic and engaging web applications. I am also eager to learn other technologies as well.</p>
         </section>
       </main>

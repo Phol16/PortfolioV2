@@ -1,12 +1,6 @@
 import React, { useContext } from 'react'
 import ProjectDetails from './ProjectDetails'
 import { ThemeFormat } from './ThemeFormat'
-import movienotepad0 from '../assets/movienotepad/movienotepad0.png';
-import mazegame0 from '../assets/mazegame/mazegame0.png';
-import portfolio0 from '../assets/portfolio/portfolio0.png';
-import pokedex0 from '../assets/pokedex/pokedex-0.png';
-import eatstagram0 from '../assets/eatstagram/eatstagram0.png';
-import weatherapp0 from '../assets/weatherapp/weatherApp0.png';
 import { ThemeContext } from '../layout/Intro';
 
 const Information = [
@@ -16,7 +10,7 @@ const Information = [
     description: `A fullstack application developed by using MERN stack. 
     It is an application where user can add movie or series by providing details/information about a specific movie. 
     It is also an application where user can user can add movies to their watchlist and add notes to a specific movie in the watchlist.`,
-    image: movienotepad0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089666/Portfolio/movienotepad0_dcreop.png',
     demo: 'https://movienotepadclient.onrender.com/',
     source: 'https://github.com/Phol16/MovieNotepadV2',
   },
@@ -26,7 +20,7 @@ const Information = [
     description: `A fullstack application developed by using MERN stack.
     It is an application developed by UpliftCodeCamp Batch12.
     It is an application where you can upload photos of your favorite foods, you can interact to other photos that was uploaded by other users as well.`,
-    image: eatstagram0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089943/Portfolio/eatstagram0_wxpcwo.png',
     demo: 'https://proj6-fe.onrender.com/',
     source: 'https://github.com/Phol16',
   },
@@ -36,7 +30,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
-    image: portfolio0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089856/Portfolio/portfolio0_joojhv.png',
     demo: 'https://phol.vercel.app/',
     source: 'https://github.com/Phol16/PortfolioV2',
   },
@@ -46,7 +40,7 @@ const Information = [
     description: `A simple application developed by using HTML CSS and JS.
     It is an application where you can choose game difficulty.
     It is an application develop for pc because the user will use the keyboard to play`,
-    image: mazegame0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089830/Portfolio/mazegame0_cdq58a.png',
     demo: 'https://phol16.github.io/TheMazeGame/startingPage.html',
     source: 'https://github.com/Phol16/TheMazeGame',
   },
@@ -56,7 +50,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     It is an application the that display a list of pokemons.
     It has a feature where you can capture the pokemon.`,
-    image: pokedex0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089842/Portfolio/pokedex-0_e5h9m6.png',
     demo: 'https://reactjs-pokedex.onrender.com/',
     source: 'https://github.com/Phol16/ReactJS-reducer-pokedex',
   },
@@ -66,7 +60,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     It is an application where it shows information about the weather in zamboanga city.
     It is a simple application.`,
-    image: weatherapp0,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089866/Portfolio/weatherApp0_caqs43.png',
     demo: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
   },
