@@ -4,8 +4,6 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeFormat } from './ThemeFormat';
 import { ThemeContext } from '../layout/Intro';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import slide from './style/Slide.module.css';
 
 const ProjectDetails = ({ title, tech, description, image, demo, source, number }) => {
@@ -81,7 +79,7 @@ const ProjectDetails = ({ title, tech, description, image, demo, source, number 
           )}
         </article>
         <main className={`relative overflow-hidden group rounded-lg`}>
-          <LazyLoadImage effect='blur' src={image} alt='Photo' className={`aspect-video w-[400px] lg:max-w-[300px] xl:max-w-[400px] group-hover:blur-[2px] group-hover:scale-125 duration-[200ms]`} />
+          <img decoding='async' loading='lazy' src={image} alt='Photo' className={`aspect-video w-[400px] lg:max-w-[300px] xl:max-w-[400px] group-hover:blur-[2px] group-hover:scale-125 duration-[200ms]`} />
           <p className={`${TminiContent} ${PTextColor} absolute inset-0 flex items-center justify-center p-7 opacity-0 top-5 group-hover:top-0 group-hover:opacity-100 ${dark ? 'group-hover:bg-black/70' : 'group-hover:bg-white/70'} duration-[200ms]`}>{description}</p>
         </main>
       </section>
