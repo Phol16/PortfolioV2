@@ -31,7 +31,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089856/Portfolio/portfolio0_joojhv.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678117992/Portfolio/portfolio0_wcn5y2.png',
     demo: 'https://phol.vercel.app/',
     source: 'https://github.com/Phol16/PortfolioV2',
   },
