@@ -1,24 +1,26 @@
 import React, { useContext } from 'react';
-import typing from './style/Typing.module.css';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../layout/Intro';
-import ContactLinks from './ContactLinks';
-import topBoxDesign from './style/TopBoxDesign.module.css'
 import { ThemeFormat } from './ThemeFormat';
+import ContactLinks from './ContactLinks';
+import topBoxDesign from './style/TopBoxDesign.module.css';
+import typing from './style/Typing.module.css';
 
 const Hero = () => {
   const { dark } = useContext(ThemeContext);
   const { primaryDColorText, primaryLColorText, secondaryDColorText, secondaryLColorText, tertiaryDColorText, tertiaryLColorText, DMain, DSub, DMini } = ThemeFormat;
-
+  const PTextColor = dark ? primaryDColorText : primaryLColorText;
+  const STextColor = dark ? secondaryDColorText : secondaryLColorText;
+  const TTextColor = dark ? tertiaryDColorText : tertiaryLColorText;
   return (
-    <div className={`${dark ? primaryDColorText : primaryLColorText} h-[85vh] flex flex-col justify-center p-1 `}>
-      <article className={`relative flex flex-col gap-2 m-auto ${dark? topBoxDesign.Dbox: topBoxDesign.Lbox}`}>
+    <div className={`${PTextColor} h-[85vh] flex flex-col justify-center p-1 `}>
+      <article className={`relative flex flex-col gap-2 m-auto ${dark ? topBoxDesign.Dbox : topBoxDesign.Lbox}`}>
         <h1 className={`${DMain}`}>
-          Hi ! My name is <span className={`${dark ? secondaryDColorText : secondaryLColorText}`}>Phol</span>
+          Hi ! My name is <span className={`${STextColor}`}>Phol</span>
         </h1>
         <section className=' flex flex-col gap-1 px-2'>
-          <h2 className={`${DSub} ${dark ? secondaryDColorText : secondaryLColorText} ${typing.List}`}>
+          <h2 className={`${DSub} ${STextColor} ${typing.List}`}>
             <ul>
               <li>
                 <span className={dark ? typing.Dark : typing.Light}>Full-stack developer</span>
@@ -28,7 +30,7 @@ const Hero = () => {
               </li>
             </ul>
           </h2>
-          <p className={`${DMini} ${dark ? tertiaryDColorText : tertiaryLColorText} max-w-xs md:max-w-[400px]`}>I am a MERN stack developer. I am knowledgeable in creating front-end and back-end and I am eager to learn more advance technologies</p>
+          <p className={`${DMini} ${TTextColor} max-w-xs md:max-w-[400px]`}>I am a MERN stack developer. I am knowledgeable in creating front-end and back-end and I am eager to learn more advance technologies</p>
         </section>
         <ContactLinks />
       </article>

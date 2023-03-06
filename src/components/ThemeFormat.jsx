@@ -1,4 +1,4 @@
- export const ThemeFormat = {
+export const ThemeFormat = {
   primaryBGDark: 'bg-zinc-800 duration-[500ms]',
   primaryBGLight: 'bg-slate-200 duration-[500ms]',
 

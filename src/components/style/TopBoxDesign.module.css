@@ -1,5 +1,5 @@
 @media only screen and (min-width: 768px) {
-  .Dbox::after{
+  .Dbox::after {
     content: '';
     position: absolute;
     width: 50%;
@@ -11,7 +11,7 @@
     top: -2rem;
     right: -2rem;
   }
-  .Lbox::after{
+  .Lbox::after {
     content: '';
     position: absolute;
     width: 50%;

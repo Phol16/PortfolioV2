@@ -1,8 +1,8 @@
-.List{
+.List {
   height: 20px;
   overflow: hidden;
 }
-.List li{
+.List li {
   position: relative;
   top: 0;
   animation: slide 4s steps(2) infinite;
@@ -10,63 +10,60 @@
 .List li span {
   position: relative;
 }
-.Dark::after{
+.Dark::after {
   transition: 500ms;
   position: absolute;
   content: '';
-  border-left: 1px solid white ;
+  border-left: 1px solid white;
   left: 0px;
   width: 105%;
   height: 100%;
   background-color: var(--DprimaryBgColor);
-  animation: 
-  cursor .5s infinite,
-  typing 2s steps(20) infinite;
+  animation: cursor 0.5s infinite, typing 2s steps(20) infinite;
 }
-.Light::after{
+.Light::after {
   transition: 500ms;
   position: absolute;
   content: '';
-  border-left: 1px solid black ;
+  border-left: 1px solid black;
   left: 0px;
   width: 105%;
   height: 100%;
   background-color: var(--LprimaryBgColor);
-  animation: 
-  cursor .5s infinite,
-  typing 2s steps(20) infinite;
+  animation: cursor 0.5s infinite, typing 2s steps(20) infinite;
 }
-@keyframes cursor{
-  50%{
+@keyframes cursor {
+  50% {
     border-color: transparent;
   }
 }
-@keyframes typing{
-  10%{
+@keyframes typing {
+  10% {
     left: 0%;
   }
-  50%, 70%{
-    left:100%;
+  50%,
+  70% {
+    left: 100%;
   }
-  100%{
-    left:0%;
+  100% {
+    left: 0%;
   }
 }
-@keyframes slide{
-  100%{
+@keyframes slide {
+  100% {
     top: -40px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-   .List {
+  .List {
     height: 25px;
   }
   .List li span::after {
     height: 100%;
   }
   @keyframes slide {
-    100%{
+    100% {
       top: -58px;
     }
   }

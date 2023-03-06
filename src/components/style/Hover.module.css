@@ -1,4 +1,4 @@
-.DhoverFill::after{
+.DhoverFill::after {
   background-color: var(--DsecondaryBgColor);
   position: absolute;
   content: '';
@@ -10,21 +10,21 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.DhoverFill:hover::after{
+.DhoverFill:hover::after {
   transition: 0.5s;
   right: 0;
 }
-.DhoverFill{
+.DhoverFill {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.DhoverFill:hover{
+.DhoverFill:hover {
   color: white;
 }
 
-.LhoverFill::after{
+.LhoverFill::after {
   background-color: var(--LsecondaryBgColor);
   position: absolute;
   content: '';
@@ -36,16 +36,16 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.LhoverFill:hover::after{
+.LhoverFill:hover::after {
   transition: 0.5s;
   right: 0;
 }
-.LhoverFill{
+.LhoverFill {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.LhoverFill:hover{
+.LhoverFill:hover {
   color: white;
 }

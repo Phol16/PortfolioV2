@@ -1,9 +1,9 @@
 import { faCss3, faGitAlt, faGithub, faGitlab, faHtml5, faJsSquare, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faC, faE, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {ThemeFormat} from './ThemeFormat';
+import { ThemeFormat } from './ThemeFormat';
 
-const{FASizeIcon, SVGSizeIcon} = ThemeFormat
+const { FASizeIcon, SVGSizeIcon } = ThemeFormat;
 export const programmingLanguage = [
   {
     icon: <FontAwesomeIcon icon={faJsSquare} className={`${FASizeIcon} text-yellow-400`} />,

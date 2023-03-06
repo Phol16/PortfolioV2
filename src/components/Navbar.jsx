@@ -1,18 +1,19 @@
+import React, { useContext, useState } from 'react';
 import { faDownload, faHamburger, faInfoCircle, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useState } from 'react';
-import Logo from '../assets/svg/Logo';
-import NavButton from './NavButton';
-import PDF from '../assets/Lim_Pholibert_CV.pdf';
-import ContactLinks from './ContactLinks';
 import { ThemeContext } from '../layout/Intro';
-import FixedNav from './FixedNav';
 import { ThemeFormat } from './ThemeFormat';
+import Logo from '../assets/svg/Logo';
+import PDF from '../assets/Lim_Pholibert_CV.pdf';
+import NavButton from './NavButton';
+import ContactLinks from './ContactLinks';
+import FixedNav from './FixedNav';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { dark } = useContext(ThemeContext);
-  const {secondaryBgDark, secondaryBgLight}= ThemeFormat
+  const { secondaryBgDark, secondaryBgLight } = ThemeFormat;
+
   const SBGColor = dark ? secondaryBgDark : secondaryBgLight;
 
   return (

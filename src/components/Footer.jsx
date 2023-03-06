@@ -4,7 +4,8 @@ import { ThemeFormat } from './ThemeFormat';
 
 const Footer = () => {
   const { dark } = useContext(ThemeContext);
-  const {primaryDColorText, primaryLColorText}=ThemeFormat
+  const { primaryDColorText, primaryLColorText } = ThemeFormat;
+
   const PTextColor = dark ? primaryDColorText : primaryLColorText;
 
   return (

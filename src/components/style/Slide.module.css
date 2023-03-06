@@ -1,21 +1,20 @@
-.initialLeft{
-  transition:  ease-in-out 0.7s,;
+.initialLeft {
+  transition: ease-in-out 0.7s;
   opacity: 0;
- transform: translateX(-100%);
+  transform: translateX(-100%);
 }
-.slideLeft{
-  transition: transform ease-in-out 0.7s , opacity ease 1s;
+.slideLeft {
+  transition: transform ease-in-out 0.7s, opacity ease 1s;
   opacity: 1;
   transform: translateX(0);
 }
-.initialRight{
-  transition:  ease-in-out 0.7s, opacity ease 1s;
+.initialRight {
+  transition: ease-in-out 0.7s, opacity ease 1s;
   opacity: 0;
   transform: translateX(100%);
 }
-.slideRight{
+.slideRight {
   transition: transform ease-in-out 0.7s;
   opacity: 1;
   transform: translateX(0);
 }
-
