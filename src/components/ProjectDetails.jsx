@@ -10,12 +10,14 @@ const ProjectDetails = ({ title, tech, description, image, demo, source,number }
   const { dark } = useContext(ThemeContext);
   const { Theading, TminiContent, TsubHeading, secondaryBgDark, FASizeIcon, primaryDColorText, primaryLColorText } = ThemeFormat;
   const ProjRef = useRef(null);
+  const infoRef = useRef(null);
   const [visible, setVisible] = useState();
+  const [info, setInfo] = useState(false);
 
   const projectButton = [
     {
       icon: faHome,
-      title: 'Live Demo',
+      title: 'View Live',
       redirect: demo,
     },
     {
@@ -26,6 +28,7 @@ const ProjectDetails = ({ title, tech, description, image, demo, source,number }
   ];
 
   useEffect(() => {
+    console.log(infoRef.current.onMouseOver);
     const observer = new IntersectionObserver((entries) => {
       entries[0].isIntersecting ? setVisible(true) : setVisible(false)
     },{threshold:0.5});
@@ -39,7 +42,12 @@ const ProjectDetails = ({ title, tech, description, image, demo, source,number }
         <section className='flex gap-2'>
           {projectButton.map((details, index) => {
             return (
+              <section className='relative flex flex-col items-center' key={index}>
+               {info === details.title && <p className='absolute text-xs w-24 rounded-lg p-1 text-center -top-8 bg-black'>{details.title}</p>}
               <button
+              ref={infoRef}
+              onMouseOut={()=>{setInfo(false)}}
+              onMouseOver={()=>{setInfo(details.title)}}
                 key={index}
                 className={`bg-transparent hover:scale-125 transiton-all duration-[150ms] flex items-center`}
                 onClick={() => {
@@ -48,6 +56,7 @@ const ProjectDetails = ({ title, tech, description, image, demo, source,number }
               >
                 <FontAwesomeIcon icon={details.icon} className={FASizeIcon} />
               </button>
+              </section>
             );
           })}
         </section>

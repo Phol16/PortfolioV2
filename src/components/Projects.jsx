@@ -74,7 +74,7 @@ const Projects = () => {
   return (
     <div className={`${dark ? primaryDColorText : primaryLColorText} flex flex-col max-w-fit m-auto gap-10`} id='Projects'>
       <h1 className={`${Theading} ${dark ? secondaryDColorText : secondaryLColorText} p-2`}>Projects</h1>
-      <main className={`grid gap-5 justify-center items-center lg:grid-cols-2 gap-5 w-fit self-center overflow-hidden`}>
+      <main className={`grid gap-5 justify-center items-center lg:grid-cols-2 gap-5 w-fit self-center overflow-hidden py-10`}>
         {Information.map((Details, index) => {
           return <ProjectDetails number={index+1} key={Details.title} title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;
         })}
