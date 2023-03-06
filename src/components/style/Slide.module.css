@@ -1,0 +1,21 @@
+.initialLeft{
+  transition: all 1.5s;
+  opacity: 0;
+ transform: translateX(-100%);
+}
+.slideLeft{
+  transition: all 1.5s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.initialRight{
+  transition: all 1.5s;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slideRight{
+  transition: all 1.5s;
+  opacity: 1;
+  transform: translateX(0);
+}
+

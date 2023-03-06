@@ -1,13 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeFormat } from './ThemeFormat';
 import { ThemeContext } from '../layout/Intro';
+import slide from './style/Slide.module.css'
 
-const ProjectDetails = ({ title, tech, description, image, demo, source }) => {
+const ProjectDetails = ({ title, tech, description, image, demo, source,number }) => {
   const { dark } = useContext(ThemeContext);
   const { Theading, TminiContent, TsubHeading, secondaryBgDark, FASizeIcon, primaryDColorText, primaryLColorText } = ThemeFormat;
+  const ProjRef = useRef(null);
+  const [visible, setVisible] = useState();
 
   const projectButton = [
     {
@@ -22,8 +25,16 @@ const ProjectDetails = ({ title, tech, description, image, demo, source }) => {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries[0].isIntersecting ? setVisible(true) : setVisible(false)
+    },{threshold:0.5});
+    observer.observe(ProjRef.current);
+  },[]);
+
   return (
-    <div className={`flex items-center flex-col sm:flex-row p-1 justify-self-end`}>
+    <div className={`p-1 justify-self-end `} ref={ProjRef}>
+      <section className={`${visible? (number%2 === 0 ? slide.slideRight: slide.slideLeft) : (number%2 === 0 ? slide.initialRight : slide.initialLeft)} flex items-center flex-col sm:flex-row`}>
       <article className={`flex flex-col justify-center items-center gap-2 relative sm:left-5 z-10`}>
         <section className='flex gap-2'>
           {projectButton.map((details, index) => {
@@ -52,6 +63,7 @@ const ProjectDetails = ({ title, tech, description, image, demo, source }) => {
         <img decoding='async' loading='lazy' src={image} alt='Photo' className={`aspect-video w-[400px] lg:max-w-[300px] xl:max-w-[400px] group-hover:blur-[2px] group-hover:scale-125 duration-[200ms]`} />
         <p className={`${TminiContent} ${dark ? primaryDColorText : primaryLColorText} absolute inset-0 flex items-center justify-center p-7 opacity-0 top-5 group-hover:top-0 group-hover:opacity-100 ${dark ? 'group-hover:bg-black/70' : 'group-hover:bg-white/70'} duration-[200ms]`}>{description}</p>
       </main>
+      </section>
     </div>
   );
 };

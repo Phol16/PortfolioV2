@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
-import ProjectDetails from './ProjectDetails'
-import { ThemeFormat } from './ThemeFormat'
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import ProjectDetails from './ProjectDetails';
+import { ThemeFormat } from './ThemeFormat';
 import { ThemeContext } from '../layout/Intro';
+import slide from './style/Slide.module.css'
 
 const Information = [
   {
@@ -68,17 +69,18 @@ const Information = [
 
 const Projects = () => {
   const { dark } = useContext(ThemeContext);
-  const {Theading, primaryDColorText, primaryLColorText,secondaryDColorText, secondaryLColorText} = ThemeFormat
+  const { Theading, primaryDColorText, primaryLColorText, secondaryDColorText, secondaryLColorText } = ThemeFormat;
+
   return (
     <div className={`${dark ? primaryDColorText : primaryLColorText} flex flex-col max-w-fit m-auto gap-10`} id='Projects'>
-      <h1 className={`${Theading} ${dark ? secondaryDColorText: secondaryLColorText} p-2`}>Projects</h1>
-      <main className='grid gap-5 justify-center items-center lg:grid-cols-2 gap-5 w-fit self-center'>
-      {Information.map((Details) => {
-          return <ProjectDetails key={Details.title} title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;
+      <h1 className={`${Theading} ${dark ? secondaryDColorText : secondaryLColorText} p-2`}>Projects</h1>
+      <main className={`grid gap-5 justify-center items-center lg:grid-cols-2 gap-5 w-fit self-center overflow-hidden`}>
+        {Information.map((Details, index) => {
+          return <ProjectDetails number={index+1} key={Details.title} title={Details.title} tech={Details.tech} description={Details.description} image={Details.image} demo={Details.demo} source={Details.source} />;
         })}
-        </main>
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
