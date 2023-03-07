@@ -10,6 +10,7 @@
     align-self: end;
     top: -2rem;
     right: -2rem;
+    animation: boxAnimate 1s ease-in-out;
   }
   .Lbox::after {
     content: '';
@@ -22,5 +23,21 @@
     align-self: end;
     top: -2rem;
     right: -2rem;
+    animation: boxAnimate 1s ease-in-out;
+  }
+}
+
+@keyframes boxAnimate{
+  0%, 20%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+  0%, 20%{
+    height: 0%;
+  }
+  100%{
+    height: 50%;
   }
 }
