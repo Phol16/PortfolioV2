@@ -21,7 +21,7 @@ const Information = [
     description: `A fullstack application developed by using MERN stack.
     It is an application developed by UpliftCodeCamp Batch12.
     It is an application where you can upload photos of your favorite foods, you can interact to other photos that was uploaded by other users as well.`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089943/Portfolio/eatstagram0_wxpcwo.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678191964/Portfolio/eatstagram0_ryyp3i.png',
     demo: 'https://proj6-fe.onrender.com/',
     source: 'https://github.com/Phol16',
   },
@@ -61,7 +61,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     It is an application where it shows information about the weather in zamboanga city.
     It is a simple application.`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089866/Portfolio/weatherApp0_caqs43.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678191371/Portfolio/weatherApp0_dgx82e.png',
     demo: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
   },
