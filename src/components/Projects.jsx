@@ -61,7 +61,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     It is an application where it shows information about the weather in zamboanga city.
     It is a simple application.`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678191371/Portfolio/weatherApp0_dgx82e.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678193519/Portfolio/weatherApp0_drppyc.png',
     demo: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
   },
