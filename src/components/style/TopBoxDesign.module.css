@@ -28,13 +28,13 @@
 }
 
 @keyframes boxAnimate{
-  0%, 20%{
+  0%{
     width: 0%;
   }
   100%{
     width: 50%;
   }
-  0%, 20%{
+  0%{
     height: 0%;
   }
   100%{
