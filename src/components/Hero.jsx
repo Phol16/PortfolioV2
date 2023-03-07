@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../layout/Intro';
@@ -9,14 +9,24 @@ import typing from './style/Typing.module.css';
 
 const Hero = () => {
   const { dark } = useContext(ThemeContext);
+  const [visible, setVisible] = useState(false);
+  const heroRef = useRef(null);
   const { primaryDColorText, primaryLColorText, secondaryDColorText, secondaryLColorText, tertiaryDColorText, tertiaryLColorText, DMain, DSub, DMini } = ThemeFormat;
   const PTextColor = dark ? primaryDColorText : primaryLColorText;
   const STextColor = dark ? secondaryDColorText : secondaryLColorText;
   const TTextColor = dark ? tertiaryDColorText : tertiaryLColorText;
+
+  useEffect(()=>{
+    const observer = new IntersectionObserver((entries)=>{
+      entries[0].isIntersecting ? setVisible(true): setVisible(false)
+    },{threshold:0.5})
+     observer.observe(heroRef.current)
+  },[])
+
   return (
     <div className={`${PTextColor} h-[85vh] flex flex-col justify-center p-1 `}>
-      <article className={`relative flex flex-col gap-2 m-auto ${dark ? topBoxDesign.Dbox : topBoxDesign.Lbox}`}>
-        <h1 className={`${DMain}`}>
+      <article className={`relative flex flex-col gap-2 m-auto ${visible ? dark ? topBoxDesign.Dbox : topBoxDesign.Lbox : null}`}>
+        <h1 className={`${DMain}`} ref={heroRef}>
           Hi ! My name is <span className={`${STextColor}`}>Phol</span>
         </h1>
         <section className=' flex flex-col gap-1 px-2'>

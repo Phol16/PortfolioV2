@@ -32,7 +32,6 @@ const ProjectDetails = ({ title, tech, description, image, demo, source, number 
   ];
 
   useEffect(() => {
-    console.log(infoRef.current.onMouseOver);
     const observer = new IntersectionObserver(
       (entries) => {
         entries[0].isIntersecting ? setVisible(true) : setVisible(false);
