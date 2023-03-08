@@ -51,7 +51,7 @@ const Information = [
     description: `A Web-Based application developed by using ReactJS.
     It is an application the that display a list of pokemons.
     It has a feature where you can capture the pokemon.`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089842/Portfolio/pokedex-0_e5h9m6.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678262045/Portfolio/Untitled_qxjfwr.png',
     demo: 'https://reactjs-pokedex.onrender.com/',
     source: 'https://github.com/Phol16/ReactJS-reducer-pokedex',
   },
