@@ -26,7 +26,7 @@ const FixedNav = ({navVisible}) => {
 
   return (
     <div className='flex flex-col gap-2'>
-      <section className={`flex flex-col ${navVisible ? 'hidden' : 'flex'}`}>
+      <section className={`flex flex-col gap-2 ${navVisible ? 'hidden' : 'flex'}`}>
       <a href='#Home' className={`${PTextColor} hover:scale-125 focus:outline-none ${dark ? hover.DhoverFill : hover.LhoverFill}`}>
         <button className='bg-transparent focus:outline-none'>
           <FontAwesomeIcon icon={faHome} className={FASizeIcon} />
