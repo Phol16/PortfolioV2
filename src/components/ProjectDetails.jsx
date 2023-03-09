@@ -79,11 +79,14 @@ const ProjectDetails = ({ title, tech, description, image, demo, source, number 
           )}
         </article>
         <main className={`relative overflow-hidden group rounded-lg`}>
+          <a href={demo} target='_blank'>
           <img decoding='async' loading='lazy' src={image} alt='Photo' className={`aspect-video w-[400px] lg:max-w-[300px] xl:max-w-[400px] group-hover:blur-[2px] group-hover:scale-125 duration-[200ms]`} />
+          
           <section className={`${TminiContent} ${PTextColor} absolute inset-0 flex flex-col gap-2 items-center justify-center p-7 opacity-0 top-5 group-hover:top-0 group-hover:opacity-100 ${dark ? 'group-hover:bg-black/70' : 'group-hover:bg-white/70'} duration-[200ms]`}>
             <p className={`${STextColor}`}>{tech}</p>
             <p>{description}</p>
             </section>
+            </a>
         </main>
       </section>
     </div>
