@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { faDownload, faHamburger, faInfoCircle, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from '../layout/Intro';
@@ -11,14 +11,28 @@ import FixedNav from './FixedNav';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [navVisible, setNavVisible] = useState(false);
+  const navbarRef = useRef(null);
   const { dark } = useContext(ThemeContext);
   const { secondaryBgDark, secondaryBgLight } = ThemeFormat;
 
   const SBGColor = dark ? secondaryBgDark : secondaryBgLight;
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries[0].isIntersecting ? setNavVisible(true) : setNavVisible(false);
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+    observer.observe(navbarRef.current);
+  }, []);
+
   return (
     <>
-      <div className={`${SBGColor} p-5 flex justify-between w-full items-center z-30`} id='Home'>
+      <div className={`${SBGColor} p-5 flex justify-between w-full items-center z-30`} id='Home' ref={navbarRef}>
         <Logo />
         <nav className=' gap-5 pr-2 hidden md:flex'>
           <NavButton redirect={PDF} icon={<FontAwesomeIcon icon={faDownload} />} text={'CV/Resume'} />
@@ -49,7 +63,7 @@ const Navbar = () => {
         </section>
       </nav>
       <nav className='fixed bottom-20 right-0 z-10'>
-        <FixedNav />
+        <FixedNav navVisible={navVisible}/>
       </nav>
     </>
   );
