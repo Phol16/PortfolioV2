@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 import ProjectDetails from './ProjectDetails';
 import { ThemeFormat } from './ThemeFormat';
 import { ThemeContext } from '../layout/Intro';
-import slide from './style/Slide.module.css';
 
 const Information = [
   {
@@ -17,7 +16,7 @@ const Information = [
   },
   {
     title: 'Eatstagram',
-    tech: 'MongoDB ExpressJS ReactJS NodeJS',
+    tech: 'MongoDB ExpressJS ReactJS NodeJS Auth0',
     description: `A fullstack application developed by using MERN stack.
     It is an application developed by UpliftCodeCamp Batch12.
     It is an application where you can upload photos of your favorite foods, you can interact to other photos that was uploaded by other users as well.`,
@@ -27,7 +26,7 @@ const Information = [
   },
   {
     title: 'Personal Portfolio',
-    tech: 'ReactJS HTML CSS JS',
+    tech: 'ReactJS HTML CSS JS TailwindCSS',
     description: `A Web-Based application developed by using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
@@ -57,7 +56,7 @@ const Information = [
   },
   {
     title: 'Weather App',
-    tech: 'ReactJS RestfulAPI MUI',
+    tech: 'ReactJS RestfulAPI ',
     description: `A Web-Based application developed by using ReactJS.
     It is an application where it shows information about the weather in zamboanga city.
     It is a simple application.`,
