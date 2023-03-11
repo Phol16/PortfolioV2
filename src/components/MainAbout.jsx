@@ -55,7 +55,7 @@ const MainAbout = () => {
   return (
     <div className={`${PTextColor} flex flex-col  max-w-fit m-auto gap-10 p-2`} id='About'>
       <main className='max-w-4xl m-auto flex gap-2'>
-          <img decoding='async' loading='lazy' width='300' alt='Coding' src='https://i.pinimg.com/originals/54/e3/7d/54e37d8074ebcde1d96c77d7b2a7f310.gif' className={` border-2 ${dark ? 'border-sky-400' : 'border-green-700'} rounded-lg hidden sm:flex`} />
+          <img decoding='async' loading='lazy' width='300' alt='Coding' src='https://i.pinimg.com/originals/54/e3/7d/54e37d8074ebcde1d96c77d7b2a7f310.gif' className={` border-2 ${dark ? 'border-[#38E4AE]' : 'border-[#101935]'} rounded-lg hidden sm:flex`} />
         <section className='flex flex-col gap-2 p-2'>
         <h1 className={`${Theading} ${STextColor}`}>About Me</h1>
           <p className={`${TminiHeading} m-auto p-2 `}>I am an aspiring software developer with experience using the MERN stack for web development. While I am not a seasoned professional, I am knowledgeable on how to use MongoDB, Express JS, React Js, and Node JS to build dynamic and engaging web applications. I am also eager to learn other technologies as well.</p>
