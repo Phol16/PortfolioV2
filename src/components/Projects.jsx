@@ -44,6 +44,26 @@ const Information = [
     demo: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
   },
+  {
+    title: 'Personal Portfolio',
+    tech: 'ReactJS HTML CSS JS TailwindCSS',
+    description: `A Web-Based application developed by using ReactJS.
+    The current website is this application.
+    It is an application that shows the details and the projects`,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678117992/Portfolio/portfolio0_wcn5y2.png',
+    demo: 'https://phol.vercel.app/',
+    source: 'https://github.com/Phol16/PortfolioV2',
+  },
+  {
+    title: 'The Maze Game',
+    tech: 'HTML CSS JS',
+    description: `A simple application developed by using HTML CSS and JS.
+    It is an application where you can choose game difficulty.
+    It is an application develop for pc because the user will use the keyboard to play`,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089830/Portfolio/mazegame0_cdq58a.png',
+    demo: 'https://phol16.github.io/TheMazeGame/startingPage.html',
+    source: 'https://github.com/Phol16/TheMazeGame',
+  },
 ];
 
 const Projects = () => {
