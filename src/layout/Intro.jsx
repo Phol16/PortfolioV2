@@ -19,7 +19,7 @@ const Intro = () => {
 
   setTimeout(() => {
     setLoad(true);
-  }, 2000);
+  }, 1500);
 
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>
