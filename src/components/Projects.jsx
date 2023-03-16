@@ -10,7 +10,7 @@ const Information = [
     description: `A fullstack application developed by using MERN stack. 
     It is an application where user can add movie or series by providing details/information about a specific movie. 
     It is also an application where user can user can add movies to their watchlist and add notes to a specific movie in the watchlist.`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678880072/Portfolio/movienotepad_ems7zl.png',
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678977547/Portfolio/Untitled_nsv7an.png',
     demo: 'https://movienotepadclient.onrender.com/',
     source: 'https://github.com/Phol16/MovieNotepadV2',
   },
