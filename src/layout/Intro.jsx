@@ -12,18 +12,13 @@ const Intro = () => {
 
   const value = local !== 'true' ? false : true;
   const [dark, setDark] = useState(local === null ? true : value);
-  const [load, setLoad] = useState(false);
 
   const { primaryBGDark, primaryBGLight } = ThemeFormat;
   const BG = dark ? primaryBGDark : primaryBGLight;
 
-  setTimeout(() => {
-    setLoad(true);
-  }, 1500);
 
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>
-      {load ? (
         <div className={`${BG}`}>
           <Navbar />
           <main className='pb-10'>
@@ -31,9 +26,6 @@ const Intro = () => {
           </main>
           <Footer />
         </div>
-      ) : (
-        <ConnectingPage />
-      )}
     </ThemeContext.Provider>
   );
 };
