@@ -23,6 +23,16 @@ const Information = [
     source: 'https://github.com/Phol16/ChatApp',
   },
   {
+    title: 'Personal Portfolio',
+    tech: 'ReactJS HTML CSS JS TailwindCSS',
+    description: `A Web-Based application developed by using ReactJS.
+    The current website is this application.
+    It is an application that shows the details and the projects`,
+    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678880213/Portfolio/portfolio_jmaefg.png',
+    demo: 'https://phol.vercel.app/',
+    source: 'https://github.com/Phol16/PortfolioV2',
+  },
+  {
     title: 'Eatstagram',
     tech: 'MongoDB ExpressJS ReactJS NodeJS Auth0',
     description: `A fullstack application developed by using MERN stack.
@@ -51,16 +61,6 @@ const Information = [
     image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678193519/Portfolio/weatherApp0_drppyc.png',
     demo: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
-  },
-  {
-    title: 'Personal Portfolio',
-    tech: 'ReactJS HTML CSS JS TailwindCSS',
-    description: `A Web-Based application developed by using ReactJS.
-    The current website is this application.
-    It is an application that shows the details and the projects`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678880213/Portfolio/portfolio_jmaefg.png',
-    demo: 'https://phol.vercel.app/',
-    source: 'https://github.com/Phol16/PortfolioV2',
   },
 ];
 
