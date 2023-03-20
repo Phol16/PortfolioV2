@@ -15,6 +15,14 @@ const Information = [
     source: 'https://github.com/Phol16/MovieNotepadV2',
   },
   {
+    title: 'Mini Messenger',
+    tech: 'MongoDb ExpressJS SocketIO ReactJs',
+    description: `An simple application that is almost a like from messenger where user can communicate with one another, it is a very simple application that uses socket io for realtime communication`,
+    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1679321037/Portfolio/Untitled_b3kuhi.png',
+    demo: 'https://minimessenger.onrender.com/',
+    source: 'https://github.com/Phol16/ChatApp',
+  },
+  {
     title: 'Eatstagram',
     tech: 'MongoDB ExpressJS ReactJS NodeJS Auth0',
     description: `A fullstack application developed by using MERN stack.
@@ -53,16 +61,6 @@ const Information = [
     image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678880213/Portfolio/portfolio_jmaefg.png',
     demo: 'https://phol.vercel.app/',
     source: 'https://github.com/Phol16/PortfolioV2',
-  },
-  {
-    title: 'The Maze Game',
-    tech: 'HTML CSS JS',
-    description: `A simple application developed by using HTML CSS and JS.
-    It is an application where you can choose game difficulty.
-    It is an application develop for pc because the user will use the keyboard to play`,
-    image: 'https://res.cloudinary.com/df8nkgje6/image/upload/v1678089830/Portfolio/mazegame0_cdq58a.png',
-    demo: 'https://phol16.github.io/TheMazeGame/startingPage.html',
-    source: 'https://github.com/Phol16/TheMazeGame',
   },
 ];
 
