@@ -74,6 +74,10 @@ const ProjectDetails = ({ title, tech, description, image, demo, source, number 
             <h1 className={`${TsubHeading}  text-center rounded-md max-w-sm z-10 hover:scale-125`}>
               Movie <span className='text-red-600'>Notepad</span>
             </h1>
+          ) : title ==='Mini Messenger'? (
+            <h1 className={`${TsubHeading}  text-center rounded-md max-w-sm z-10 hover:scale-125`}>
+            Mini <span className='messenger'>Messenger</span>
+          </h1>
           ) : (
             <h1 className={`${TsubHeading}  text-center rounded-md max-w-sm z-10 hover:scale-125`}>{title}</h1>
           )}
