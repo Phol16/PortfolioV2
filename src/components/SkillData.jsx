@@ -11,7 +11,7 @@ export const programmingLanguage = [
   },
   {
     icon: <FontAwesomeIcon icon={faC} className={`${FASizeIcon} `} />,
-    name: 'C++',
+    name: 'C#',
   },
   {
     icon: (
