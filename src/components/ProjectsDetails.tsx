@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import ProjectsButton from './ProjectsButton';
-import slide from './style/slide.module.css';
 
 type Props = {
   title: string;
@@ -30,7 +29,7 @@ const ProjectsDetails = ({ title, image, description, tech, live, source, number
 
   return (
     <div className='max-w-fit overflow-x-hidden' ref={ProjRef}>
-      <section className={`${visible ? (number % 2 === 0 ? slide.slideRight : slide.slideLeft) : number % 2 === 0 ? slide.initialRight : slide.initialLeft}`}>
+      <section className={`${visible ? (number % 2 === 0 ? 'slideRight' : 'slideLeft') : number % 2 === 0 ? 'initialRight' : 'initialLeft'}`}>
         <main className='flex flex-col justify-center items-center gap-1'>
           <section className='flex gap-3'>
             <ProjectsButton live={live} source={source} />
