@@ -36,6 +36,17 @@ body {
   background-clip: border-box;
   -webkit-background-clip: text;
 }
+.cursor{
+  animation: blinking 1.2s infinite;
+}
+@keyframes blinking {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
 }

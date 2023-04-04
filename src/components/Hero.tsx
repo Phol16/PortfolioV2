@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import arrowDownSVG from '../assets/svg/arrowDown.svg';
-import typing from './style/typing.module.css';
 
 type timeOutIDs = ReturnType<typeof setTimeout>;
 
@@ -65,7 +64,7 @@ const Hero = () => {
       </h1>
       <main className=' px-6 max-w-xs md:max-w-sm xl:max-w-md text-xs md:text-sm'>
         <h2 className='text-primaryTextColor my-1'>
-          {displayInfo} <span className={`${typing.cursor} text-secondaryTextColor`}>|</span>
+          {displayInfo} <span className={`cursor text-secondaryTextColor`}>|</span>
         </h2>
         <p>I`m a MERN stack developer. I`m knowledgeable in creating front-end and back-end and I`m eager to learn more advance technologies</p>
       </main>
