@@ -91,7 +91,7 @@ const Skills = () => {
       <h1 className=' text-primaryTextColor my-10'>Certification</h1>
       <main className=' flex flex-col md:flex-row gap-5 justify-center'>
         {Cert.map((element, index) => {
-          return <img loading='lazy' decoding='async' src={element.image} key={index} className='sm:max-w-xs w-fit h-fit self-center ' />;
+          return <img loading='lazy' decoding='async' src={element.image} key={index} className=' w-[300px] self-center ' />;
         })}
       </main>
     </div>
