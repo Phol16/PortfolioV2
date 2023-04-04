@@ -7,7 +7,7 @@ const NavMenuBurger = () => {
   const [hover, setHover] = useState<string | null>(null);
 
   return (
-    <div className='fixed top-0 right-0 w-[60vw] bg-white text-primaryBackground h-[svh] z-40 flex flex-col justify-between py-10'>
+    <div className='fixed top-0 right-0 w-[60vw] bg-white text-primaryBackground h-[100svh] z-40 flex flex-col justify-between py-10'>
       <h1 className='self-center font-bold text-2xl'>Phol</h1>
       <main>
         <ul className='flex flex-col gap-5'>
