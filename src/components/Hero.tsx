@@ -59,10 +59,10 @@ const Hero = () => {
 
   return (
     <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100svh-82px)] p-1'>
-      <h1 className='font-medium text-3xl md:text-4xl xl:text-5xl'>
+      <h1 className='font-medium text-3xl md:text-4xl'>
         Hi! My name is <span className='text-primaryTextColor'>Phol</span>
       </h1>
-      <main className=' px-6 max-w-xs md:max-w-sm xl:max-w-md text-xs md:text-sm'>
+      <main className=' px-6 max-w-xs md:max-w-sm text-xs md:text-sm'>
         <h2 className='text-primaryTextColor my-1'>
           {displayInfo} <span className={`cursor text-secondaryTextColor`}>|</span>
         </h2>
@@ -71,7 +71,7 @@ const Hero = () => {
       <a href='#Project'>
         <section className='absolute bottom-4 left-0 flex flex-col items-center justify-center gap-6 cursor-pointer animate-bounce'>
           <p className=' rotate-[270deg] font-normal text-[10px]'>Scroll Down</p>
-          <img src={arrowDownSVG} alt='arrowDown' className='w-3 ' />
+          <img src={arrowDownSVG} alt='arrowDown' className='w-3 h-3' />
         </section>
       </a>
     </div>

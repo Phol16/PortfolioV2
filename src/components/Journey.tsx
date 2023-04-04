@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Journey = () => {
   return (
     <div className=' text-primaryTextColor flex flex-col py-10'>

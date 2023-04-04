@@ -59,21 +59,17 @@ body {
 }
 .initialLeft {
   transition: ease-in-out 0.7s;
-  opacity: 0;
   transform: translateX(-100%);
 }
 .slideLeft {
-  transition: transform ease-in-out 0.7s, opacity ease 1s;
-  opacity: 1;
+  transition: transform ease-in-out 0.7s;
   transform: translateX(0);
 }
 .initialRight {
-  transition: ease-in-out 0.7s, opacity ease 1s;
-  opacity: 0;
+  transition: ease-in-out 0.7s;
   transform: translateX(100%);
 }
 .slideRight {
   transition: transform ease-in-out 0.7s;
-  opacity: 1;
   transform: translateX(0);
 }

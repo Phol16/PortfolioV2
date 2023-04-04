@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react'
-
 const currDate:number = new Date().getFullYear();
 
 

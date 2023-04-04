@@ -24,7 +24,7 @@ const About = () => {
                 to={element.href}
                 key={index}
                 className={({ isActive }: { isActive: boolean; isPending: boolean }) => {
-                  return `p-3 rounded-lg text-sm md:text-base ${isActive ? 'bg-primaryTextColor shadow-sm shadow-white text-secondaryBackground' : 'bg-secondaryTextColor'}`;
+                  return `p-3 rounded-lg text-sm md:text-base ${isActive ? 'bg-primaryTextColor shadow-sm shadow-white' : 'bg-secondaryTextColor'}`;
                 }}
               >
                 {element.title}

@@ -1,10 +1,10 @@
-import tsIcon from '../assets/svg/TypescriptIcon';
-import jsIcon from '../assets/svg/JavascriptIcon';
-import cIcon from '../assets/svg/CsharpIcon';
-import mongodbIcon from '../assets/svg/MongodbIcon';
-import expressJsIcon from '../assets/svg/ExpressIcon';
-import nodeJsIcon from '../assets/svg/NodejsIcon';
-import reactJsIcon from '../assets/svg/ReactjsIcon';
+import TsIcon from '../assets/svg/TypescriptIcon';
+import JsIcon from '../assets/svg/JavascriptIcon';
+import CIcon from '../assets/svg/CsharpIcon';
+import MongodbIcon from '../assets/svg/MongodbIcon';
+import ExpressJsIcon from '../assets/svg/ExpressIcon';
+import NodeJsIcon from '../assets/svg/NodejsIcon';
+import ReactJsIcon from '../assets/svg/ReactjsIcon';
 import LaptopIcon from '../assets/svg/LaptopIcon';
 import DesktopIcon from '../assets/svg/DesktopIcon';
 import PrinterIcon from '../assets/svg/PrinterIcon';
@@ -39,18 +39,18 @@ const Skill: skill[] = [
   {
     title: 'Programming Language',
     icons: [
-      { name: 'Typescript', Comp: tsIcon },
-      { name: 'Javascript', Comp: jsIcon },
-      { name: 'C Sharp', Comp: cIcon },
+      { name: 'Typescript', Comp: TsIcon },
+      { name: 'Javascript', Comp: JsIcon },
+      { name: 'C Sharp', Comp: CIcon },
     ],
   },
   {
     title: 'Full Stack Development',
     icons: [
-      { name: 'MongoDB', Comp: mongodbIcon },
-      { name: 'Express JS', Comp: expressJsIcon },
-      { name: ' React JS', Comp: reactJsIcon },
-      { name: 'Node JS', Comp: nodeJsIcon },
+      { name: 'MongoDB', Comp: MongodbIcon },
+      { name: 'Express JS', Comp: ExpressJsIcon },
+      { name: ' React JS', Comp: ReactJsIcon },
+      { name: 'Node JS', Comp: NodeJsIcon },
     ],
   },
 ];
@@ -89,9 +89,13 @@ const Skills = () => {
         })}
       </section>
       <h1 className=' text-primaryTextColor my-10'>Certification</h1>
-      <main className=' flex flex-col md:flex-row gap-5 justify-center'>
+      <main className=' flex flex-col md:flex-row gap-5'>
         {Cert.map((element, index) => {
-          return <img loading='lazy' decoding='async' src={element.image} key={index} className=' w-[300px] self-center ' />;
+          return (
+            <p title={element.title} className='self-center'>
+              <img loading='lazy' decoding='async' alt='Photo' src={element.image} key={index} className=' w-[300px] h-auto self-center ' />
+            </p>
+          );
         })}
       </main>
     </div>

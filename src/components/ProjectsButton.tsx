@@ -54,7 +54,7 @@ const ProjectsButton = ({ live, source }: Props) => {
                 handleMouseOver(element.toolTip);
               }}
             >
-              <img src={element.icon} alt='Icon' className={element.icon === sourceIcon ? `w-4` : `w-5`} />
+              <img src={element.icon} alt='Icon' className={element.icon === sourceIcon ? `w-4 h-6` : `w-5 h-7`} />
             </a>
           </main>
         );

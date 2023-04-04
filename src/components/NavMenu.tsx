@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import DownloadIcon from '../assets/svg/DownloadIcon';
 import AboutMeIcon from '../assets/svg/AboutMeIcon';
 import ProjectIcon from '../assets/svg/ProjectIcon';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 type education = {
   education: string;
   date: string;

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Menu } from './NavMenu';
 import GitHubIcon from '../assets/svg/GitHubIcon';
 import LinkedInIcon from '../assets/svg/LinkedInIcon';

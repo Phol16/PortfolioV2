@@ -1,4 +1,3 @@
-import React, { ReactNode } from 'react';
 import ProjectsDetails from './ProjectsDetails';
 
 interface ProjectsInfo {
