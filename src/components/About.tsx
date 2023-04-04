@@ -13,7 +13,7 @@ const buttonDetails: buttons[] = [
 
 const About = () => {
   return (
-    <div className='px-5 flex flex-col w-fit m-auto my-20 max-w-xl' id='About'>
+    <div className='px-5 flex flex-col w-fit m-auto my-15 max-w-xl' id='About'>
       <h1 className='font-semibold text-primaryTextColor text-xl my-5'>About Me</h1>
       <p className=' text-xs md:text-sm px-2 self-center max-w-xl'>I'm knowledgeable in using MERN stack technology for web development. I use MERN stack to create full stack application. I'm also knowledgeable in troubleshooting laptops, desktop and printers. I am also eager to learn more or develop or improve my skills. currently I am learning typescript and nextJS</p>
       <main className='text-black font-semibold flex flex-col gap-3 my-5'>

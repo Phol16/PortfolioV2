@@ -44,7 +44,7 @@ const Information = () => {
             <main className='my-5' key={index}>
               <h2 className='font-normal md:text-base'>{element.title}</h2>
               {element.content ? (
-                <p className=' indent-5 text-xs md:text-sm text-primaryTextColor'>{element.content}</p>
+                <p className='my-2 indent-5 text-xs md:text-sm text-primaryTextColor'>{element.content}</p>
               ) : element.education ? (
                 element.education.map((e, i) => {
                   return (
