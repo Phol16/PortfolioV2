@@ -86,7 +86,7 @@ const Projects = () => {
       </section>
     </div>
     <section className='absolute top-0 -z-40 w-full h-full'>
-          <img loading='lazy' decoding='async' src={donut} alt="cube" className='w-20 h-20 opacity-20 absolute left-[220px] top-[25%]'/>
+          <img loading='lazy' decoding='async' src={donut} alt="cube" className='w-20 h-20 opacity-20 absolute left-[220px] top-[15%]'/>
           <img loading='lazy' decoding='async' src={sphere} alt="cube" className='w-20 h-20 opacity-20 absolute right-[220px] top-[75%]'/>
     </section>
     </main>
