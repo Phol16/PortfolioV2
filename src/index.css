@@ -11,7 +11,7 @@
   --primaryBackground: #0C090D;
   --secondaryBackground: #ffffff;
 
-  --primaryTextColorHover: #05b1dc77;
+  --primaryTextColorHover: #05b1dc7c;
   --primaryTextColor: #05B2DC;
   --secondaryTextColor: #F1F0EA;
 }
@@ -73,4 +73,13 @@ body {
 .slideRight {
   transition: transform ease-in-out 0.7s;
   transform: translateX(0);
+}
+.line::after{
+  position: absolute;
+  left: 38%;
+  top: 20px;
+  content: '';
+  background-color: white;
+  width: 2px;
+  height: 20px;
 }
