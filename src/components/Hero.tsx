@@ -61,7 +61,7 @@ const Hero = () => {
   }, [displayInfo, deleteMode]);
 
   return (
-    <main className='relative h-[calc(100vh-82px)]'>
+    <main className='relative h-[calc(100svh-82px)]'>
     <div className=' relative flex flex-col justify-center h-full space-y-2 items-center p-1 z-10'>
       <h1 className='font-medium text-3xl md:text-4xl relative'>
         <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>
@@ -76,7 +76,7 @@ const Hero = () => {
         <p>I`m a MERN stack developer. I`m knowledgeable in creating front-end and back-end and I`m eager to learn more advance technologies</p>
       </main>
       <a href='#Project'>
-        <section className='absolute bottom-4 left-0 flex flex-col items-center justify-center gap-6 cursor-pointer animate-bounce'>
+        <section className='absolute bottom-5 left-0 flex flex-col items-center justify-center gap-6 cursor-pointer animate-bounce'>
           <p className=' rotate-[270deg] font-normal text-[10px]'>Scroll Down</p>
           <img src={arrowDownSVG} alt='arrowDown' className='w-3 h-3' />
         </section>
