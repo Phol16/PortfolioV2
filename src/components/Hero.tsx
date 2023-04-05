@@ -61,8 +61,8 @@ const Hero = () => {
   }, [displayInfo, deleteMode]);
 
   return (
-    <>
-    <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100svh-82px)] p-1 z-10'>
+    <main className='relative'>
+    <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100vh-82px)] p-1 z-10'>
       <h1 className='font-medium text-3xl md:text-4xl relative'>
         <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>
           <img src={avatar} alt='Photo' loading='lazy' decoding='async' className='w-14 h-14 md:w-16 md:h-16' title='Phol' />
@@ -82,11 +82,11 @@ const Hero = () => {
         </section>
       </a>
     </div>
-    <section className='absolute top-0 -z-40  w-screen h-screen'>
+    <section className='absolute top-0 -z-40 w-full h-[100svh]'>
       <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[75%] left-[220px] w-20 h-20 opacity-20'/>
       <img loading='lazy' decoding='async' src={triangle} alt="cube" className='absolute top-[25%] right-[220px] w-20 h-20 opacity-20'/>
     </section>
-    </>
+    </main>
   );
 };
 
