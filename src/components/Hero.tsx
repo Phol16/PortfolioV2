@@ -83,8 +83,8 @@ const Hero = () => {
       </a>
     </div>
     <section className='absolute top-0 -z-40 w-full h-[100svh]'>
-      <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[75%] left-[220px] w-20 h-20 opacity-20'/>
-      <img loading='lazy' decoding='async' src={triangle} alt="cube" className='absolute top-[15%] right-[220px] w-20 h-20 opacity-20'/>
+      <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[75%] left-[220px] w-20 h-20 opacity-20 '/>
+      <img loading='lazy' decoding='async' src={triangle} alt="cube" className='absolute top-[15%] right-[220px] w-20 h-20 opacity-20 hidden md:flex'/>
     </section>
     </main>
   );
