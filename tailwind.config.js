@@ -9,6 +9,7 @@ module.exports = {
       colors:{
         primaryBackground: "var(--primaryBackground)",
         secondaryBackground: "var(--secondaryBackground)",
+        primaryTextColorHover: "var(--primaryTextColorHover)",
         primaryTextColor: "var(--primaryTextColor)",
         secondaryTextColor: "var(--secondaryTextColor)"
       },
