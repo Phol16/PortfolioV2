@@ -34,7 +34,7 @@ const Journey = () => {
       <section className='relative md:-left-28 my-10 w-fit text-xs md:text-base flex flex-col px-10 gap-8'>
         {Details.map((element, index) => {
           return (
-            <main key={index} className={`relative flex items-center px-5 w-80 ${index % 2 === 0 ? 'md:justify-end' : 'md:left-[100%]'}`}>
+            <main key={index} className={`relative flex items-center px-5 ${index % 2 === 0 ? 'md:justify-end' : 'md:left-[100%]'}`}>
               <p className='w-fit'>{element.content}</p>
               {element.year ? <span className='text-primaryTextColor'>{element.year}</span> : null}
               <span className={`${index !== Details.length - 1 ? 'line' : null} absolute left-0 ${index % 2 === 0 ? 'md:left-[100%]' : ''}`}>

@@ -92,7 +92,7 @@ const Skills = () => {
       <main className=' flex flex-col md:flex-row gap-5'>
         {Cert.map((element, index) => {
           return (
-            <p title={element.title} className='self-center'>
+            <p title={element.title} className='self-center' key={index}>
               <img loading='lazy' decoding='async' alt='Photo' src={element.image} key={index} className=' w-[300px] h-auto self-center ' />
             </p>
           );
