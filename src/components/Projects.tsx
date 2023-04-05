@@ -1,4 +1,5 @@
 import ProjectsDetails from './ProjectsDetails';
+import cube from '../assets/svg/CubeIcon.svg'
 
 interface ProjectsInfo {
   title: string;
@@ -72,6 +73,7 @@ const projectsInfo: ProjectsInfos = [
 
 const Projects = () => {
   return (
+    <main className='relative'>
     <div className='my-20 flex flex-col' id='Project'>
       <section className='w-fit self-center px-5'>
         <h1 className='font-semibold text-primaryTextColor text-xl my-5'>Projects</h1>
@@ -82,6 +84,11 @@ const Projects = () => {
         </main>
       </section>
     </div>
+    <section className='absolute top-0 -z-40 w-full h-full'>
+          <img loading='lazy' decoding='async' src={cube} alt="cube" className='w-20 h-20 opacity-30 absolute left-[220px] top-[25%]'/>
+          <img loading='lazy' decoding='async' src={cube} alt="cube" className='w-20 h-20 opacity-30 absolute right-[220px] top-[75%]'/>
+    </section>
+    </main>
   );
 };
 

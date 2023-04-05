@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import arrowDownSVG from '../assets/svg/arrowDown.svg';
+import avatar from '../assets/svg/AvatarIcon.svg';
+import cube from '../assets/svg/CubeIcon.svg'
 
 type timeOutIDs = ReturnType<typeof setTimeout>;
 
@@ -58,8 +60,12 @@ const Hero = () => {
   }, [displayInfo, deleteMode]);
 
   return (
-    <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100svh-82px)] p-1'>
-      <h1 className='font-medium text-3xl md:text-4xl'>
+    <>
+    <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100svh-82px)] p-1 z-10'>
+      <h1 className='font-medium text-3xl md:text-4xl relative'>
+        <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>
+          <img src={avatar} alt='Photo' loading='lazy' decoding='async' className='w-14 h-14 md:w-16 md:h-16' title='Phol' />
+        </a>
         Hi! My name is <span className='text-primaryTextColor'>Phol</span>
       </h1>
       <main className=' px-6 max-w-xs md:max-w-sm text-xs md:text-sm'>
@@ -75,6 +81,11 @@ const Hero = () => {
         </section>
       </a>
     </div>
+    <section className='absolute top-0 -z-40  w-screen h-screen'>
+      <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[75%] left-[220px] w-20 h-20 opacity-30'/>
+      <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[25%] right-[220px] w-20 h-20 opacity-30'/>
+    </section>
+    </>
   );
 };
 
