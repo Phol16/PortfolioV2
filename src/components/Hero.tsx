@@ -61,8 +61,8 @@ const Hero = () => {
   }, [displayInfo, deleteMode]);
 
   return (
-    <main className='relative'>
-    <div className=' relative flex flex-col justify-center space-y-2 items-center h-[calc(100vh-82px)] p-1 z-10'>
+    <main className='relative h-[calc(100vh-82px)]'>
+    <div className=' relative flex flex-col justify-center h-full space-y-2 items-center p-1 z-10'>
       <h1 className='font-medium text-3xl md:text-4xl relative'>
         <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>
           <img src={avatar} alt='Photo' loading='lazy' decoding='async' className='w-14 h-14 md:w-16 md:h-16' title='Phol' />
