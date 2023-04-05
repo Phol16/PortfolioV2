@@ -36,7 +36,7 @@ const projectsInfo: ProjectsInfos = [
     description: `A Web-Based application developed using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420731/Portfolio/portfolio_qqsld3.png',
+    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680693756/Portfolio/portfolio_ofjuxl.png',
     live: 'https://phol.vercel.app/',
     source: 'https://github.com/Phol16/PortfolioV2',
   },
