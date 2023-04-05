@@ -1,5 +1,6 @@
 import ProjectsDetails from './ProjectsDetails';
-import cube from '../assets/svg/CubeIcon.svg'
+import donut from '../assets/svg/DonutIcon.svg';
+import sphere from '../assets/svg/Sphere.svg';
 
 interface ProjectsInfo {
   title: string;
@@ -85,8 +86,8 @@ const Projects = () => {
       </section>
     </div>
     <section className='absolute top-0 -z-40 w-full h-full'>
-          <img loading='lazy' decoding='async' src={cube} alt="cube" className='w-20 h-20 opacity-30 absolute left-[220px] top-[25%]'/>
-          <img loading='lazy' decoding='async' src={cube} alt="cube" className='w-20 h-20 opacity-30 absolute right-[220px] top-[75%]'/>
+          <img loading='lazy' decoding='async' src={donut} alt="cube" className='w-20 h-20 opacity-30 absolute left-[220px] top-[25%]'/>
+          <img loading='lazy' decoding='async' src={sphere} alt="cube" className='w-20 h-20 opacity-30 absolute right-[220px] top-[75%]'/>
     </section>
     </main>
   );

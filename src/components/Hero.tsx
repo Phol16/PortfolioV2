@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import arrowDownSVG from '../assets/svg/arrowDown.svg';
 import avatar from '../assets/svg/AvatarIcon.svg';
 import cube from '../assets/svg/CubeIcon.svg'
+import triangle from '../assets/svg/TriangleIcon.svg'
 
 type timeOutIDs = ReturnType<typeof setTimeout>;
 
@@ -83,7 +84,7 @@ const Hero = () => {
     </div>
     <section className='absolute top-0 -z-40  w-screen h-screen'>
       <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[75%] left-[220px] w-20 h-20 opacity-30'/>
-      <img loading='lazy' decoding='async' src={cube} alt="cube" className='absolute top-[25%] right-[220px] w-20 h-20 opacity-30'/>
+      <img loading='lazy' decoding='async' src={triangle} alt="cube" className='absolute top-[25%] right-[220px] w-20 h-20 opacity-30'/>
     </section>
     </>
   );
