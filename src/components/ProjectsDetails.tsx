@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ProjectsButton from './ProjectsButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type Props = {
   title: string;
@@ -48,7 +50,7 @@ const ProjectsDetails = ({ title, image, description, tech, live, source, number
         </main>
         <div className='relative overflow-hidden group rounded-lg'>
           <a href={live} target='_blank' className='cursor-pointer'>
-            <img loading='lazy' decoding='async' src={image} alt='Photo' className='aspect-video w-[450px] h-auto group-hover:blur-[2px] group-hover:scale-125 duration-[500ms]' />
+            <LazyLoadImage src={image} alt='Photo' effect='blur' className='aspect-video w-[450px] h-auto group-hover:blur-[2px] group-hover:scale-125 duration-[500ms]' />
             <section className=' bg-black/80 text-left text-xs sm:text-sm lg:text-base absolute inset-0 flex flex-col gap-2 items-center justify-center p-3 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-transform duration-[500ms] '>
               <h2 className=' text-primaryTextColor'>{tech}</h2>
               <p>{description}</p>

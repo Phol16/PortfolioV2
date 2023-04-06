@@ -1,6 +1,8 @@
 import ProjectsDetails from './ProjectsDetails';
 import donut from '../assets/svg/DonutIcon.svg';
 import sphere from '../assets/svg/Sphere.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ProjectsInfo {
   title: string;
@@ -75,20 +77,20 @@ const projectsInfo: ProjectsInfos = [
 const Projects = () => {
   return (
     <main className='relative'>
-    <div className='my-20 flex flex-col' id='Project'>
-      <section className='w-fit self-center px-5'>
-        <h1 className='font-semibold text-primaryTextColor text-xl my-5'>Projects</h1>
-        <main className='grid md:grid-cols-2 w-fit h-fit gap-2 md:gap-x-16 xl:gap-x-28'>
-          {projectsInfo.map((element, index) => {
-            return <ProjectsDetails number={index + 1} title={element.title} description={element.description} image={element.image} tech={element.tech} live={element.live} source={element.source} key={index} />;
-          })}
-        </main>
+      <div className='my-20 flex flex-col' id='Project'>
+        <section className='w-fit self-center px-5'>
+          <h1 className='font-semibold text-primaryTextColor text-xl my-5'>Projects</h1>
+          <main className='grid md:grid-cols-2 w-fit h-fit gap-2 md:gap-x-16 xl:gap-x-28'>
+            {projectsInfo.map((element, index) => {
+              return <ProjectsDetails number={index + 1} title={element.title} description={element.description} image={element.image} tech={element.tech} live={element.live} source={element.source} key={index} />;
+            })}
+          </main>
+        </section>
+      </div>
+      <section className='absolute top-0 -z-40 w-full h-full'>
+        <LazyLoadImage src={donut} alt='cube' className='w-20 h-20 opacity-20 absolute left-[220px] top-[15%]' />
+        <LazyLoadImage src={sphere} alt='cube' className='w-20 h-20 opacity-20 absolute right-[220px] top-[75%]' />
       </section>
-    </div>
-    <section className='absolute top-0 -z-40 w-full h-full'>
-          <img loading='lazy' decoding='async' src={donut} alt="cube" className='w-20 h-20 opacity-20 absolute left-[220px] top-[15%]'/>
-          <img loading='lazy' decoding='async' src={sphere} alt="cube" className='w-20 h-20 opacity-20 absolute right-[220px] top-[75%]'/>
-    </section>
     </main>
   );
 };
