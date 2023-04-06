@@ -8,6 +8,8 @@ import ReactJsIcon from '../assets/svg/ReactjsIcon';
 import LaptopIcon from '../assets/svg/LaptopIcon';
 import DesktopIcon from '../assets/svg/DesktopIcon';
 import PrinterIcon from '../assets/svg/PrinterIcon';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type fill = {
   fill: string;
@@ -93,7 +95,7 @@ const Skills = () => {
         {Cert.map((element, index) => {
           return (
             <p title={element.title} className='self-center' key={index}>
-              <img loading='lazy' decoding='async' alt='Photo' src={element.image} key={index} className=' w-[300px] h-auto self-center ' />
+              <LazyLoadImage effect='blur' loading='lazy' decoding='async' alt='Photo' src={element.image} key={index} className=' w-[300px] h-auto self-center ' />
             </p>
           );
         })}
