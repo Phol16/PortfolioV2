@@ -24,7 +24,7 @@ const Details: details[] = [
   { content: '',year: 2023},
   { content: 'Re-Learning C#' }, 
   { content: 'Learning TypeScript' },
-  { content: 'Currently Learn NextJS' },
+  { content: 'Currently Learning NextJS' },
   { content: 'Will learn Relational Database Management System(RDBMS)' }
 ];
 
