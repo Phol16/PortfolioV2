@@ -23,8 +23,9 @@ const Details: details[] = [
   { content: 'Graduated from BootCamp' }, 
   { content: '',year: 2023},
   { content: 'Re-Learning C#' }, 
-  { content: 'Currently Learning TypeScript' },
-  { content: 'Will Learn NextJS' }
+  { content: 'Learning TypeScript' },
+  { content: 'Currently Learn NextJS' },
+  { content: 'Will learn Relational Database Management System(RDBMS)' }
 ];
 
 const Journey = () => {
