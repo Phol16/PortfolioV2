@@ -70,6 +70,7 @@ const NavMenu = () => {
           onClick={useCallback(() => {
             setOpen(true);
           }, [open])}
+          aria-label='NavMenu'
         >
           <BarsIcon />
         </button>
