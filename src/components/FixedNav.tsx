@@ -27,7 +27,7 @@ const FixedNav = () => {
       {
         Nav.map(({redirect, Icon}, index)=>{
           return (
-            <a key={index} href={redirect} target='_blank' className='hover:scale-110 transition-transform duration-150'>
+            <a key={index} href={redirect} target='_blank' className='hover:scale-110 transition-transform duration-150' aria-label='nav-Link'>
             <Icon fill='#05B2DC' />
           </a>
           )
