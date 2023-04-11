@@ -4,7 +4,7 @@ import AboutMeIcon from '../assets/svg/AboutMeIcon';
 import ProjectIcon from '../assets/svg/ProjectIcon';
 import BarsIcon from '../assets/svg/BarsIcon';
 import NavMenuBurger from './NavMenuBurger';
-import CV from '../assets/Lim_Pholibert_CV.pdf'
+import CV from '../assets/PholibertLim_FullStackDev_MERN_2023.pdf'
 
 type prop = {
   fill: string;
