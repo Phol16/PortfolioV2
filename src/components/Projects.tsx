@@ -19,7 +19,7 @@ const projectsInfo: ProjectsInfos = [
   {
     title: 'Movie Notepad',
     description: 'A fullstack application developed using MERN stack. It is an application where user can add movie or series by providing details/information about a specific movie. It is also an application where user can add movies to their watchlist and add notes to a specific movie in the watchlist.',
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680421092/Portfolio/movienotepad_qgp9fr.png',
+    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1681542436/Portfolio/movienotepad_eyeza0.png',
     tech: 'MongoDb ExpressJS NodeJS ReactJS',
     live: 'https://movienotepadclient.onrender.com/',
     source: 'https://github.com/Phol16/MovieNotepadV2',
