@@ -74,6 +74,14 @@ body {
   transition: transform ease-in-out 0.7s;
   transform: translateX(0);
 }
+.initialTop {
+  transition: ease-in-out 0.7s;
+  transform: translateY(-80%);
+}
+.slideTop {
+  transition: transform ease-in-out 0.7s;
+  transform: translateY(0);
+}
 .line::after{
   position: absolute;
   left: 38%;
@@ -81,5 +89,5 @@ body {
   content: '';
   background-color: white;
   width: 2px;
-  height: 20px;
+  height: 100%;
 }
