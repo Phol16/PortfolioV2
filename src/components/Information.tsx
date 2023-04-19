@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 type education = {
   education: string;
   date: string;
@@ -35,8 +37,10 @@ const Inform: inform[] = [
 const Information = () => {
   return (
     <div className=' max-w-lg '>
-      <h1 className=' text-primaryTextColor'>Information</h1>
-      <section className=' text-secondaryTextColor font-light p-10 m-auto'>
+      <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor'>
+        Information
+      </motion.h1>
+      <motion.section initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-secondaryTextColor font-light p-10 m-auto'>
         {Inform.map((element, index) => {
           return (
             <main className='my-5' key={index}>
@@ -57,7 +61,7 @@ const Information = () => {
             </main>
           );
         })}
-      </section>
+      </motion.section>
     </div>
   );
 };

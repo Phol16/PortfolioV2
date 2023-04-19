@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import LoadingPage from '../page/LoadingPage';
+import Journey from '../components/Journey';
+import Information from '../components/Information';
+import Skills from '../components/Skills';
 const HomePage = React.lazy(() => import('../page/HomePage'));
-const Skills = React.lazy(() => import('../components/Skills'));
-const Journey = React.lazy(() => import('../components/Journey'));
-const Information = React.lazy(() => import('../components/Information'));
 
 function App() {
   return (
@@ -25,22 +25,8 @@ function App() {
             </Suspense>
           }
         />
-        <Route
-          path='/Journey'
-          element={
-            <Suspense fallback={<LoadingPage />}>
-              <Journey />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/Information'
-          element={
-            <Suspense fallback={<LoadingPage />}>
-              <Information />
-            </Suspense>
-          }
-        />
+        <Route path='/Journey' element={<Journey />} />
+        <Route path='/Information' element={<Information />} />
       </Route>
     </Routes>
   );
