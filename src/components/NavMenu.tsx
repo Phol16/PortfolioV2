@@ -41,7 +41,7 @@ const NavMenu = () => {
 
   return (
     <>
-      <div className='text-black hidden md:flex'>
+      <div className=' hidden md:flex'>
         <ul className='flex gap-5 font-semibold'>
           {Menu.map(({ title, Icon, redirect }, index) => {
             return (
@@ -56,7 +56,7 @@ const NavMenu = () => {
                       setHover(null);
                     }, [title])}
                   >
-                    {Icon ? <Icon fill={hover === title ? 'white' : 'black'} transition='ease 100ms' /> : null}
+                    {Icon ? <Icon fill={hover === title ? 'white' : '#05b2dc'} transition='ease 100ms' /> : null}
                     <p>{title}</p>
                   </button>
                 </a>

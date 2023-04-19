@@ -64,7 +64,7 @@ const Hero = () => {
   }, [displayInfo, deleteMode]);
 
   return (
-    <main className='relative h-[calc(100svh-82px)]'>
+    <main className='relative h-[95svh]'>
       <div className=' relative flex flex-col justify-center h-full space-y-2 items-center p-1 z-10'>
         <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className='font-medium text-3xl md:text-4xl relative'>
           <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>

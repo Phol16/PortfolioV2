@@ -4,7 +4,7 @@ import NavMenu from './NavMenu';
 
 const Navbar = () => {
   return (
-    <div className='text-secondaryTextColor bg-primaryTextColor p-4 flex items-center justify-between'>
+    <div className='fixed w-full z-40 text-primaryTextColor bg-primaryBackground p-4 flex items-center justify-between'>
       <Logo />
       <NavMenu />
       <FixedNav />

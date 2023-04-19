@@ -2,12 +2,13 @@ import { useCallback, useState } from 'react';
 import { Menu } from './NavMenu';
 import GitHubIcon from '../assets/svg/GitHubIcon';
 import LinkedInIcon from '../assets/svg/LinkedInIcon';
+import { motion } from 'framer-motion';
 
 const NavMenuBurger = () => {
   const [hover, setHover] = useState<string | null>(null);
 
   return (
-    <div className='fixed top-0 right-0 w-[60vw] bg-white text-primaryBackground h-[100dvh] z-40 flex flex-col justify-between py-10'>
+    <motion.div initial={{ opacity: 0, x: 50 }} transition={{ duration: 0.3 }} whileInView={{ opacity: 1, x: 0 }} className='fixed top-0 right-0 w-[60vw] bg-secondaryTextColor text-primaryBackground h-[100dvh] z-40 flex flex-col justify-between py-10'>
       <h1 className='self-center font-bold text-2xl'>Phol</h1>
       <main>
         <ul className='flex flex-col gap-5'>
@@ -43,7 +44,7 @@ const NavMenuBurger = () => {
           <LinkedInIcon fill='black' />
         </a>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
