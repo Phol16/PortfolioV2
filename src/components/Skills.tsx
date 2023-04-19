@@ -72,10 +72,10 @@ const Cert: cert[] = [
 const Skills = () => {
   return (
     <div>
-      <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor'>
+      <motion.h1 initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor'>
         Skills
       </motion.h1>
-      <motion.section initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className='grid md:grid-cols-2 items-center gap-10 text-secondaryTextColor my-10'>
+      <motion.section initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className='grid md:grid-cols-2 items-center gap-10 text-secondaryTextColor my-10'>
         {Skill.map((skillElement, index) => {
           return (
             <div key={index} className='flex flex-col gap-3 items-center'>
@@ -93,10 +93,10 @@ const Skills = () => {
           );
         })}
       </motion.section>
-      <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor my-10'>
+      <motion.h1 initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor my-10'>
         Certification
       </motion.h1>
-      <motion.main initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' flex flex-col md:flex-row gap-5'>
+      <motion.main initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' flex flex-col md:flex-row gap-5'>
         {Cert.map((element, index) => {
           return (
             <p title={element.title} className='self-center' key={index}>
