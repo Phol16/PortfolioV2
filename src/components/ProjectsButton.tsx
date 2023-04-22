@@ -40,7 +40,7 @@ const ProjectsButton = ({ live, source }: Props) => {
     <>
       {ProjectButtons.map((element, index) => {
         return (
-          <main className='relative flex flex-col items-center mt-8' key={index}>
+          <main className='relative flex flex-col justify-center items-center mt-8' key={index}>
             {info === element.toolTip && <p className='border absolute text-xs w-24 rounded-lg p-1 text-center -top-8'>{element.toolTip}</p>}
             <a
               className='cursor-pointer'
