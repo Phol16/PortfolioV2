@@ -15,7 +15,7 @@ const Journey = () => {
   return (
     <div className=' text-secondaryTextColor flex flex-col '>
       <div className='text-primaryTextColor'>Journey</div>
-      <aside className=' overflow-hidden my-8 py-2'>
+      <aside className=' relative -left-[25px] overflow-hidden my-8 py-2'>
         <section className='relative md:-left-[70px] w-fit text-xs md:text-base flex flex-col px-10 gap-8 '>
           {Details.map((element, index) => {
             return (
