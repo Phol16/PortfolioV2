@@ -40,7 +40,7 @@ const Information = () => {
       <motion.h1 initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-primaryTextColor'>
         Information
       </motion.h1>
-      <motion.section initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-secondaryTextColor font-light p-10 m-auto'>
+      <motion.section initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-secondaryTextColor font-light p-3 my-5'>
         {Inform.map((element, index) => {
           return (
             <main className='my-5' key={index}>
