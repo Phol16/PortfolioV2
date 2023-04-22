@@ -43,7 +43,7 @@ const ProjectsButton = ({ live, source }: Props) => {
           <main className='relative flex flex-col justify-center items-center mt-8' key={index}>
             {info === element.toolTip && <p className='border absolute text-xs w-24 rounded-lg p-1 text-center -top-8'>{element.toolTip}</p>}
             <a
-              className='cursor-pointer'
+              className='cursor-pointer' 
               href={element.redirect}
               target='_blank'
               title={element.toolTip}
