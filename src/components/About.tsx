@@ -29,7 +29,7 @@ const About = () => {
                 to={element.href}
                 key={index}
                 className={({ isActive }: { isActive: boolean; isPending: boolean }) => {
-                  return `p-3 rounded-lg text-sm md:text-base hover:bg-primaryTextColorHover  hover:text-secondaryTextColor transition-colors duration-200 ${isActive ? 'bg-primaryTextColor shadow-sm shadow-white' : 'bg-secondaryTextColor'}`;
+                  return `p-3 rounded-lg text-sm md:text-base hover:bg-primaryTextColorHover  hover:text-secondaryTextColor transition-colors duration-200 ${isActive ? 'bg-primaryTextColor' : 'bg-secondaryTextColor'}`;
                 }}
               >
                 {element.title}
