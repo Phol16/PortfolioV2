@@ -66,13 +66,13 @@ const Hero = () => {
   return (
     <main className='relative h-[95svh]'>
       <div className=' relative flex flex-col justify-center h-full space-y-2 items-center p-1 z-10'>
-        <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} viewport={{once:true}} whileInView={{ opacity: 1, y: 0 }} className='font-medium text-3xl md:text-4xl relative'>
+        <motion.h1 initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} viewport={{once:true}} whileInView={{ opacity: 1, y: 0 }} className='font-medium text-3xl md:text-4xl 2xl:text-5xl relative'>
           <a href='#About' className='cursor-pointer absolute -top-14 md:-top-16 right-0 hover:translate-y-0.5 transition-transform duration-150'>
             <img src={avatar} alt='Photo' loading='lazy' decoding='async' className='w-14 h-14 md:w-16 md:h-16' title='Phol' />
           </a>
           Hi! My name is <span className='text-primaryTextColor'>Phol</span>
         </motion.h1>
-        <motion.main initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' px-6 max-w-xs md:max-w-sm text-xs md:text-sm'>
+        <motion.main initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' px-6 max-w-xs md:max-w-sm 2xl:max-w-md text-xs md:text-sm 2xl:text-base'>
           <h2 className='text-primaryTextColor my-1'>
             {displayInfo} <span className={`cursor text-secondaryTextColor`}>|</span>
           </h2>

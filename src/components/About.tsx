@@ -15,7 +15,7 @@ const buttonDetails: buttons[] = [
 const About = () => {
   return (
     <div className='px-5 flex flex-col w-fit m-auto py-20 max-w-xl' id='About'>
-      <motion.h1 initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className='font-semibold text-primaryTextColor text-xl my-5'>
+      <motion.h1 initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className='font-semibold text-primaryTextColor text-xl 2xl:text-2xl my-5'>
         About Me
       </motion.h1>
       <motion.p initial={{ opacity: 0, y: 50 }} viewport={{once:true}} transition={{ duration: 0.4 }} whileInView={{ opacity: 1, y: 0 }} className=' text-xs md:text-sm px-2 self-center max-w-xl'>

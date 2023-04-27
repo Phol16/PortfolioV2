@@ -80,7 +80,7 @@ const Projects = () => {
     <main className='relative'>
       <div className='py-20 flex flex-col' id='Project'>
         <section className='w-fit self-center px-5'>
-          <motion.h1 initial={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }} viewport={{once:true}} whileInView={{ opacity: 1, x: 0 }} className='font-semibold text-primaryTextColor text-xl my-5'>
+          <motion.h1 initial={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }} viewport={{once:true}} whileInView={{ opacity: 1, x: 0 }} className='font-semibold text-primaryTextColor text-xl 2xl:text-2xl my-5'>
             Projects
           </motion.h1>
           <main className='grid md:grid-cols-2 w-fit h-fit gap-2 md:gap-x-16 xl:gap-x-28'>
