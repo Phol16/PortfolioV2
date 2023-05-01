@@ -19,8 +19,10 @@ interface ProjectsInfos extends Array<ProjectsInfo> {}
 const projectsInfo: ProjectsInfos = [
   {
     title: 'Movie Notepad',
-    description: 'A fullstack application developed using MERN stack. It is an application where user can add movie or series by providing details/information about a specific movie. It is also an application where user can add movies to their watchlist and add notes to a specific movie in the watchlist.',
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1682244926/Portfolio/movienotepad_znvjx1.png',
+    description:
+      'A fullstack application developed using MERN stack. It is an application where user can add movie or series by providing details/information about a specific movie. It is also an application where user can add movies to their watchlist and add notes to a specific movie in the watchlist.',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1682244926/Portfolio/movienotepad_znvjx1.png',
     tech: 'MongoDb ExpressJS NodeJS ReactJS',
     live: 'https://movienotepadclient.onrender.com/',
     source: 'https://github.com/Phol16/MovieNotepadV2',
@@ -29,7 +31,8 @@ const projectsInfo: ProjectsInfos = [
     title: 'Mini Messenger',
     tech: 'MongoDb ExpressJS SocketIO ReactJs',
     description: `A fullstack application developed using MERN stack with socketIO. It is a simple application that almost look like messenger where user can communicate with one another, it is a very simple application that uses socket io for realtime communication`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1679321037/Portfolio/Untitled_b3kuhi.png',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1679321037/Portfolio/Untitled_b3kuhi.png',
     live: 'https://minimessenger.onrender.com/',
     source: 'https://github.com/Phol16/ChatApp',
   },
@@ -39,7 +42,8 @@ const projectsInfo: ProjectsInfos = [
     description: `A Web-Based application developed using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680693756/Portfolio/portfolio_ofjuxl.png',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680693756/Portfolio/portfolio_ofjuxl.png',
     live: 'https://phol.vercel.app/',
     source: 'https://github.com/Phol16/PortfolioV2',
   },
@@ -49,7 +53,8 @@ const projectsInfo: ProjectsInfos = [
     description: `A fullstack application developed using MERN stack.
     It is an application developed by UpliftCodeCamp Batch12.
     It is an application where you can upload photos of your favorite foods, you can interact to other photos that was uploaded by other users as well.`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420740/Portfolio/eatstagram_o3q32x.png',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420740/Portfolio/eatstagram_o3q32x.png',
     live: 'https://proj6-fe.onrender.com/',
     source: 'https://github.com/Phol16',
   },
@@ -59,7 +64,8 @@ const projectsInfo: ProjectsInfos = [
     description: `A Web-Based application developed using ReactJS.
     It is an application the that display a list of pokemons.
     It has a feature where you can capture the pokemon.`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420735/Portfolio/pokedex_nbegkb.png',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420735/Portfolio/pokedex_nbegkb.png',
     live: 'https://reactjs-pokedex.onrender.com/',
     source: 'https://github.com/Phol16/ReactJS-reducer-pokedex',
   },
@@ -69,7 +75,8 @@ const projectsInfo: ProjectsInfos = [
     description: `A Web-Based application developed using ReactJS.
     It is an application where it shows information about the weather in zamboanga city.
     It is a simple application.`,
-    image: 'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420728/Portfolio/wheaterApp_lehxrc.png',
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420728/Portfolio/wheaterApp_lehxrc.png',
     live: 'https://weather-app-7009.onrender.com/',
     source: 'https://github.com/Phol16/Weather-App',
   },
@@ -80,19 +87,44 @@ const Projects = () => {
     <main className='relative'>
       <div className='py-20 flex flex-col' id='Project'>
         <section className='w-fit self-center px-5'>
-          <motion.h1 initial={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }} viewport={{once:true}} whileInView={{ opacity: 1, x: 0 }} className='font-semibold text-primaryTextColor text-xl 2xl:text-2xl my-5'>
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.3 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className='font-semibold text-primaryTextColor text-xl 2xl:text-2xl my-5'
+          >
             Projects
           </motion.h1>
           <main className='grid md:grid-cols-2 w-fit h-fit gap-2 md:gap-x-16 xl:gap-x-28'>
             {projectsInfo.map((element, index) => {
-              return <ProjectsDetails number={index + 1} title={element.title} description={element.description} image={element.image} tech={element.tech} live={element.live} source={element.source} key={index} />;
+              return (
+                <ProjectsDetails
+                  number={index + 1}
+                  title={element.title}
+                  description={element.description}
+                  image={element.image}
+                  tech={element.tech}
+                  live={element.live}
+                  source={element.source}
+                  key={index}
+                />
+              );
             })}
           </main>
         </section>
       </div>
       <section className='absolute top-0 -z-40 w-full h-full'>
-        <LazyLoadImage src={donut} alt='cube' className='w-20 h-20 opacity-20 absolute left-[220px] top-[15%]' />
-        <LazyLoadImage src={sphere} alt='cube' className='w-20 h-20 opacity-20 absolute right-[220px] top-[75%]' />
+        <LazyLoadImage
+          src={donut}
+          alt='cube'
+          className='w-20 h-20 opacity-20 absolute left-[220px] top-[15%]'
+        />
+        <LazyLoadImage
+          src={sphere}
+          alt='cube'
+          className='w-20 h-20 opacity-20 absolute right-[220px] top-[75%]'
+        />
       </section>
     </main>
   );

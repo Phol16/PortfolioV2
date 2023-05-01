@@ -13,7 +13,15 @@ type Props = {
   number: number;
 };
 
-const ProjectsDetails = ({ title, image, description, tech, live, source, number }: Props) => {
+const ProjectsDetails = ({
+  title,
+  image,
+  description,
+  tech,
+  live,
+  source,
+  number,
+}: Props) => {
   const [visible, setVisible] = useState<boolean>();
   const ProjRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +39,17 @@ const ProjectsDetails = ({ title, image, description, tech, live, source, number
 
   return (
     <div className='max-w-fit overflow-x-hidden' ref={ProjRef}>
-      <section className={`${visible ? (number % 2 === 0 ? 'slideRight' : 'slideLeft') : number % 2 === 0 ? 'initialRight' : 'initialLeft'}`}>
+      <section
+        className={`${
+          visible
+            ? number % 2 === 0
+              ? 'slideRight'
+              : 'slideLeft'
+            : number % 2 === 0
+            ? 'initialRight'
+            : 'initialLeft'
+        }`}
+      >
         <main className='flex flex-col justify-center items-center gap-1'>
           <section className='flex gap-3'>
             <ProjectsButton live={live} source={source} />
@@ -50,7 +68,12 @@ const ProjectsDetails = ({ title, image, description, tech, live, source, number
         </main>
         <div className='relative overflow-hidden group rounded-lg'>
           <a href={live} target='_blank' className='cursor-pointer'>
-            <LazyLoadImage src={image} alt='Photo' effect='blur' className='aspect-video w-[450px] h-auto group-hover:blur-[2px]' />
+            <LazyLoadImage
+              src={image}
+              alt='Photo'
+              effect='blur'
+              className='aspect-video w-[450px] h-auto group-hover:blur-[2px]'
+            />
             <section className=' bg-black/80 text-left text-xs sm:text-sm lg:text-base absolute inset-0 flex flex-col gap-2 items-center justify-center p-3 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[500ms] '>
               <h2 className=' text-primaryTextColor'>{tech}</h2>
               <p>{description}</p>

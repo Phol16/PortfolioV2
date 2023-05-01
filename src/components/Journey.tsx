@@ -9,7 +9,29 @@ interface details {
   content: string;
 }
 
-const Details: details[] = [{ content: '', year: 2021 }, { content: 'Graduated College' }, { content: 'Learning C#' }, { content: 'Learning Web Fundamentals' }, { content: '', year: 2022 }, { content: 'Enrolled in a Bootcamp' }, { content: 'Learning Git' }, { content: 'Re-Learning Web Fundamentals' }, { content: 'Javascript (Basic - Advance)' }, { content: 'React JS' }, { content: 'Node JS' }, { content: 'Express JS' }, { content: 'General Programming' }, { content: 'MongoDB' }, { content: 'Graduated from BootCamp' }, { content: '', year: 2023 }, { content: 'Re-Learning C#' }, { content: 'Learning TypeScript' }, { content: 'Currently Learning NextJS' }, { content: 'Will learn Relational Database Management System(RDBMS)' }];
+const Details: details[] = [
+  { content: '', year: 2021 },
+  { content: 'Graduated College' },
+  { content: 'Learning C#' },
+  { content: 'Learning Web Fundamentals' },
+  { content: '', year: 2022 },
+  { content: 'Enrolled in a Bootcamp' },
+  { content: 'Learning Git' },
+  { content: 'Re-Learning Web Fundamentals' },
+  { content: 'Javascript (Basic - Advance)' },
+  { content: 'React JS' },
+  { content: 'Node JS' },
+  { content: 'Express JS' },
+  { content: 'General Programming' },
+  { content: 'MongoDB' },
+  { content: 'Graduated from BootCamp' },
+  { content: '', year: 2023 },
+  { content: 'Re-Learning C#' },
+  { content: 'Learning TypeScript' },
+  { content: 'Learning NextJS' },
+  { content: 'Currently Learning (RDBMS)' },
+  { content: 'Next to learn ReactNative' },
+];
 
 const Journey = () => {
   return (
@@ -19,10 +41,14 @@ const Journey = () => {
         <section className='relative md:-left-[70px] w-fit text-xs md:text-base flex flex-col px-10 gap-8 '>
           {Details.map((element, index) => {
             return (
-                <JourneyDetails title={element.content} year={element.year} index={index} />
+              <JourneyDetails
+                title={element.content}
+                year={element.year}
+                index={index}
+              />
             );
           })}
-          <div className='absolute -top-2 line h-[97%] left-11 md:left-[90.5%]'></div>
+          <div className='absolute -top-2 line h-[98%] left-11 md:left-[90.5%]'></div>
         </section>
       </aside>
     </div>

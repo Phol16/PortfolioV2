@@ -4,7 +4,7 @@ import AboutMeIcon from '../assets/svg/AboutMeIcon';
 import ProjectIcon from '../assets/svg/ProjectIcon';
 import BarsIcon from '../assets/svg/BarsIcon';
 import NavMenuBurger from './NavMenuBurger';
-import CV from '../assets/PholibertLim_FullStackDev_MERN_2023.pdf'
+import CV from '../assets/PholibertLim_FullStackDev_MERN_2023.pdf';
 
 type prop = {
   fill: string;
@@ -45,7 +45,10 @@ const NavMenu = () => {
         <ul className='flex gap-5 font-semibold'>
           {Menu.map(({ title, Icon, redirect }, index) => {
             return (
-              <li className='hover:text-secondaryTextColor cursor-pointer transition-colors duration-150' key={index}>
+              <li
+                className='hover:text-secondaryTextColor cursor-pointer transition-colors duration-150'
+                key={index}
+              >
                 <a href={redirect}>
                   <button
                     className='flex justify-center items-center gap-1'
@@ -56,7 +59,12 @@ const NavMenu = () => {
                       setHover(null);
                     }, [title])}
                   >
-                    {Icon ? <Icon fill={hover === title ? 'white' : '#05b2dc'} transition='ease 100ms' /> : null}
+                    {Icon ? (
+                      <Icon
+                        fill={hover === title ? 'white' : '#05b2dc'}
+                        transition='ease 100ms'
+                      />
+                    ) : null}
                     <p>{title}</p>
                   </button>
                 </a>

@@ -40,8 +40,15 @@ const ProjectsButton = ({ live, source }: Props) => {
     <>
       {ProjectButtons.map((element, index) => {
         return (
-          <main className='relative flex flex-col justify-center items-center mt-8' key={index}>
-            {info === element.toolTip && <p className='border absolute text-xs w-24 rounded-lg p-1 text-center -top-8'>{element.toolTip}</p>}
+          <main
+            className='relative flex flex-col justify-center items-center mt-8'
+            key={index}
+          >
+            {info === element.toolTip && (
+              <p className='border absolute text-xs w-24 rounded-lg p-1 text-center -top-8'>
+                {element.toolTip}
+              </p>
+            )}
             <a
               className='cursor-pointer'
               href={element.redirect}
@@ -54,7 +61,11 @@ const ProjectsButton = ({ live, source }: Props) => {
                 handleMouseOver(element.toolTip);
               }}
             >
-              <img src={element.icon} alt='Icon' className={element.icon === sourceIcon ? `w-4 h-6` : `w-5 h-7`} />
+              <img
+                src={element.icon}
+                alt='Icon'
+                className={element.icon === sourceIcon ? `w-4 h-6` : `w-5 h-7`}
+              />
             </a>
           </main>
         );

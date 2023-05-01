@@ -7,7 +7,7 @@ type props = {
   index: number;
 };
 
-const JourneyDetails = ({ title, year,  index }: props) => {
+const JourneyDetails = ({ title, year, index }: props) => {
   const [visible, setVisible] = useState<boolean>();
   const ProjRef = useRef<HTMLDivElement>(null);
 
@@ -21,10 +21,30 @@ const JourneyDetails = ({ title, year,  index }: props) => {
   }, []);
 
   return (
-    <main ref={ProjRef} key={index} className={` relative flex items-center px-5 ${index % 2 === 0 ? 'md:justify-end' : 'md:left-[100%]'} `}>
-      <p className={`w-fit max-w-[16rem] ${visible ? 'slideTop': 'initialTop'}`} >{title}</p>
-      {year ? <span className={`text-primaryTextColor ${visible ? 'slideTop': 'initialTop'}`}>{year}</span> : null}
-      <span className={`absolute left-0 ${index % 2 === 0 ? 'md:left-[100%]' : ''}`}>
+    <main
+      ref={ProjRef}
+      key={index}
+      className={` relative flex items-center px-5 ${
+        index % 2 === 0 ? 'md:justify-end' : 'md:left-[100%]'
+      } `}
+    >
+      <p
+        className={`w-fit max-w-[16rem] ${visible ? 'slideTop' : 'initialTop'}`}
+      >
+        {title}
+      </p>
+      {year ? (
+        <span
+          className={`text-primaryTextColor ${
+            visible ? 'slideTop' : 'initialTop'
+          }`}
+        >
+          {year}
+        </span>
+      ) : null}
+      <span
+        className={`absolute left-0 ${index % 2 === 0 ? 'md:left-[100%]' : ''}`}
+      >
         <DotIcon />
       </span>
     </main>

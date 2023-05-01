@@ -24,15 +24,19 @@ const Nav: nav[] = [
 const FixedNav = () => {
   return (
     <div className='fixed bottom-16 right-5 z-20 flex flex-col items-center gap-5'>
-      {
-        Nav.map(({redirect, Icon}, index)=>{
-          return (
-            <a key={index} href={redirect} target='_blank' className='hover:scale-110 transition-transform duration-150' aria-label='nav-Link'>
+      {Nav.map(({ redirect, Icon }, index) => {
+        return (
+          <a
+            key={index}
+            href={redirect}
+            target='_blank'
+            className='hover:scale-110 transition-transform duration-150'
+            aria-label='nav-Link'
+          >
             <Icon fill='#05B2DC' />
           </a>
-          )
-        })
-      }
+        );
+      })}
     </div>
   );
 };
