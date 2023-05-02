@@ -37,6 +37,17 @@ const projectsInfo: ProjectsInfos = [
     source: 'https://github.com/Phol16/ChatApp',
   },
   {
+    title: 'Pokemon Pokedex',
+    tech: 'NextJS TailwindCSS',
+    description: `A Web-Based application developed using Next JS.
+    It is an application the that display a list of pokemons.
+    It has a feature where you can capture the pokemon.`,
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1683038461/Portfolio/pokedex_opbsp7.png',
+    live: 'https://pokemonpokedex-nu.vercel.app/',
+    source: 'https://github.com/Phol16/PokemonV2',
+  },
+  {
     title: 'Personal Portfolio',
     tech: 'ReactJS HTML CSS JS TailwindCSS',
     description: `A Web-Based application developed using ReactJS.
@@ -57,17 +68,6 @@ const projectsInfo: ProjectsInfos = [
       'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420740/Portfolio/eatstagram_o3q32x.png',
     live: 'https://proj6-fe.onrender.com/',
     source: 'https://github.com/Phol16',
-  },
-  {
-    title: 'Pokemon Pokedex',
-    tech: 'ReactJS RestfulAPI MUI',
-    description: `A Web-Based application developed using ReactJS.
-    It is an application the that display a list of pokemons.
-    It has a feature where you can capture the pokemon.`,
-    image:
-      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420735/Portfolio/pokedex_nbegkb.png',
-    live: 'https://reactjs-pokedex.onrender.com/',
-    source: 'https://github.com/Phol16/ReactJS-reducer-pokedex',
   },
   {
     title: 'Weather App',
