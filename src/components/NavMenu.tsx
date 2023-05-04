@@ -1,100 +1,67 @@
-import { useCallback, useState } from 'react';
-import DownloadIcon from '../assets/svg/DownloadIcon';
-import AboutMeIcon from '../assets/svg/AboutMeIcon';
-import ProjectIcon from '../assets/svg/ProjectIcon';
-import BarsIcon from '../assets/svg/BarsIcon';
-import NavMenuBurger from './NavMenuBurger';
-import CV from '../assets/PholibertLim_FullStackDev_MERN_2023.pdf';
+'use client';
 
-type prop = {
-  fill: string;
-  transition: string;
-};
+import React, { useState } from 'react';
+import { HiOutlineBars3 } from 'react-icons/hi2';
+import { RxCross2 } from 'react-icons/rx';
+import { NavButtons } from './Navbar';
 
-type menu = {
-  title: string;
-  Icon?: ({ fill, transition }: prop) => JSX.Element;
-  redirect?: string;
-};
-
-export const Menu: menu[] = [
-  {
-    title: 'CV/Resume',
-    Icon: DownloadIcon,
-    redirect: CV,
-  },
-  {
-    title: 'About Me',
-    Icon: AboutMeIcon,
-    redirect: '#About',
-  },
-  {
-    title: 'Projects',
-    Icon: ProjectIcon,
-    redirect: '#Project',
-  },
-];
+import Footer from './Footer';
 
 const NavMenu = () => {
-  const [hover, setHover] = useState<string | null>(null);
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <div className=' hidden md:flex'>
-        <ul className='flex gap-5 font-semibold'>
-          {Menu.map(({ title, Icon, redirect }, index) => {
-            return (
-              <li
-                className='hover:text-secondaryTextColor cursor-pointer transition-colors duration-150'
-                key={index}
+    <main className='z-20'>
+      <div>
+        <button
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          <HiOutlineBars3 className='text-5xl text-sky-500 hover:text-sky-800' />
+        </button>
+      </div>
+      {open && (
+        <main className='fixed top-0 left-0 w-full h-full flex justify-end'>
+          <div
+            onClick={() => {
+              setOpen(false);
+            }}
+            className='fixed w-full h-full bg-black/60 -z-10'
+          ></div>
+          <nav className='bg-secondaryColorL text-black dark:bg-secondaryColor dark:text-white z-10 w-[90%] h-full sm:w-3/6 flex flex-col justify-between transition duration-200'>
+            <header className='flex items-center text-xl w-full p-5 justify-between'>
+              <h1 className=' font-semibold pl-5 '>Phol</h1>
+              <button
+                onClick={() => {
+                  setOpen(false);
+                }}
+                className='hover:text-red-500 hover:-translate-y-0.5'
               >
-                <a href={redirect}>
-                  <button
-                    className='flex justify-center items-center gap-1'
-                    onMouseOver={useCallback(() => {
-                      setHover(title);
-                    }, [title])}
-                    onMouseOut={useCallback(() => {
-                      setHover(null);
-                    }, [title])}
-                  >
-                    {Icon ? (
-                      <Icon
-                        fill={hover === title ? 'white' : '#05b2dc'}
-                        transition='ease 100ms'
-                      />
-                    ) : null}
-                    <p>{title}</p>
+                <RxCross2 />
+              </button>
+            </header>
+            <main className='flex flex-col gap-5 items-center z-50'>
+              {NavButtons.map((e) => (
+                <a
+                  key={e.label}
+                  href={e.redirect}
+                  className=' p-4 hover:text-white dark:hover:text-black w-full flex flex-col items-center'
+                >
+                  <button className='flex items-center w-60 gap-1 px-5 p-2 text-xl font-medium'>
+                    {e.icon}
+                    {e.label}
                   </button>
                 </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className='flex flex-col md:hidden relative'>
-        <button
-          onClick={useCallback(() => {
-            setOpen(true);
-          }, [open])}
-          aria-label='NavMenu'
-        >
-          <BarsIcon />
-        </button>
-        {open && (
-          <>
-            <section
-              className='fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/30 z-30'
-              onClick={() => {
-                setOpen(false);
-              }}
-            ></section>
-            <NavMenuBurger />
-          </>
-        )}
-      </div>
-    </>
+              ))}
+            </main>
+            <footer className='w-full'>
+              <Footer />
+            </footer>
+          </nav>
+        </main>
+      )}
+    </main>
   );
 };
 

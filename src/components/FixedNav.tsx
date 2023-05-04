@@ -1,42 +1,39 @@
-import GitHubIcon from '../assets/svg/GitHubIcon';
-import LinkedInIcon from '../assets/svg/LinkedInIcon';
+'use client';
 
-type prop = {
-  fill: string;
-};
+import React, { useState } from 'react';
+import { FaMoon, FaSun, FaHome } from 'react-icons/fa';
 
-type nav = {
-  redirect: string;
-  Icon: ({ fill }: prop) => JSX.Element;
-};
+import { useSelector } from 'react-redux';
+import { RootState } from '@/libs/store/store';
 
-const Nav: nav[] = [
-  {
-    redirect: 'https://www.linkedin.com/in/pholibert-lim-37a51323b/',
-    Icon: LinkedInIcon,
-  },
-  {
-    redirect: 'https://github.com/Phol16',
-    Icon: GitHubIcon,
-  },
-];
+import { useDispatch } from 'react-redux';
+import { storeDarkMode } from '@/libs/store/features/darkModeSlice';
 
 const FixedNav = () => {
+  const darkModeData = useSelector(
+    (state: RootState) => state.darkModeData.darkMode
+  );
+  const homeData = useSelector((state: RootState) => state.homeData.inView);
+
+  const dispatch = useDispatch();
+
   return (
-    <div className='fixed bottom-16 right-5 z-20 flex flex-col items-center gap-5'>
-      {Nav.map(({ redirect, Icon }, index) => {
-        return (
-          <a
-            key={index}
-            href={redirect}
-            target='_blank'
-            className='hover:scale-110 transition-transform duration-150'
-            aria-label='nav-Link'
-          >
-            <Icon fill='#05B2DC' />
-          </a>
-        );
-      })}
+    <div className='fixed bottom-10 right-7 flex flex-col items-center justify-center gap-5 text-3xl z-10 text-black dark:text-white transition duration-200'>
+      <a href='#Home'>
+        <FaHome className={`${homeData ? 'flex' : 'hidden'} hover:scale-110`} />
+      </a>
+      <button
+        onClick={() => {
+          dispatch(storeDarkMode(!darkModeData));
+        }}
+        className={`transition duration-200`}
+      >
+        {darkModeData ? (
+          <FaSun className='hover:scale-110' />
+        ) : (
+          <FaMoon className='hover:scale-110' />
+        )}
+      </button>
     </div>
   );
 };
