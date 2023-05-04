@@ -44,7 +44,7 @@ const AboutSection = () => {
               className='max-w-md text-justify whitespace-break-spaces space-y-3 p-3'
             >
               <h1 className='text-md md:text-lg font-semibold'>
-                An Aspiring Developer
+                An Aspiring Developer.
               </h1>
               <p>
                 Greetings! My name is <b>Phol</b>. I am passionate about
