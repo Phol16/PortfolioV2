@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primaryColor: #0c090d;
+  --secondaryColor: #00ceee;
+
+  --primaryColorL: #eff1f3;
+  --secondaryColorL: #006bae;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.messenger {
+  background: linear-gradient(
+    81.84deg,
+    #0099ff -9.4%,
+    #a033ff 51.57%,
+    #ff5280 84.07%,
+    #ff7061 90.59%
+  );
+  color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primaryColor);
+  border-radius: 1px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primaryColorL);
+}
