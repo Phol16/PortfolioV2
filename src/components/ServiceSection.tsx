@@ -20,7 +20,7 @@ export const service: Service[] = [
   {
     label: 'Back-End Development',
     description: `I'm knowledgeable in Developing back-end web application using:`,
-    icons: 'git,js,ts,express,nodejs,mongodb,,',
+    icons: 'git,js,ts,express,nodejs,mongodb,postman,',
   },
   {
     label: 'Full-Stack Development',
@@ -58,7 +58,7 @@ export const ServiceDetails = ({ details }: { details: Service }) => {
         src={`https://skillicons.dev/icons?i=${details.icons}`}
         alt={'skillIcon'}
         width={400}
-        height={400}
+        height={0}
         className=' max-w-[250px] h-auto'
       />
     </motion.main>
