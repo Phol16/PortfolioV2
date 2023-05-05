@@ -131,7 +131,7 @@ export const ProjectButton = ({
               setActive('');
             }}
           >
-            <button>{element.icon}</button>
+            <button aria-label={`${element.toolTip}`}>{element.icon}</button>
           </a>
         </section>
       ))}

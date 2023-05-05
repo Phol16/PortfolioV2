@@ -8,6 +8,7 @@ import { RootState } from '@/libs/store/store';
 
 import { useDispatch } from 'react-redux';
 import { storeDarkMode } from '@/libs/store/features/darkModeSlice';
+import Link from 'next/link';
 
 const FixedNav = () => {
   const darkModeData = useSelector(
@@ -19,10 +20,11 @@ const FixedNav = () => {
 
   return (
     <div className='fixed bottom-10 right-7 flex flex-col items-center justify-center gap-5 text-3xl z-10 text-black dark:text-white transition duration-200'>
-      <a href='#Home'>
+      <a aria-label='Home Button' href='#Home'>
         <FaHome className={`${homeData ? 'flex' : 'hidden'} hover:scale-110`} />
       </a>
       <button
+        aria-label='Dark Mode'
         onClick={() => {
           dispatch(storeDarkMode(!darkModeData));
         }}

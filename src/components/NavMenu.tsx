@@ -14,6 +14,7 @@ const NavMenu = () => {
     <main className='z-20'>
       <div>
         <button
+          aria-label='Nav Menu'
           onClick={() => {
             setOpen(true);
           }}
@@ -33,6 +34,7 @@ const NavMenu = () => {
             <header className='flex items-center text-xl w-full p-5 justify-between'>
               <h1 className=' font-semibold pl-5 '>Phol</h1>
               <button
+                aria-label='Exit'
                 onClick={() => {
                   setOpen(false);
                 }}
@@ -44,11 +46,15 @@ const NavMenu = () => {
             <main className='flex flex-col gap-5 items-center z-50'>
               {NavButtons.map((e) => (
                 <a
+                  aria-label={`${e.label}`}
                   key={e.label}
                   href={e.redirect}
                   className=' p-4 hover:text-white dark:hover:text-black w-full flex flex-col items-center'
                 >
-                  <button className='flex items-center w-60 gap-1 px-5 p-2 text-xl font-medium'>
+                  <button
+                    aria-label={`${e.label}`}
+                    className='flex items-center w-60 gap-1 px-5 p-2 text-xl font-medium'
+                  >
                     {e.icon}
                     {e.label}
                   </button>

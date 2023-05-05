@@ -41,7 +41,7 @@ const Footer = () => {
   useEffect(() => {
     footerInView ? footerAnimation.start(popUp.show) : null;
   }, [footerInView]);
-  
+
   return (
     <footer className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition p-10 duration-200 border-t-[2px] border-primaryColor dark:border-primaryColorL'>
       <motion.section
@@ -53,6 +53,7 @@ const Footer = () => {
         <main className='flex gap-5 text-3xl'>
           {accounts.map((e) => (
             <a
+              aria-label={`${e.label}`}
               key={e.label}
               target='_blank'
               href={e.redirect}

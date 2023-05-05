@@ -89,7 +89,11 @@ const HeroSection = () => {
         className=' space-y-3'
       >
         <header className='text-3xl md:text-5xl 2xl:text-6xl font-bold flex flex-col'>
-          <a href='#About' className='self-end hover:-translate-y-0.5'>
+          <a
+            aria-label='About Button'
+            href='#About'
+            className='self-end hover:-translate-y-0.5'
+          >
             <Image src={avatar} alt='Photo' className='w-[70px]' />
           </a>
           <h1>
