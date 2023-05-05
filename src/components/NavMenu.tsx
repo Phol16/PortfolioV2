@@ -30,7 +30,7 @@ const NavMenu = () => {
             }}
             className='fixed w-full h-full bg-black/60 -z-10'
           ></div>
-          <nav className='bg-secondaryColorL text-black dark:bg-secondaryColor dark:text-white z-10 w-[90%] h-full sm:w-3/6 flex flex-col justify-between transition duration-200'>
+          <nav className='bg-secondaryColorL text-white dark:bg-secondaryColor dark:text-black z-10 w-[90%] h-full sm:w-3/6 flex flex-col justify-between transition duration-200'>
             <header className='flex items-center text-xl w-full p-5 justify-between'>
               <h1 className=' font-semibold pl-5 '>Phol</h1>
               <button
@@ -49,7 +49,7 @@ const NavMenu = () => {
                   aria-label={`${e.label}`}
                   key={e.label}
                   href={e.redirect}
-                  className=' p-4 hover:text-white dark:hover:text-black w-full flex flex-col items-center'
+                  className=' p-4  hover:text-black dark:hover:text-white w-full flex flex-col items-center'
                 >
                   <button
                     aria-label={`${e.label}`}

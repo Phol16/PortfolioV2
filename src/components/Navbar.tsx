@@ -14,7 +14,7 @@ import { RootState } from '@/libs/store/store';
 import { useDispatch } from 'react-redux';
 import { storeHomeMode } from '@/libs/store/features/homeSlice';
 
-import { popUp } from '@/libs/motion';
+import { popDown } from '@/libs/motion';
 import useObserver from '@/hooks/useObserver';
 
 type NavButtons = {
@@ -64,10 +64,10 @@ const Navbar = () => {
       >
         <CgLaptop className='text-6xl dark:text-white text-black transition-colors duration-200' />
         <motion.nav
-          variants={popUp}
-          transition={{duration:1}}
-          initial={popUp.hidden}
-          animate={popUp.show}
+          variants={popDown}
+          transition={{duration:0.8}}
+          initial={popDown.hidden}
+          animate={popDown.show}
           className='gap-5 text-lg font-semibold hidden lg:flex'
         >
           {NavButtons.map((e) => (
@@ -83,9 +83,9 @@ const Navbar = () => {
           ))}
         </motion.nav>
         <motion.nav
-          variants={popUp}
-          initial={popUp.hidden}
-          animate={popUp.show}
+          variants={popDown}
+          initial={popDown.hidden}
+          animate={popDown.show}
           className='flex lg:hidden'
         >
           <NavMenu />

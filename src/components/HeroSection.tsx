@@ -84,6 +84,7 @@ const HeroSection = () => {
     <div className='relative p-1 w-full h-[calc(95svh_-_5rem)] flex flex-col  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200'>
       <motion.section
         variants={opacity}
+        transition={{duration:0.5}}
         initial={opacity.hidden}
         animate={opacity.show}
         className=' space-y-3'

@@ -15,6 +15,16 @@ export const popUp={
     y:0
   }
 }
+export const popDown ={
+  hidden:{
+    y:-50,
+    opacity:0
+  },
+  show:{
+    opacity:1,
+    y:0
+  }
+}
 
 export const slideFromLeft={
   hidden:{
