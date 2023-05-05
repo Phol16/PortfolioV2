@@ -65,6 +65,7 @@ const Navbar = () => {
         <CgLaptop className='text-6xl dark:text-white text-black transition-colors duration-200' />
         <motion.nav
           variants={popUp}
+          transition={{duration:1}}
           initial={popUp.hidden}
           animate={popUp.show}
           className='gap-5 text-lg font-semibold hidden lg:flex'

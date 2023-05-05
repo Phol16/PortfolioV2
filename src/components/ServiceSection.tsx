@@ -44,7 +44,7 @@ export const ServiceDetails = ({ details }: { details: Service }) => {
   return (
     <motion.main
       ref={elemRef}
-      variants={popUp}
+      transition={{duration:0.5}}
       initial={popUp.hidden}
       animate={animation}
       key={details.label}
