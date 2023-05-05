@@ -6,8 +6,15 @@ import avatar from '../../public/avatar.svg';
 import Image from 'next/image';
 import ScrollDown from './ScrollDown';
 import { opacity } from '@/libs/motion';
+import { setTimeout } from 'timers/promises';
 
 type timeOutIDs = ReturnType<typeof setTimeout>;
+
+export const detailInfo: string[] = [
+  ' Software Developer',
+  ' Full-Stack Developer',
+  ' Movie Enthusiast',
+];
 
 const HeroSection = () => {
   const [displayInfo, setDisplayInfo] = useState<string[]>([]);
@@ -16,59 +23,62 @@ const HeroSection = () => {
   const currChar = useRef(0);
 
   useEffect(() => {
-    const detailInfo: string[] = [
-      'Software Developer',
-      'Full-Stack Developer',
-      'Movie Enthusiast',
-    ];
-    let dispalyTimeoutId: timeOutIDs;
-    let delayCursorId: timeOutIDs;
+    let dispalyTimeoutId: number;
+    let delayCursorId: number;
 
-    detailInfo.map((element, index) => {
-      //will restart to the begining if the current index is at the last index
-      if (currIndex.current === detailInfo.length) {
-        currIndex.current = 0;
-      }
-
-      if (currIndex.current === index) {
-        //determine which mode will be activated
-        if (currChar.current === element.length) {
-          //will change the current index of the detailsInfo to be display
-          if (deleteMode && currChar.current === element.length) {
-            currChar.current = 0;
-            setDeleteMode(!deleteMode);
-            currIndex.current = currIndex.current + 1;
-          }
-
-          //added delay before changing delete mode
-          delayCursorId = setTimeout(() => {
-            setDeleteMode(!deleteMode);
-            currChar.current = 0;
-          }, 500);
-        } else {
-          //displaying the information
-          dispalyTimeoutId = setTimeout(() => {
-            if (deleteMode) {
-              setDisplayInfo(displayInfo.slice(0, displayInfo.length - 1));
-              currChar.current = currChar.current + 1;
-            } else {
-              setDisplayInfo([
-                ...displayInfo,
-                element.charAt(currChar.current),
-              ]);
-              currChar.current = currChar.current + 1;
-            }
-          }, 100);
-        }
-      }
-    });
+    if (!deleteMode) {
+      //displayMode
+      dispalyTimeoutId = window.setTimeout(() => {
+        setDisplayInfo([
+          ...displayInfo,
+          detailInfo[currIndex.current].charAt(currChar.current),
+        ]);
+      }, 100);
+    } else {
+      //DeleteMode
+      dispalyTimeoutId = window.setTimeout(() => {
+        setDisplayInfo([
+          detailInfo[currIndex.current].slice(
+            0,
+            detailInfo[currIndex.current].length - currChar.current
+          ),
+        ]);
+      }, 100);
+    }
 
     //cleanup function
     return () => {
       clearTimeout(delayCursorId);
       clearTimeout(dispalyTimeoutId);
+
+      currChar.current += 1;
+
+      if (
+        currChar.current > detailInfo[currIndex.current]?.length &&
+        deleteMode
+      ) {
+        //switching between arrays.
+        setDeleteMode(false);
+        currIndex.current += 1;
+        currChar.current = 0;
+      }
+      if (
+        currChar.current > detailInfo[currIndex.current]?.length &&
+        !deleteMode
+      ) {
+        //changing to deleteMode with delay
+        delayCursorId = window.setTimeout(() => {
+          currChar.current = 0;
+          setDeleteMode(true);
+        }, 200);
+      }
+
+      //reverting to the start of the array to make it loop
+      currIndex.current > detailInfo.length - 1
+        ? ((currIndex.current = 0), (currChar.current = 0))
+        : null;
     };
-  }, [displayInfo, deleteMode]);
+  }, [displayInfo, deleteMode, currIndex.current]);
 
   return (
     <div className='relative p-1 w-full h-[calc(95svh_-_5rem)] flex flex-col  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200'>
@@ -79,8 +89,8 @@ const HeroSection = () => {
         className=' space-y-3'
       >
         <header className='text-3xl md:text-5xl 2xl:text-6xl font-bold flex flex-col'>
-          <a href='#About'  className='self-end hover:-translate-y-0.5'>
-            <Image src={avatar} alt='Photo' className='w-[70px]'/>
+          <a href='#About' className='self-end hover:-translate-y-0.5'>
+            <Image src={avatar} alt='Photo' className='w-[70px]' />
           </a>
           <h1>
             Hi! My name is{' '}
