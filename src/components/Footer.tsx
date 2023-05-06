@@ -1,9 +1,13 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
 import { motion, useAnimationControls } from 'framer-motion';
 import useObserver from '@/hooks/useObserver';
 import { popUp } from '@/libs/motion';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/libs/store/store';
 
 const currDate: number = new Date().getFullYear();
 
@@ -33,6 +37,10 @@ const contactInfo: Record<string, string>[] = [
 ];
 
 const Footer = () => {
+  const darkModeData = useSelector(
+    (state: RootState) => state.darkModeData.darkMode
+  );
+
   const footerRef = useRef(null);
   const footerAnimation = useAnimationControls();
 
@@ -43,6 +51,7 @@ const Footer = () => {
   }, [footerInView]);
 
   return (
+    <div className={darkModeData ? 'dark' : ''}>
     <footer className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition p-10 duration-200 border-t-[2px] border-primaryColor dark:border-primaryColorL'>
       <motion.section
         ref={footerRef}
@@ -76,6 +85,7 @@ const Footer = () => {
         <h1 className=' font-semibold text-sm'>© Phol {currDate}</h1>
       </motion.section>
     </footer>
+    </div>
   );
 };
 

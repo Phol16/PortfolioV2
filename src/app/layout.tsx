@@ -2,8 +2,9 @@ import './globals.css'
 import {  Poppins } from 'next/font/google'
 import { Metadata } from 'next'
 
-import Navbar from '../components/Navbar'
+import Navbar from '@/components/Navbar'
 import { Providers } from '@/libs/store/Provider'
+import Footer from '@/components/Footer'
 
 const poppins = Poppins({weight:['200','300','400','700','800'],subsets:['latin']});
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Providers>
         <Navbar/>
         {children}
+        <Footer/>
         </Providers>
       </body>
     </html>

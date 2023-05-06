@@ -22,7 +22,6 @@ export default function Home() {
       <ServiceSection />
       <ProjectsSection />
       <AboutSection />
-      <Footer/>
     </main>
   );
 }
