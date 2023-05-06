@@ -17,6 +17,11 @@ module.exports = {
         secondaryColor:'var(--secondaryColor)',
         primaryColorL:'var(--primaryColorL)',
         secondaryColorL:'var(--secondaryColorL)',
+        html:'var(--html)',
+        css:'var(--css)',
+        js:'var(--js)',
+        ts:'var(--ts)',
+        cs:'var(--cs)',
       }
     },
   },

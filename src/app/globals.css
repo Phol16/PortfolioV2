@@ -11,6 +11,12 @@
 
   --primaryColorL: #eff1f3;
   --secondaryColorL: #006bae;
+
+  --html: #ff5733;
+  --css: #2965f1;
+  --js: #ceb200;
+  --ts: #007acc;
+  --cs: #bf40bf;
 }
 html,
 body {
