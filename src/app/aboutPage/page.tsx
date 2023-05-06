@@ -107,6 +107,7 @@ const AboutPage = () => {
           <main className='flex flex-wrap gap-2 justify-center items-center p-2'>
             {tools.map((element) => (
               <Image
+                key={element.title}
                 src={`https://skillicons.dev/icons?i=${element.icon}`}
                 alt={'skillIcon'}
                 width={50}
@@ -120,9 +121,13 @@ const AboutPage = () => {
       </section>
       <section className='flex flex-col gap-3 p-5'>
         <h1 className='text-lg lg:text-xl font-semibold'>Github Stats</h1>
-        <a href='https://github.com/Phol16' target='_blank' className=' font-medium flex gap-2 items w-fit self-end px-5 py-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black hover:rounded-2xl transition-all  duration-200'>
-            <h1>Phol16</h1>
-            <FaGithub className='text-xl' />
+        <a
+          href='https://github.com/Phol16'
+          target='_blank'
+          className=' font-medium flex gap-2 items w-fit self-end px-5 py-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black hover:rounded-2xl transition-all  duration-200'
+        >
+          <h1>Phol16</h1>
+          <FaGithub className='text-xl' />
         </a>
         <Image
           src='https://github-readme-stats.vercel.app/api?username=phol16&theme=graywhite&count_private=true&show_icons=true'
@@ -131,7 +136,7 @@ const AboutPage = () => {
           height={0}
           className='h-auto'
         />
-                <Image
+        <Image
           src=' https://github-readme-stats.vercel.app/api/top-langs/?username=phol16&hide_progress=true&theme=graywhite'
           alt='Gstatus'
           width={400}
