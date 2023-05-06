@@ -10,15 +10,17 @@ import {
   TbBrandCSharp,
 } from 'react-icons/tb';
 import { BiArrowBack } from 'react-icons/bi';
+import ProgrammingSkill from '@/components/ProgrammingSkill';
+import Tools from '@/components/Tools';
 
 interface Skills {
   title: string;
-  icon?: ReactElement;
-  color?: string;
+  icon: ReactElement;
+  color: string;
 }
 interface Tools {
   title: string;
-  icon?: string;
+  icon: string;
 }
 
 const programmingLanguage: Skills[] = [
@@ -90,13 +92,12 @@ const AboutPage = () => {
           </h2>
           <main className='flex flex-wrap gap-3 justify-center items-center p-1'>
             {programmingLanguage.map((element) => (
-              <div
+              <ProgrammingSkill
+                title={element.title}
+                icon={element.icon}
+                color={element.color}
                 key={element.title}
-                className={`${element.color} hover:text-white flex flex-col justify-center items-center gap-5 border border-secondaryColorL dark:secondaryColor rounded-lg p-5 w-[130px] hover:scale-110 cursor-pointer transition-transform duration-200`}
-              >
-                <h1 className=' font-semibold'>{element.title}</h1>
-                <section className='text-4xl'>{element.icon}</section>
-              </div>
+              />
             ))}
           </main>
         </aside>
@@ -106,14 +107,10 @@ const AboutPage = () => {
           </h2>
           <main className='flex flex-wrap gap-2 justify-center items-center p-2'>
             {tools.map((element) => (
-              <Image
-                key={element.title}
-                src={`https://skillicons.dev/icons?i=${element.icon}`}
-                alt={'skillIcon'}
-                width={50}
-                height={0}
-                className=' max-w-[250px] h-auto'
+              <Tools
                 title={element.title}
+                icon={element.icon}
+                key={element.title}
               />
             ))}
           </main>
