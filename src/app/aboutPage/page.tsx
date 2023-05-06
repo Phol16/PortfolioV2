@@ -134,7 +134,7 @@ const AboutPage = () => {
           className='h-auto'
         />
         <Image
-          src=' https://github-readme-stats.vercel.app/api/top-langs/?username=phol16&hide_progress=true&theme=graywhite'
+          src='https://github-readme-stats.vercel.app/api/top-langs/?username=phol16&hide_progress=true'
           alt='Gstatus'
           width={400}
           height={0}
