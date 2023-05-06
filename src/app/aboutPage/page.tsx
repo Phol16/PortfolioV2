@@ -67,6 +67,7 @@ const tools: Tools[] = [
   { title: 'vs', icon: 'visualstudio' },
   { title: 'figma', icon: 'figma' },
   { title: 'vercel', icon: 'vercel' },
+  { title: 'redux', icon: 'redux' },
 ];
 
 const AboutPage = () => {
@@ -105,7 +106,7 @@ const AboutPage = () => {
           <h2 className='text-base lg:text-lg font-semibold'>
             Tools / Technology
           </h2>
-          <main className='flex flex-wrap gap-2 justify-center items-center p-2'>
+          <main className='flex flex-wrap gap-2 justify-center items-center p-2 max-w-3xl'>
             {tools.map((element) => (
               <Tools
                 title={element.title}

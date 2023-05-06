@@ -15,17 +15,12 @@ export const service: Service[] = [
   {
     label: 'Front-End Development',
     description: `I'm knowledgeable in Developing front-end web application using:`,
-    icons: 'html,css,js,ts,react,tailwind,materialui,figma',
+    icons: 'html,css,js,ts,react,nextjs,vite,tailwind,redux',
   },
   {
     label: 'Back-End Development',
     description: `I'm knowledgeable in Developing back-end web application using:`,
-    icons: 'git,js,ts,express,nodejs,mongodb,postman,',
-  },
-  {
-    label: 'Full-Stack Development',
-    description: `I'm knowledgeable in developing full-stack web application using:`,
-    icons: 'git,js,ts,nextjs,react,expressjs,nodejs,mongodb',
+    icons: 'git,js,ts,nextjs,express,nodejs,mongodb,postman',
   },
 ];
 
@@ -57,9 +52,9 @@ export const ServiceDetails = ({ details }: { details: Service }) => {
       <Image
         src={`https://skillicons.dev/icons?i=${details.icons}`}
         alt={'skillIcon'}
-        width={400}
+        width={300}
         height={0}
-        className=' max-w-[250px] h-auto'
+        className=' max-w-[250px] h-auto m-auto'
       />
     </motion.main>
   );
