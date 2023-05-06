@@ -1,7 +1,7 @@
 'use client';
 
 import useObserver from '@/hooks/useObserver';
-import { slideFromLeft, slideFromRight } from '@/libs/motion';
+import { popUp, slideFromLeft, slideFromRight } from '@/libs/motion';
 import { useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import React, { ReactElement, useEffect, useRef, useState } from 'react';
@@ -221,10 +221,26 @@ export const ProjectDetails = ({
 };
 
 const ProjectsSection = () => {
+  const projRef = useRef(null);
+  const projAnimation = useAnimationControls();
+
+  const projInView = useObserver(projRef);
+
+  useEffect(() => {
+    projInView ? projAnimation.start(popUp.show) : null;
+  }, [projInView]);
+
   return (
     <div className='px-5 py-10 bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition-colors duration-200'>
       <section id='Project' className='max-w-xl md:max-w-6xl m-auto p-4'>
-        <h1 className='text-xl md:text-3xl font-semibold'>Projects</h1>
+        <motion.h1
+          ref={projRef}
+          initial={popUp.hidden}
+          animate={projAnimation}
+          className='text-xl md:text-3xl font-semibold'
+        >
+          Projects
+        </motion.h1>
         <main className='flex flex-col gap-10 justify-center w-full pb-15 pt-20'>
           {projectsInfo.map((element, index) => (
             <ProjectDetails
