@@ -117,6 +117,29 @@ const AboutPage = () => {
           </main>
         </aside>
       </section>
+      <section>
+        <h1 className='text-lg lg:text-xl font-semibold'>Certifications</h1>
+        <main className='flex gap-5 flex-wrap items-center justify-center p-5 my-5'>
+          <Image
+            src={
+              'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680583345/Portfolio/uplift_ymob3e.png'
+            }
+            alt='certPhoto'
+            width={300}
+            height={0}
+            className='h-auto'
+          />
+          <Image
+            src={
+              'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680583169/Portfolio/Image_11_geuqux.jpg'
+            }
+            alt='certPhoto'
+            width={300}
+            height={0}
+            className='h-auto'
+          />
+        </main>
+      </section>
       <section className='flex flex-col gap-3 p-5'>
         <h1 className='text-lg lg:text-xl font-semibold'>Github Stats</h1>
         <a
