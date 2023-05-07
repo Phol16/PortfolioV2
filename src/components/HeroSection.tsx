@@ -11,8 +11,9 @@ import { setTimeout } from 'timers/promises';
 type timeOutIDs = ReturnType<typeof setTimeout>;
 
 export const detailInfo: string[] = [
-  ' Software Developer',
-  ' Full-Stack Developer',
+  ' Aspiring Software Engineer',
+  ' Front-End Developer',
+  ' Back-End Developer',
   ' Movie Enthusiast',
 ];
 
@@ -70,7 +71,7 @@ const HeroSection = () => {
         delayCursorId = window.setTimeout(() => {
           currChar.current = 0;
           setDeleteMode(true);
-        }, 200);
+        }, 300);
       }
 
       //reverting to the start of the array to make it loop
@@ -110,8 +111,8 @@ const HeroSection = () => {
             <span className='dark:text-white text-black'>|</span>
           </h2>
           <p>
-            I`m a MERN stack developer. I`m knowledgeable in creating front-end
-            and back-end and I`m eager to learn more advance technologies
+            I`m knowledgeable in creating front-end
+            and back-end application and I`m eager to learn more advance technologies
           </p>
         </main>
       </motion.section>

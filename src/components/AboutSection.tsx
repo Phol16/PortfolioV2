@@ -45,7 +45,7 @@ const AboutSection = () => {
               className='max-w-md text-justify whitespace-break-spaces space-y-3 p-3'
             >
               <h1 className='text-md md:text-lg font-semibold'>
-                An Aspiring Developer.
+                Get to Know Me.
               </h1>
               <p>
                 Greetings! My name is <b>Phol</b>. I am passionate about
@@ -83,7 +83,7 @@ const AboutSection = () => {
                 href={'/aboutPage'}
                 className='text-center hover:rounded-2xl font-semibold px-5 p-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black transition duration-200'
               >
-                <button aria-label='Learn More'>Learn More</button>
+                <button aria-label='Learn More'>See More</button>
               </Link>
             </motion.aside>
           </main>
