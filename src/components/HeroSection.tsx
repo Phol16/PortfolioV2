@@ -11,7 +11,6 @@ import { setTimeout } from 'timers/promises';
 type timeOutIDs = ReturnType<typeof setTimeout>;
 
 export const detailInfo: string[] = [
-  ' Aspiring Software Engineer',
   ' Front-End Developer',
   ' Back-End Developer',
   ' Movie Enthusiast',
