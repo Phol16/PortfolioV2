@@ -16,6 +16,7 @@ import { storeHomeMode } from '@/libs/store/features/homeSlice';
 
 import { popDown } from '@/libs/motion';
 import useObserver from '@/hooks/useObserver';
+import Button from './Button';
 
 type NavButtons = {
   label: string;
@@ -72,13 +73,10 @@ const Navbar = () => {
         >
           {NavButtons.map((e) => (
             <a aria-label={`${e.label}`} href={e.redirect} key={e.label}>
-              <button
-                aria-label={`${e.label}`}
-                className='flex items-center gap-1 px-5 py-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black hover:rounded-2xl transition-all  duration-200'
-              >
+              <Button>
                 {e.icon}
                 {e.label}
-              </button>
+              </Button>
             </a>
           ))}
         </motion.nav>

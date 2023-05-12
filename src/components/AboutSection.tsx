@@ -1,10 +1,12 @@
 'use client'
+
 import { motion, useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import { popUp } from '@/libs/motion';
 import useObserver from '@/hooks/useObserver';
 import Link from 'next/link';
+import Button from './Button';
 
 const AboutSection = () => {
   const aboutRef = useRef(null);
@@ -81,9 +83,8 @@ const AboutSection = () => {
               <Link
                 aria-label='Learn More'
                 href={'/aboutPage'}
-                className='text-center hover:rounded-2xl font-semibold px-5 p-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black transition duration-200'
               >
-                <button aria-label='Learn More'>See More</button>
+                <Button>View More</Button>
               </Link>
             </motion.aside>
           </main>
