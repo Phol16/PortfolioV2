@@ -82,7 +82,7 @@ const AboutSection = () => {
               />
               <Link
                 aria-label='Learn More'
-                href={'/aboutPage'}
+                href={'/about'}
               >
                 <Button>View More</Button>
               </Link>

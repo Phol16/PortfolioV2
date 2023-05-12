@@ -6,8 +6,10 @@ import { RxCross2 } from 'react-icons/rx';
 import { NavButtons } from './Navbar';
 
 import Footer from './Footer';
+import { usePathname } from 'next/navigation';
 
 const NavMenu = () => {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
@@ -44,12 +46,12 @@ const NavMenu = () => {
               </button>
             </header>
             <main className='flex flex-col gap-5 items-center z-50'>
-              {NavButtons.map((e) => (
+              {NavButtons.map((e,i) => (
                 <a
                   aria-label={`${e.label}`}
                   key={e.label}
                   href={e.redirect}
-                  className=' p-4  hover:text-black dark:hover:text-white w-full flex flex-col items-center'
+                  className={` p-4 hover:text-black dark:hover:text-white w-full flex flex-col items-center ${pathname === '/about' && i >= 1 ? 'hidden': 'flex'}`}
                 >
                   <button
                     aria-label={`${e.label}`}
