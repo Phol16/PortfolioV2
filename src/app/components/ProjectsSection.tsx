@@ -37,12 +37,12 @@ const projectsInfo: ProjectsInfo[] = [
   },
   {
     title: 'Mini Messenger',
-    tech: 'MongoDb ExpressJS SocketIO ReactJs',
-    description: `A fullstack application developed using MERN stack with socketIO. It is a simple application that almost look like messenger where user can communicate with one another, it is a very simple application that uses socket io for realtime communication`,
+    tech: 'NextJS Pusher TailwindCSS Prisma',
+    description: `A fullstack application developed using NextJS, MongoDB, Prisma and Pusher. It is a simple application that almost look like messenger where user can communicate with one another, it is a realtime communication app`,
     image:
-      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1679321037/Portfolio/Untitled_b3kuhi.png',
-    live: 'https://minimessenger.onrender.com/',
-    source: 'https://github.com/Phol16/ChatApp',
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1683996035/Portfolio/minimessenger_uttewg.png',
+    live: 'https://mini-messenger-sooty.vercel.app/',
+    source: 'https://github.com/Phol16/miniMessenger',
   },
   {
     title: 'Pokemon Pokedex',
@@ -57,7 +57,7 @@ const projectsInfo: ProjectsInfo[] = [
   },
   {
     title: 'Personal Portfolio',
-    tech: 'ReactJS HTML CSS JS TailwindCSS',
+    tech: 'NextJS ReduxToolkit TailwindCSS',
     description: `A Web-Based application developed using ReactJS.
     The current website is this application.
     It is an application that shows the details and the projects`,
