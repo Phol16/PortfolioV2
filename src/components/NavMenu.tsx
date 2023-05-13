@@ -60,7 +60,7 @@ const NavMenu = () => {
                       </div>
                       <main>
                         {NavButtons.map((e, i) => (
-                          <Link
+                          <a
                             href={e.redirect}
                             key={e.label}
                             className={` flex p-3 items-center ${
@@ -70,7 +70,7 @@ const NavMenu = () => {
                             } hover:bg-gray-800 rounded-lg`}
                           >
                             {e.label}
-                          </Link>
+                          </a>
                         ))}
                       </main>
                       <footer className='rounded-lg overflow-hidden'>
