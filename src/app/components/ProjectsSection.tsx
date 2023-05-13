@@ -178,6 +178,7 @@ export const ProjectDetails = ({
       >
         <motion.aside
           ref={projImageRef}
+          transition={{duration:0.5}}
           initial={
             index % 2 === 0 ? slideFromRight.hidden : slideFromLeft.hidden
           }
@@ -193,6 +194,7 @@ export const ProjectDetails = ({
         </motion.aside>
         <motion.aside
           ref={projDetailsRef}
+          transition={{duration:0.5}}
           initial={
             index % 2 === 0 ? slideFromLeft.hidden : slideFromRight.hidden
           }
@@ -235,6 +237,7 @@ const ProjectsSection = () => {
       <section id='Project' className='max-w-xl md:max-w-6xl m-auto p-4'>
         <motion.h1
           ref={projRef}
+          transition={popUp.duration}
           initial={popUp.hidden}
           animate={projAnimation}
           className='text-xl md:text-3xl font-semibold'

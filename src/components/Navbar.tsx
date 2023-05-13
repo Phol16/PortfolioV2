@@ -59,7 +59,7 @@ const Navbar = () => {
   }, [navInView]);
 
   return (
-    <div className={darkModeData ? 'dark' : ''}>
+    <div className={`${darkModeData ? 'dark' : ''}`}>
       <div
         id='Home'
         ref={navRef}

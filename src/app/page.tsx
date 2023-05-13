@@ -1,15 +1,13 @@
 'use client';
 import { Inter } from 'next/font/google';
-import HeroSection from '@/components/HeroSection';
 
 import { useSelector } from 'react-redux';
 import { RootState } from '@/libs/store/store';
-import AboutSection from '@/components/AboutSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import ServiceSection from '@/components/ServiceSection';
-import Footer from '@/components/Footer';
+import HeroSection from '@/app/components/HeroSection';
+import AboutSection from '@/app/components/AboutSection';
+import ProjectsSection from '@/app/components/ProjectsSection';
+import ServiceSection from '@/app/components/ServiceSection';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const darkModeData = useSelector(

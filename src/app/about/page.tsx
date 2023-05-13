@@ -10,7 +10,8 @@ import {
   TbBrandCSharp,
 } from 'react-icons/tb';
 import { BiArrowBack } from 'react-icons/bi';
-import ProgrammingSkill from '@/components/ProgrammingSkill';
+
+import ProgrammingSkill from '@/app/about/components/ProgrammingSkill';
 import Tools from '@/components/Tools';
 
 interface Skills {

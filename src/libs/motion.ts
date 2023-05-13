@@ -6,6 +6,9 @@ export const opacity = {
 }
 
 export const popUp={
+  duration:{
+    duration:0.5
+  },
   hidden:{
     y:50,
     opacity:0
@@ -13,7 +16,7 @@ export const popUp={
   show:{
     opacity:1,
     y:0
-  }
+  },
 }
 export const popDown ={
   hidden:{

@@ -52,7 +52,7 @@ const Footer = () => {
 
   return (
     <div className={darkModeData ? 'dark' : ''}>
-    <footer className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition p-10 duration-200 border-t-[2px] border-primaryColor dark:border-primaryColorL'>
+    <footer className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition p-10 duration-200 '>
       <motion.section
         ref={footerRef}
         initial={popUp.hidden}
