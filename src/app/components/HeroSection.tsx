@@ -2,13 +2,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import avatar from '../../public/avatar.svg';
+import avatar from '../../../public/avatar.svg';
 import Image from 'next/image';
 import ScrollDown from './ScrollDown';
 import { opacity } from '@/libs/motion';
 import { setTimeout } from 'timers/promises';
-
-type timeOutIDs = ReturnType<typeof setTimeout>;
 
 export const detailInfo: string[] = [
   ' Front-End Developer',
@@ -84,7 +82,7 @@ const HeroSection = () => {
     <div className='relative p-1 w-full h-[calc(95svh_-_5rem)] flex flex-col  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200'>
       <motion.section
         variants={opacity}
-        transition={{duration:0.5}}
+        transition={{ duration: 0.8 }}
         initial={opacity.hidden}
         animate={opacity.show}
         className=' space-y-3'
@@ -110,8 +108,8 @@ const HeroSection = () => {
             <span className='dark:text-white text-black'>|</span>
           </h2>
           <p>
-            I`m knowledgeable in creating front-end
-            and back-end application and I`m eager to learn more advance technologies
+            I`m knowledgeable in creating front-end and back-end application and
+            I`m eager to learn more advance technologies
           </p>
         </main>
       </motion.section>

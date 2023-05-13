@@ -8,7 +8,6 @@ import { RootState } from '@/libs/store/store';
 
 import { useDispatch } from 'react-redux';
 import { storeDarkMode } from '@/libs/store/features/darkModeSlice';
-import Link from 'next/link';
 
 const FixedNav = () => {
   const darkModeData = useSelector(

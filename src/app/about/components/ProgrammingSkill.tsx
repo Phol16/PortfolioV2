@@ -1,4 +1,5 @@
 'use client';
+
 import useObserver from '@/hooks/useObserver';
 import { popUp } from '@/libs/motion';
 import { useAnimationControls } from 'framer-motion';

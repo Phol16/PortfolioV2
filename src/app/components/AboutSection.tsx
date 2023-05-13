@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from 'react';
 import { popUp } from '@/libs/motion';
 import useObserver from '@/hooks/useObserver';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../../components/Button';
 
 const AboutSection = () => {
   const aboutRef = useRef(null);
@@ -32,7 +32,7 @@ const AboutSection = () => {
         <main className='max-w-xl md:max-w-6xl m-auto px-5 py-2 flex flex-col gap-5'>
           <motion.header
             ref={aboutRef}
-            variants={popUp}
+            transition={popUp.duration}
             initial={popUp.hidden}
             animate={aboutAnimation}
           >
@@ -41,7 +41,7 @@ const AboutSection = () => {
           <main className='flex flex-wrap gap-10 justify-center text-sm md:text-base'>
             <motion.aside
               ref={detailsRef}
-              variants={popUp}
+              transition={popUp.duration}
               initial={popUp.hidden}
               animate={detailsAnimation}
               className='max-w-md text-justify whitespace-break-spaces space-y-3 p-3'
@@ -66,7 +66,7 @@ const AboutSection = () => {
             </motion.aside>
             <motion.aside
               ref={skillsRef}
-              variants={popUp}
+              transition={popUp.duration}
               initial={popUp.hidden}
               animate={skillsAnimation}
               className='max-w-md text-justify self-center whitespace-break-spaces p-3 flex flex-col gap-5'
