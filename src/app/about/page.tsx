@@ -69,6 +69,7 @@ const tools: Tools[] = [
   { title: 'figma', icon: 'figma' },
   { title: 'vercel', icon: 'vercel' },
   { title: 'redux', icon: 'redux' },
+  { title: 'prisma', icon: 'prisma' },
 ];
 
 const AboutPage = () => {

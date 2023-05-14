@@ -20,7 +20,7 @@ export const service: Service[] = [
   {
     label: 'Back-End Development',
     description: `I'm knowledgeable in Developing back-end web application using:`,
-    icons: 'git,js,ts,nextjs,express,nodejs,mongodb,postman',
+    icons: 'git,js,ts,nextjs,express,nodejs,mongodb,postman,prisma',
   },
 ];
 
