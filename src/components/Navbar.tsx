@@ -63,7 +63,7 @@ const Navbar = () => {
       <div
         id='Home'
         ref={navRef}
-        className={`dark:bg-primaryColor bg-primaryColorL w-full py-4 px-8 flex items-center justify-between transition-colors duration-200 z-10`}
+        className={`bg-transparent absolute w-full py-4 px-8 flex items-center justify-between transition-colors duration-200 z-10`}
       >
         <CgLaptop className='text-6xl dark:text-white text-black transition-colors duration-200' />
         <motion.nav

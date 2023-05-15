@@ -27,7 +27,7 @@ const AboutSection = () => {
   }, [aboutInView, detailsInView, skillsInView]);
 
   return (
-    <section className='bg-primaryColorL text-black px-2 py-10 dark:bg-primaryColor dark:text-white transition-colors duration-200 w-full'>
+    <section className='bg-primaryColorL text-black px-2 py-10 dark:bg-primaryColor dark:text-white w-full'>
       <div id='About' className='w-fit m-auto'>
         <main className='max-w-xl md:max-w-6xl m-auto px-5 py-2 flex flex-col gap-5'>
           <motion.header

@@ -45,6 +45,17 @@ const projectsInfo: ProjectsInfo[] = [
     source: 'https://github.com/Phol16/miniMessenger',
   },
   {
+    title: 'Personal Portfolio',
+    tech: 'NextJS ReduxToolkit TailwindCSS',
+    description: `A Web-Based application developed using ReactJS.
+    The current website is this application.
+    It is an application that shows the details and the projects`,
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1684136123/Portfolio/portfolio_uhue0z.png',
+    live: 'https://phol.vercel.app/',
+    source: 'https://github.com/Phol16/PortfolioV2',
+  },
+  {
     title: 'Pokemon Pokedex',
     tech: 'NextJS TailwindCSS',
     description: `A Web-Based application developed using Next JS.
@@ -54,17 +65,6 @@ const projectsInfo: ProjectsInfo[] = [
       'https://res.cloudinary.com/dy23rmhmq/image/upload/v1683038461/Portfolio/pokedex_opbsp7.png',
     live: 'https://pokemonpokedex-nu.vercel.app/',
     source: 'https://github.com/Phol16/PokemonV2',
-  },
-  {
-    title: 'Personal Portfolio',
-    tech: 'NextJS ReduxToolkit TailwindCSS',
-    description: `A Web-Based application developed using ReactJS.
-    The current website is this application.
-    It is an application that shows the details and the projects`,
-    image:
-      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680693756/Portfolio/portfolio_ofjuxl.png',
-    live: 'https://phol.vercel.app/',
-    source: 'https://github.com/Phol16/PortfolioV2',
   },
   {
     title: 'Eatstagram',
@@ -233,7 +233,7 @@ const ProjectsSection = () => {
   }, [projInView]);
 
   return (
-    <div className='px-5 py-10 bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition-colors duration-200'>
+    <div className='px-5 py-10 bg-primaryColorL text-black dark:bg-primaryColor dark:text-white '>
       <section id='Project' className='max-w-xl md:max-w-6xl m-auto p-4'>
         <motion.h1
           ref={projRef}

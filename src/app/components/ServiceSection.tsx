@@ -62,7 +62,7 @@ export const ServiceDetails = ({ details }: { details: Service }) => {
 
 const ServiceSection = () => {
   return (
-    <div className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200 px-10 py-16'>
+    <div className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white px-10 py-16'>
       <main className='flex gap-10 flex-wrap justify-center'>
         {service.map((e) => (
           <ServiceDetails details={e} key={e.label}/>

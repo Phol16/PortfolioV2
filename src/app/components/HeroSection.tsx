@@ -79,7 +79,7 @@ const HeroSection = () => {
   }, [displayInfo, deleteMode, currIndex.current]);
 
   return (
-    <div className='relative p-1 w-full h-[calc(95svh_-_5rem)] flex flex-col  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200'>
+    <div className='relative p-1 w-full h-[95svh] flex flex-col  justify-center items-center bg-gradient-to-br from-[#6bb9eb] from-5% via-primaryColorL via-40% to-primaryColorL to-[90%] text-black dark:bg-gradient-to-br dark:from-[#003841] dark:from-5% dark:via-primaryColor dark:via-40% dark:to-primaryColor dark:to-[90%] dark:text-white transition duration-200'>
       <motion.section
         variants={opacity}
         transition={{ duration: 0.8 }}
@@ -97,13 +97,13 @@ const HeroSection = () => {
           </a>
           <h1>
             Hi! My name is{' '}
-            <span className='text-secondaryColorL dark:text-secondaryColor'>
+            <span className='text-secondaryColorL dark:text-secondaryColor transition-colors duration-[1000]'>
               Phol
             </span>
           </h1>
         </header>
         <main className='max-w-xs md:max-w-md 2xl:max-w-lg flex flex-col gap-2 px-5 text-xs md:text-base'>
-          <h2 className='font-medium text-secondaryColorL dark:text-secondaryColor'>
+          <h2 className='font-medium text-secondaryColorL dark:text-secondaryColor transition duration-200'>
             {displayInfo}
             <span className='dark:text-white text-black'>|</span>
           </h2>
