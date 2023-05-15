@@ -240,7 +240,7 @@ const ProjectsSection = () => {
           transition={popUp.duration}
           initial={popUp.hidden}
           animate={projAnimation}
-          className='text-xl md:text-3xl font-semibold'
+          className='text-xl md:text-3xl font-semibold px-5 md:px-20'
         >
           Projects
         </motion.h1>
