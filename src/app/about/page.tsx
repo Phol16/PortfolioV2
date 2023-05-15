@@ -74,7 +74,7 @@ const tools: Tools[] = [
 
 const AboutPage = () => {
   return (
-    <div className='relative px-4 py-40 w-full flex flex-col gap-10  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white transition duration-200'>
+    <div className='relative px-4 py-40 w-full flex flex-col gap-10  justify-center items-center bg-primaryColorL text-black dark:bg-primaryColor dark:text-white'>
       <header className='relative flex justify-center items-center'>
         <Link
           aria-label='Home Page'
