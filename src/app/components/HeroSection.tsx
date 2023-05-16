@@ -8,8 +8,7 @@ import Lottie from 'lottie-react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/libs/store/store';
 
-import HeroAnimationL from '../../../public/assets/lightRobot.json';
-import HeroAnimation from '../../../public/assets/darkRobot.json';
+import HeroAnimation from '../../../public/assets/lightRobot.json';
 
 export const detailInfo: string[] = [
   ' Front-End Developer',
@@ -110,21 +109,12 @@ const HeroSection = () => {
                 Hey! Nice to meet you
               </motion.p>
             )}
-            {/* {darkModeData ? (
               <Lottie
                 onMouseOver={() => setHoverRobot(true)}
                 onMouseOut={() => setHoverRobot(false)}
                 animationData={HeroAnimation}
                 className='w-[70px] md:w-[100px] h-auto'
               />
-            ) : ( */}
-              <Lottie
-                onMouseOver={() => setHoverRobot(true)}
-                onMouseOut={() => setHoverRobot(false)}
-                animationData={HeroAnimationL}
-                className='w-[70px] md:w-[100px] h-auto'
-              />
-            {/* )} */}
           </a>
           <h1>
             Hi! My name is{' '}
