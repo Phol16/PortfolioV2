@@ -2,12 +2,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import avatar from '../../../public/avatar.svg';
-import Image from 'next/image';
 import ScrollDown from './ScrollDown';
 import { opacity, popUp } from '@/libs/motion';
-import Lottie from 'lottie-react'
-import HeroAnimation from '../../../public/assets/lightRobot.json'
+import Lottie from 'lottie-react';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/libs/store/store';
+
+import HeroAnimationL from '../../../public/assets/lightRobot.json';
+import HeroAnimation from '../../../public/assets/darkRobot.json';
 
 export const detailInfo: string[] = [
   ' Front-End Developer',
@@ -21,6 +23,10 @@ const HeroSection = () => {
   const [hoverRobot, setHoverRobot] = useState<boolean>(false);
   const currIndex = useRef(0);
   const currChar = useRef(0);
+
+  const darkModeData = useSelector(
+    (state: RootState) => state.darkModeData.darkMode
+  );
 
   useEffect(() => {
     let dispalyTimeoutId: number;
@@ -95,16 +101,30 @@ const HeroSection = () => {
             href='#About'
             className='relative self-end mr-4 md:mr-0 hover:-translate-y-0.5 flex justify-center items-center'
           >
-            { hoverRobot && (
-            <motion.p
-            initial={popUp.hidden}
-            animate={popUp.show}
-             className='absolute text-xs -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColorL rounded-full text-black w-[169px] text-center'
-             >
-              Hey! Nice to meet you
+            {hoverRobot && (
+              <motion.p
+                initial={popUp.hidden}
+                animate={popUp.show}
+                className='absolute text-xs -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColor rounded-full text-primaryColorL dark:bg-primaryColorL dark:text-primaryColor w-[169px] text-center'
+              >
+                Hey! Nice to meet you
               </motion.p>
-              )}
-            <Lottie onMouseOver={()=>setHoverRobot(true)} onMouseOut={()=>setHoverRobot(false)} animationData={HeroAnimation} className='w-[70px] md:w-[100px] h-auto'/>
+            )}
+            {/* {darkModeData ? (
+              <Lottie
+                onMouseOver={() => setHoverRobot(true)}
+                onMouseOut={() => setHoverRobot(false)}
+                animationData={HeroAnimation}
+                className='w-[70px] md:w-[100px] h-auto'
+              />
+            ) : ( */}
+              <Lottie
+                onMouseOver={() => setHoverRobot(true)}
+                onMouseOut={() => setHoverRobot(false)}
+                animationData={HeroAnimationL}
+                className='w-[70px] md:w-[100px] h-auto'
+              />
+            {/* )} */}
           </a>
           <h1>
             Hi! My name is{' '}
@@ -124,7 +144,7 @@ const HeroSection = () => {
           </p>
         </main>
       </motion.section>
-      
+
       <ScrollDown />
     </div>
   );
