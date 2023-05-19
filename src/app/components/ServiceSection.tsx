@@ -45,10 +45,8 @@ export const ServiceDetails = ({ details }: { details: Service }) => {
       key={details.label}
       className='border-2 p-5 border-secondaryColorL dark:border-secondaryColor flex flex-col gap-4 rounded-lg max-w-xs'
     >
-      <h1 className='font-semibold text-md text-center Slabel'>
-        {details.label}
-      </h1>
-      <p className='font-medium Sdesc text-sm'>{details.description}</p>
+      <h1 className='font-semibold text-md lg:text-lg text-center Slabel'>{details.label}</h1>
+      <p className='font-medium Sdesc text-sm  text-center'>{details.description}</p>
       <Image
         src={`https://skillicons.dev/icons?i=${details.icons}`}
         alt={'skillIcon'}
@@ -65,7 +63,7 @@ const ServiceSection = () => {
     <div className='bg-primaryColorL text-black dark:bg-primaryColor dark:text-white px-10 py-16'>
       <main className='flex gap-10 flex-wrap justify-center'>
         {service.map((e) => (
-          <ServiceDetails details={e} key={e.label}/>
+          <ServiceDetails details={e} key={e.label} />
         ))}
       </main>
     </div>

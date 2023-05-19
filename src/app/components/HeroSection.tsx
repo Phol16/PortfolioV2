@@ -23,9 +23,7 @@ const HeroSection = () => {
   const currIndex = useRef(0);
   const currChar = useRef(0);
 
-  const darkModeData = useSelector(
-    (state: RootState) => state.darkModeData.darkMode
-  );
+  const darkModeData = useSelector((state: RootState) => state.darkModeData.darkMode);
 
   useEffect(() => {
     let dispalyTimeoutId: number;
@@ -58,19 +56,13 @@ const HeroSection = () => {
 
       currChar.current += 1;
 
-      if (
-        currChar.current > detailInfo[currIndex.current]?.length &&
-        deleteMode
-      ) {
+      if (currChar.current > detailInfo[currIndex.current]?.length && deleteMode) {
         //switching between arrays.
         setDeleteMode(false);
         currIndex.current += 1;
         currChar.current = 0;
       }
-      if (
-        currChar.current > detailInfo[currIndex.current]?.length &&
-        !deleteMode
-      ) {
+      if (currChar.current > detailInfo[currIndex.current]?.length && !deleteMode) {
         //changing to deleteMode with delay
         delayCursorId = window.setTimeout(() => {
           currChar.current = 0;
@@ -104,17 +96,17 @@ const HeroSection = () => {
               <motion.p
                 initial={popUp.hidden}
                 animate={popUp.show}
-                className='absolute text-xs -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColor rounded-full text-primaryColorL dark:bg-primaryColorL dark:text-primaryColor w-[169px] text-center'
+                className='absolute text-xs lg:text-base -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColor rounded-full text-primaryColorL dark:bg-primaryColorL dark:text-primaryColor w-[169px] lg:w-[210px] text-center'
               >
                 Hey! Nice to meet you
               </motion.p>
             )}
-              <Lottie
-                onMouseOver={() => setHoverRobot(true)}
-                onMouseOut={() => setHoverRobot(false)}
-                animationData={HeroAnimation}
-                className='w-[70px] md:w-[100px] h-auto'
-              />
+            <Lottie
+              onMouseOver={() => setHoverRobot(true)}
+              onMouseOut={() => setHoverRobot(false)}
+              animationData={HeroAnimation}
+              className='w-[70px] md:w-[100px] h-auto'
+            />
           </a>
           <h1>
             Hi! My name is{' '}
@@ -124,17 +116,16 @@ const HeroSection = () => {
           </h1>
         </header>
         <main className='max-w-xs md:max-w-md 2xl:max-w-lg flex flex-col gap-2 px-5 text-xs md:text-base'>
-          <h2 className='font-medium text-secondaryColorL dark:text-secondaryColor transition duration-200'>
+          <h2 className='font-semibold text-secondaryColorL dark:text-secondaryColor transition duration-200'>
             {displayInfo}
             <span className='dark:text-white text-black'>|</span>
           </h2>
           <p>
-            I`m knowledgeable in creating front-end and back-end application and
-            I`m eager to learn more advance technologies
+            I`m knowledgeable in creating front-end and back-end application and I`m eager
+            to learn more advance technologies
           </p>
         </main>
       </motion.section>
-
       <ScrollDown />
     </div>
   );

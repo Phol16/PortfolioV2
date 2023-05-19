@@ -23,7 +23,7 @@ const NavMenu = () => {
             setIsOpen(true);
           }}
         >
-          <HiOutlineBars3 className='text-5xl text-sky-500 hover:text-sky-800' />
+          <HiOutlineBars3 className='text-5xl text-secondaryColorL dark:text-secondaryColor' />
         </button>
       </div>
       {
@@ -54,7 +54,10 @@ const NavMenu = () => {
                     <div className='px-4 sm:px-6 flex flex-col justify-between h-full'>
                       <div className=' flex items-center justify-between p-2'>
                         <h1>Phol</h1>
-                        <button onClick={()=>setIsOpen(false)} className='hover:scale-110 hover:text-rose-500'>
+                        <button
+                          onClick={() => setIsOpen(false)}
+                          className='hover:scale-110 hover:text-rose-500'
+                        >
                           <IoMdClose />
                         </button>
                       </div>
@@ -64,9 +67,7 @@ const NavMenu = () => {
                             href={e.redirect}
                             key={e.label}
                             className={` flex p-3 items-center ${
-                              pathname === '/about' && i >= 1
-                                ? 'hidden'
-                                : 'flex'
+                              pathname === '/about' && i >= 1 ? 'hidden' : 'flex'
                             } hover:bg-gray-800 rounded-lg`}
                           >
                             {e.label}

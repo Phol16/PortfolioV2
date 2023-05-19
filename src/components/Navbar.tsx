@@ -45,9 +45,7 @@ export const NavButtons: NavButtons[] = [
 
 const Navbar = () => {
   const pathname = usePathname();
-  const darkModeData = useSelector(
-    (state: RootState) => state.darkModeData.darkMode
-  );
+  const darkModeData = useSelector((state: RootState) => state.darkModeData.darkMode);
 
   const navRef = useRef(null);
   const dispatch = useDispatch();
@@ -73,8 +71,13 @@ const Navbar = () => {
           animate={popDown.show}
           className='gap-5 text-lg font-semibold hidden lg:flex'
         >
-          {NavButtons.map((e,i) => (
-            <a aria-label={`${e.label}`} href={e.redirect} key={e.label} className={`${pathname === '/about' && i >= 1 ? 'hidden': 'flex'}`}>
+          {NavButtons.map((e, i) => (
+            <a
+              aria-label={`${e.label}`}
+              href={e.redirect}
+              key={e.label}
+              className={`${pathname === '/about' && i >= 1 ? 'hidden' : 'flex'}`}
+            >
               <Button>
                 {e.icon}
                 {e.label}

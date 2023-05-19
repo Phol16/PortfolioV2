@@ -44,9 +44,9 @@ const AboutSection = () => {
               transition={popUp.duration}
               initial={popUp.hidden}
               animate={detailsAnimation}
-              className='max-w-md text-justify whitespace-break-spaces space-y-3 p-3'
+              className='max-w-md text-justify space-y-3 p-3'
             >
-              <h1 className='text-md md:text-lg font-semibold'>
+              <h1 className='textJustify text-md md:text-lg font-semibold'>
                 Get to Know Me.
               </h1>
               <p>

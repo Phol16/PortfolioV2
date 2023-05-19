@@ -13,6 +13,7 @@ import { BiArrowBack } from 'react-icons/bi';
 
 import ProgrammingSkill from '@/app/about/components/ProgrammingSkill';
 import Tools from '@/components/Tools';
+import Button from '@/components/Button';
 
 interface Skills {
   title: string;
@@ -90,9 +91,7 @@ const AboutPage = () => {
       <section className='p-5'>
         <h1 className='text-xl lg:text-2xl font-bold'>Skills</h1>
         <aside className='p-2 space-y-5'>
-          <h2 className='text-base lg:text-lg font-semibold'>
-            Programming Language
-          </h2>
+          <h2 className='text-base lg:text-lg font-semibold'>Programming Language</h2>
           <main className='flex flex-wrap gap-3 justify-center items-center p-1'>
             {programmingLanguage.map((element) => (
               <ProgrammingSkill
@@ -105,16 +104,10 @@ const AboutPage = () => {
           </main>
         </aside>
         <aside className='p-5 space-y-5'>
-          <h2 className='text-base lg:text-lg font-semibold'>
-            Tools / Technology
-          </h2>
+          <h2 className='text-base lg:text-lg font-semibold'>Tools / Technology</h2>
           <main className='flex flex-wrap gap-2 justify-center items-center p-2 max-w-3xl'>
             {tools.map((element) => (
-              <Tools
-                title={element.title}
-                icon={element.icon}
-                key={element.title}
-              />
+              <Tools title={element.title} icon={element.icon} key={element.title} />
             ))}
           </main>
         </aside>
@@ -147,10 +140,12 @@ const AboutPage = () => {
         <a
           href='https://github.com/Phol16'
           target='_blank'
-          className=' font-medium flex gap-2 items w-fit self-end px-5 py-2 rounded-full dark:bg-secondaryColor bg-secondaryColorL text-white hover:bg-secondaryColor hover:text-black dark:hover:text-white dark:hover:bg-secondaryColorL dark:text-black hover:rounded-2xl transition-all  duration-200'
+          className=' font-medium flex gap-2 items w-fit self-end'
         >
-          <h1>Phol16</h1>
-          <FaGithub className='text-xl' />
+          <Button>
+            <h1>Phol16</h1>
+            <FaGithub className='text-xl' />
+          </Button>
         </a>
         <Image
           src='https://github-readme-stats.vercel.app/api?username=phol16&theme=graywhite&count_private=true&show_icons=true'

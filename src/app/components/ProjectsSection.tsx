@@ -89,13 +89,7 @@ const projectsInfo: ProjectsInfo[] = [
     source: 'https://github.com/Phol16/Weather-App',
   },
 ];
-export const ProjectButton = ({
-  live,
-  source,
-}: {
-  live: string;
-  source: string;
-}) => {
+export const ProjectButton = ({ live, source }: { live: string; source: string }) => {
   const [active, setActive] = useState('');
 
   const projectButtons: redirects[] = [
@@ -178,26 +172,23 @@ export const ProjectDetails = ({
       >
         <motion.aside
           ref={projImageRef}
-          transition={{duration:0.5}}
-          initial={
-            index % 2 === 0 ? slideFromRight.hidden : slideFromLeft.hidden
-          }
+          transition={{ duration: 0.5 }}
+          initial={index % 2 === 0 ? slideFromRight.hidden : slideFromLeft.hidden}
           animate={projImageAnimation}
+          className=' overflow-hidden rounded-md'
         >
           <Image
             src={details.image}
             alt='ProjPhoto'
             width={500}
             height={0}
-            className='h-auto aspect-video rounded-md border-[2px] border-primaryColorL dark:border-primaryColor group-hover:border-secondaryColorL dark:group-hover:bg-secondaryColor group-hover:scale-105 transition duration-200'
+            className='h-auto aspect-video group-hover:scale-110 transition duration-200'
           />
         </motion.aside>
         <motion.aside
           ref={projDetailsRef}
-          transition={{duration:0.5}}
-          initial={
-            index % 2 === 0 ? slideFromLeft.hidden : slideFromRight.hidden
-          }
+          transition={{ duration: 0.5 }}
+          initial={index % 2 === 0 ? slideFromLeft.hidden : slideFromRight.hidden}
           animate={projDetailsAnimation}
           className='max-w-md p-5 flex flex-col gap-2 shadow-md rounded-lg shadow-black dark:shadow-white group-hover:shadow-secondaryColorL dark:group-hover:shadow-secondaryColor'
         >
@@ -215,7 +206,7 @@ export const ProjectDetails = ({
               <h1>{details.title}</h1>
             )}
           </div>
-          <p className='text-sm md:text-base'>{details.description}</p>
+          <p className='text-sm md:text-base pt-3 '>{details.description}</p>
         </motion.aside>
       </section>
     </div>
@@ -246,11 +237,7 @@ const ProjectsSection = () => {
         </motion.h1>
         <main className='flex flex-col gap-10 justify-center w-full pb-15 pt-20'>
           {projectsInfo.map((element, index) => (
-            <ProjectDetails
-              details={element}
-              index={index}
-              key={element.title}
-            />
+            <ProjectDetails details={element} index={index} key={element.title} />
           ))}
         </main>
       </section>

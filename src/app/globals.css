@@ -7,10 +7,10 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --primaryColor: #0c090d;
-  --secondaryColor: #00afca;
+  --secondaryColor: #53c0bb;
 
-  --primaryColorL: #e0e1e2;
-  --secondaryColorL: #005183;
+  --primaryColorL: #cbcbcb;
+  --secondaryColorL: #0585b8;
 
   --html: #ff5733;
   --css: #2965f1;
@@ -48,4 +48,7 @@ body {
 }
 ::-webkit-scrollbar-track {
   background: var(--primaryColorL);
+}
+.textJustify{
+  text-justify: distribute-all-lines;
 }
