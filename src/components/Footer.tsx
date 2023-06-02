@@ -28,7 +28,6 @@ const accounts: Accounts[] = [
     icon: <AiFillLinkedin />,
     redirect: 'https://www.linkedin.com/in/pholibert-lim-37a51323b/',
   },
-  { label: 'Discord', icon: <FaDiscord /> },
 ];
 
 const contactInfo: Record<string, string>[] = [

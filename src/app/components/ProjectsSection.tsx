@@ -45,6 +45,15 @@ const projectsInfo: ProjectsInfo[] = [
     source: 'https://github.com/Phol16/miniMessenger',
   },
   {
+    title: 'Spotify App',
+    tech: 'NextJS NextAuth Spotify Web API TailwindCSS',
+    description: `A web-based application. It is a simple application that almost look like the spotify App where you can play musics. (Work In Progress)`,
+    image:
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1685708647/Portfolio/SpotifyApp_v34air.png',
+    live: 'https://github.com/Phol16/Spotify_App',
+    source: 'https://github.com/Phol16/Spotify_App',
+  },
+  {
     title: 'Personal Portfolio',
     tech: 'NextJS ReduxToolkit TailwindCSS',
     description: `A Web-Based application developed using ReactJS.
@@ -77,19 +86,8 @@ const projectsInfo: ProjectsInfo[] = [
     live: 'https://proj6-fe.onrender.com/',
     source: 'https://github.com/Phol16',
   },
-  {
-    title: 'Weather App',
-    tech: 'ReactJS RestfulAPI ',
-    description: `A Web-Based application developed using ReactJS.
-    It is an application where it shows information about the weather in zamboanga city.
-    It is a simple application.`,
-    image:
-      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1680420728/Portfolio/wheaterApp_lehxrc.png',
-    live: 'https://weather-app-7009.onrender.com/',
-    source: 'https://github.com/Phol16/Weather-App',
-  },
 ];
-export const ProjectButton = ({ live, source }: { live: string; source: string }) => {
+export const ProjectButton = ({ live, source, name }: { live: string; source: string, name:string }) => {
   const [active, setActive] = useState('');
 
   const projectButtons: redirects[] = [
@@ -107,11 +105,11 @@ export const ProjectButton = ({ live, source }: { live: string; source: string }
 
   return (
     <section className='self-center flex gap-4 text-xl md:text-2xl'>
-      {projectButtons.map((element) => (
+      {projectButtons.map((element,index) => (
         <section key={element.toolTip} className='relative flex justify-center'>
           {active === element.toolTip && (
             <p className='absolute text-sm bg-secondaryColorL dark:bg-secondaryColor text-white dark:text-black -top-12 w-32 p-2 text-center rounded-full font-semibold'>
-              {element.toolTip}
+              {name === 'Spotify App' && index === 0 ? 'In Progress' : element.toolTip}
             </p>
           )}
           <a
@@ -192,7 +190,7 @@ export const ProjectDetails = ({
           animate={projDetailsAnimation}
           className='max-w-md p-5 flex flex-col gap-2 shadow-md rounded-lg shadow-black dark:shadow-white group-hover:shadow-secondaryColorL dark:group-hover:shadow-secondaryColor'
         >
-          <ProjectButton live={details.live} source={details.source} />
+          <ProjectButton live={details.live} source={details.source} name={details.title} />
           <div className='font-semibold text-md md:text-xl text-center'>
             {details.title === 'Movie Notepad' ? (
               <h1>
@@ -201,6 +199,10 @@ export const ProjectDetails = ({
             ) : details.title === 'Mini Messenger' ? (
               <h1>
                 Mini <span className='messenger'>Messenger</span>
+              </h1>
+            ) : details.title === 'Spotify App' ? (
+              <h1>
+                <span className='text-green-500'>Spotify</span> App
               </h1>
             ) : (
               <h1>{details.title}</h1>
