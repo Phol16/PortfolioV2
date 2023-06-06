@@ -47,9 +47,9 @@ const projectsInfo: ProjectsInfo[] = [
   {
     title: 'Spotify App',
     tech: 'NextJS NextAuth Spotify Web API TailwindCSS',
-    description: `A web-based application. It is a simple application that almost look like the spotify App where you can play musics. (Work In Progress)`,
+    description: `A web-based application developed using NextJS, CLSX, ReduxToolkit, SpotifyAPI and TailwindCSS. It is a simple application that almost look like the spotify App where you can play musics. (Work In Progress)`,
     image:
-      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1685708647/Portfolio/SpotifyApp_v34air.png',
+      'https://res.cloudinary.com/dy23rmhmq/image/upload/v1686043914/Portfolio/SpotifyApp_fkjixl.png',
     live: 'https://github.com/Phol16/Spotify_App',
     source: 'https://github.com/Phol16/Spotify_App',
   },
