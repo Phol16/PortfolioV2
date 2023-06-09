@@ -28,7 +28,7 @@ type NavButtons = {
 export const NavButtons: NavButtons[] = [
   {
     label: 'CV/Resume',
-    redirect: 'https://jmp.sh/7BhgiWZl',
+    redirect: 'https://jmp.sh/mQ9LLikz',
     icon: <AiOutlineFileProtect />,
   },
   {
