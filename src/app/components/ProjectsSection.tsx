@@ -47,10 +47,10 @@ const projectsInfo: ProjectsInfo[] = [
   {
     title: 'Spotify App',
     tech: 'NextJS NextAuth Spotify Web API TailwindCSS',
-    description: `A web-based application developed using NextJS, CLSX, ReduxToolkit, SpotifyAPI and TailwindCSS. It is a simple application that almost look like the spotify App where you can play musics. (Work In Progress)`,
+    description: `A web-based application developed using NextJS, CLSX, ReduxToolkit, SpotifyAPI and TailwindCSS. It is a simple application that almost look like the spotify App where you can play musics.`,
     image:
       'https://res.cloudinary.com/dy23rmhmq/image/upload/v1686043914/Portfolio/SpotifyApp_fkjixl.png',
-    live: 'https://github.com/Phol16/Spotify_App',
+    live: 'https://spotify-app-murex.vercel.app/',
     source: 'https://github.com/Phol16/Spotify_App',
   },
   {
@@ -109,7 +109,7 @@ export const ProjectButton = ({ live, source, name }: { live: string; source: st
         <section key={element.toolTip} className='relative flex justify-center'>
           {active === element.toolTip && (
             <p className='absolute text-sm bg-secondaryColorL dark:bg-secondaryColor text-white dark:text-black -top-12 w-32 p-2 text-center rounded-full font-semibold'>
-              {name === 'Spotify App' && index === 0 ? 'In Progress' : element.toolTip}
+              {element.toolTip}
             </p>
           )}
           <a
