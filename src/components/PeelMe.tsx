@@ -17,7 +17,7 @@ const PeelMe = () => {
         </div>
       </div>
 
-      <h4 className=' font-bold '>Peel Me!</h4>
+      <h4 className=' font-bold text-primaryColor'>Peel Me!</h4>
 
       <div className='sticky anim750'>
         <div className='back circle_wrapper anim750'>

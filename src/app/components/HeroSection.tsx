@@ -79,15 +79,16 @@ const HeroSection = () => {
   }, [displayInfo, deleteMode, currIndex.current]);
 
   return (
-    <div className='relative p-1 w-full h-[95svh] flex flex-col  justify-center items-center bg-gradient-to-br from-[#6bb9eb] from-5% via-primaryColorL via-40% to-primaryColorL to-[90%] text-black dark:bg-gradient-to-br dark:from-[#003841] dark:from-5% dark:via-primaryColor dark:via-40% dark:to-primaryColor dark:to-[90%] dark:text-white transition duration-200'>
+    <div className='relative bg-gradient-to-br from-[#6bb9eb] from-5% via-primaryColorL via-40% to-primaryColorL to-[90%] text-black dark:bg-gradient-to-br dark:from-[#003841] dark:from-5% dark:via-primaryColor dark:via-40% dark:to-primaryColor dark:to-[90%] dark:text-white transition duration-200'>
+    <div className='p-1 w-full h-[95svh] flex flex-col md:flex-row md:max-w-[870px] justify-center items-center m-auto'>
       <motion.section
         variants={opacity}
         transition={{ duration: 0.8 }}
         initial={opacity.hidden}
         animate={opacity.show}
-        className=' space-y-3 mt-28'
+        className=' space-y-3 mt-28 md:mt-0 md:flex-1 self-center'
       >
-        <header className='text-3xl md:text-5xl 2xl:text-6xl font-bold flex flex-col'>
+        <header className='text-3xl md:text-5xl 2xl:text-6xl font-bold flex flex-col w-fit m-auto'>
           <a
             aria-label='About Button'
             href='#About'
@@ -116,7 +117,7 @@ const HeroSection = () => {
             </span>
           </h1>
         </header>
-        <main className='max-w-xs md:max-w-md 2xl:max-w-lg flex flex-col gap-2 px-5 text-xs md:text-base'>
+        <main className='max-w-xs md:max-w-md 2xl:max-w-lg flex flex-col gap-2 px-5 text-xs md:text-base m-auto'>
           <h2 className='font-semibold text-secondaryColorL dark:text-secondaryColor transition duration-200'>
             {displayInfo}
             <span className='dark:text-white text-black'>|</span>
@@ -128,11 +129,14 @@ const HeroSection = () => {
         </main>
       </motion.section>
       <motion.section
-       initial={popUp.hidden}
-       animate={popUp.show}
-       transition={{duration:0.8}}>
-        <PeelMe/>
+        initial={popUp.hidden}
+        animate={popUp.show}
+        transition={{ duration: 0.8 }}
+        className='md:flex-[0.5] mt-5'
+      >
+        <PeelMe />
       </motion.section>
+    </div>
       <ScrollDown />
     </div>
   );
