@@ -49,6 +49,151 @@ body {
 ::-webkit-scrollbar-track {
   background: var(--primaryColorL);
 }
-.textJustify{
+.textJustify {
   text-justify: distribute-all-lines;
+}
+
+.anim750 {
+  transition: transform 750ms ease-in-out, height 750ms ease-in-out,
+    margin-top 750ms ease-in-out, top 750ms ease-in-out, opacity 750ms ease-in-out;
+}
+
+#Awesome {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+
+  backface-visibility: hidden;
+}
+
+#Awesome .sticky {
+  transform: rotate(45deg);
+}
+
+#Awesome:hover .sticky {
+  transform: rotate(10deg);
+}
+
+#Awesome .sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+}
+
+#Awesome .reveal .circle {
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+
+  font-family: 'helvetica neue', arial;
+  font-weight: 200;
+  line-height: 140px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+#Awesome .reveal .circle {
+  background: #fafafa;
+}
+
+#Awesome .circle_wrapper {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+#Awesome .circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  margin: 20px;
+
+  border-radius: 999px;
+}
+
+#Awesome .back {
+  height: 10px;
+  top: 30px;
+}
+
+#Awesome:hover .back {
+  height: 120px;
+  top: 115px;
+}
+
+#Awesome .back .circle {
+  margin-top: -130px;
+  background-color: var(--secondaryColorL);
+
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    rgba(251, 236, 63, 0),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+#Awesome:hover .back .circle {
+  margin-top: -50px;
+}
+
+#Awesome .front {
+  height: 150px;
+  bottom: 0;
+  top: auto;
+
+  -webkit-box-shadow: 0 -140px 20px -140px rgba(0, 0, 0, 0.3);
+}
+
+#Awesome:hover .front {
+  height: 65px;
+
+  -webkit-box-shadow: 0 -60px 10px -60px rgba(0, 0, 0, 0.1);
+}
+
+#Awesome .front .circle {
+  margin-top: -10px;
+  background: var(--secondaryColor);
+
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    rgba(251, 236, 63, 0) 75%,
+    var(--secondaryColorL) 95%
+  );
+  background-image: -moz-linear-gradient(
+    to bottom,
+    rgba(251, 236, 63, 0) 75%,
+    var(--secondaryColor) 95%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(251, 236, 63, 0) 75%,
+    var(--secondaryColor) 95%
+  );
+}
+
+#Awesome h4 {
+  text-align: center;
+  position: absolute;
+  width: 180px;
+  height: 140px;
+  line-height: 140px;
+
+  transition: opacity 50ms linear 400ms;
+}
+
+#Awesome:hover h4 {
+  opacity: 0;
+
+  transition: opacity 50ms linear 300ms;
+}
+
+#Awesome:hover .front .circle {
+  margin-top: -90px;
+  background-color: var(--secondaryColor);
+  background-position: 0 100px;
 }

@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/libs/store/store';
 
 import HeroAnimation from '../../../public/assets/lightRobot.json';
+import PeelMe from '@/components/PeelMe';
 
 export const detailInfo: string[] = [
   ' Front-End Developer',
@@ -84,7 +85,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         initial={opacity.hidden}
         animate={opacity.show}
-        className=' space-y-3'
+        className=' space-y-3 mt-28'
       >
         <header className='text-3xl md:text-5xl 2xl:text-6xl font-bold flex flex-col'>
           <a
@@ -96,7 +97,7 @@ const HeroSection = () => {
               <motion.p
                 initial={popUp.hidden}
                 animate={popUp.show}
-                className='absolute text-xs lg:text-base -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColor rounded-full text-primaryColorL dark:bg-primaryColorL dark:text-primaryColor w-[169px] lg:w-[210px] text-center'
+                className='absolute text-xs lg:text-sm -top-8 hidden sm:inline-block px-4 py-2 bg-primaryColor rounded-full text-primaryColorL dark:bg-primaryColorL dark:text-primaryColor w-[169px] lg:w-[210px] text-center'
               >
                 Hey! Nice to meet you
               </motion.p>
@@ -105,10 +106,10 @@ const HeroSection = () => {
               onMouseOver={() => setHoverRobot(true)}
               onMouseOut={() => setHoverRobot(false)}
               animationData={HeroAnimation}
-              className='w-[70px] md:w-[100px] h-auto'
+              className='w-[50px] md:w-[70px] h-auto'
             />
           </a>
-          <h1>
+          <h1 className='text-center'>
             Hi! My name is{' '}
             <span className='text-secondaryColorL dark:text-secondaryColor transition-colors duration-[1000]'>
               Phol
@@ -125,6 +126,12 @@ const HeroSection = () => {
             to learn more advance technologies
           </p>
         </main>
+      </motion.section>
+      <motion.section
+       initial={popUp.hidden}
+       animate={popUp.show}
+       transition={{duration:0.8}}>
+        <PeelMe/>
       </motion.section>
       <ScrollDown />
     </div>
