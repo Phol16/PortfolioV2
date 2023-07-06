@@ -53,6 +53,10 @@ body {
   text-justify: distribute-all-lines;
 }
 
+.backShadow{
+  filter: drop-shadow(2px 2px 2px black);
+}
+
 .anim750 {
   transition: transform 750ms ease-in-out, height 750ms ease-in-out,
     margin-top 750ms ease-in-out, top 750ms ease-in-out, opacity 750ms ease-in-out;
